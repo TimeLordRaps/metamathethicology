@@ -1,0 +1,128 @@
+# Mathematical contract and research ancestry
+
+Status: proposed research architecture plus an implemented finite reference
+calculus. Date: 2026-09-19. This is not a proof of the full research program.
+
+## Transfinite beginnings
+
+Every operation-space stage is an actual `ordinatics.ordinals.Ordinal`, beginning
+at omega and strictly below omega**omega. Finite arithmetic can be an object of
+such a language without being the indexing foundation. No integer label is
+silently promoted to an ordinal, and no floating infinity substitutes for one.
+
+A judgment is `(domain, predicate, arguments, alpha)`. It has no physical unit;
+its alpha is a dimensionless availability rank. A space has ceiling lambda,
+explicit assumptions A, and a finite ordered rule list R. All judgments must
+have ranks at most lambda. Every rule must have a conclusion rank at least as
+large as each premise rank. Cross-domain rules need a declared bridge basis.
+Increasing the space ceiling does not relabel judgments or create premises.
+
+At a limit ceiling such as omega**2, the engine still consumes a **finite supplied
+presentation**. It does not infer an infinite union, a cofinal family, or a limit
+theorem from a finite sample. General transfinite recursion and limit-stage
+closure need a separate, source-adequate semantics before implementation.
+
+## Exact finite calculus
+
+Let C0 = A and let C(n+1) add the conclusion of every rule whose premises are
+already in C(n). These are finite iterations at a fixed ordinal stage ceiling;
+n counts engine passes and is not a replacement for the ordinal language rank.
+Since the only possible additions are the finite list of rule conclusions,
+saturation terminates in at most as many additions as distinct conclusions.
+
+`close` implements an ordered, in-place version of this monotone construction.
+Each accepted step cites earlier context positions and its named rule. By
+induction on the trace, replayed conclusions follow from A under R. A final
+pass without additions is closed under R. The resulting set is contained in
+every R-closed superset of A, hence is its least positive closure. This is a
+mathematical argument for this finite calculus, not a proof-assistant theorem
+about the Python implementation. The tests compare it with the intersection
+of all closed supersets in an independently enumerated finite example.
+
+Premise repetition and order are retained. Rules do not consume premises, so
+this is not linear logic. There is no variable substitution, quantification,
+negation-as-failure, contradiction resolution, or logical explosion rule.
+`not-p` would merely be another uninterpreted predicate. Typed domain tags do
+not establish that user-provided axioms are consistent or sound.
+
+The budget charges assumption/rule counts and rule/premise inspections. It
+does not bound integer/string bit complexity, construction cost, or canonical
+serialization. Encoded documents have a one-mebibyte limit. Callers need an
+external process limit for hostile in-memory objects or resource isolation.
+
+## The five target distinctions
+
+| User's target | Implemented foothold | Stronger unresolved obligation |
+|---|---|---|
+| Self-representable | Complete space and trace representations recover exactly through the host codec | A representation derived and interpreted inside the native object language |
+| Self-definable | Assumptions, rules, domain boundaries, and stage ranks have explicit recoverable definitions | Internal definitions with an adequacy theorem for their native interpretation |
+| Self-closing | Least finite positive closure under explicitly supplied rules | Native generation and appropriate transfinite/limit closure for richer subjects |
+| Self-verifiable | An external checker replays retained proof steps; later-stage reflection binds that replay | Internal checker realization, a soundness theorem, and a precisely limited reflection principle |
+| Self-derivation | Derived judgments retain their exact premise ancestry | Source-native derivation of the generating/checking machinery and lower-order subjects |
+
+No implemented foothold is silently identified with the full target. The
+research phrase "closest thing to Gödelian completeness and Tarski definability"
+is a motivation, not a theorem or a comparative novelty claim.
+
+`reflect` replays a lower-space proof and creates a later-stage `derivable-in`
+judgment bound to the full space, trace, and chosen conclusion. Its strict
+inequality is checked even at limit ordinals. It is not an unrestricted truth
+schema. Manually constructing a similarly named atom proves nothing: assumptions
+and rules remain declarations, and actual replay is the acceptance mechanism.
+
+## Domain extensions, with their requested ancestry preserved
+
+### Grounded hyperphysics
+
+Base on Grounded Hypercalculi, with Ordinatics stages from the start. First
+define a typed vocabulary for entities, states, relations, grounding, modality,
+and observables. These proposed metaphysics definitions need declared model
+semantics. Physical quantities require dimensions and units in addition to
+logical ranks; neither ontology nor ordinal stage is a measurement. Use exact
+real-analysis representations where available and distinguish finite numerical
+screens from convergence proofs. An empirical law needs observation evidence
+beyond a syntactic derivation. None of this is supplied by the toy ontology tag.
+
+### Grounded hyperethics
+
+Base on the Grounded Hypercalculi language calculus and extend it through explicit
+typing and proof obligations. Keep descriptive propositions, adopted norms,
+obligations, permissions, and theory-relative judgments distinct. A declared
+bridge must explain why its descriptive premises license its normative
+conclusion within the selected theory. Conflict-sensitive consequence and
+scope must be formalized before adding inconsistent norm sets. The initial
+example only implements a conditional implication under one stipulated norm.
+
+### Grounded hyperlogic
+
+Build from Grounded Hyperset Theory's graph/quotient machinery and connect to
+Grounded Hypercalculi's hypercalculus, language calculus, and real-analysis
+modules. First identify the relation each translation preserves: bisimulation,
+syntax identity, proof derivability, or numerical equality are different.
+Finite cyclic graphs can model structural self-reference without supplying
+truth, derivability, ordinal ranks, or moral justification. A future logic or
+hyperlogic calculus needs proof rules and countermodels for each transport.
+
+### Metamathethicology
+
+The combination shares stages, explicit assumptions, domain-tagged judgments,
+replay, recoverable representation, and reflection. Domain calculi should be
+modules/adapters over those mechanisms until independent mathematical contracts
+justify separate distributions. This preserves the combined subject rather
+than equating its four components or declaring four separate foundations by name.
+
+## Next proof obligations
+
+1. Give source-native encoders and decoders and prove recovery preserves rejected
+   as well as accepted records. Host serialization alone does not discharge this.
+2. Derive an internal checking operation and prove correspondence with replay,
+   including the exact premise context and all domain/stage restrictions.
+3. Specify limit-stage interpretation and evidence transport without extrapolating
+   arbitrary infinite behavior from finite prefixes.
+4. Add substitutions to the shared language calculus only with variable typing,
+   capture/disjointness conditions, and falsifying proof examples.
+5. Supply a worked native derivation of a lower-order subject under those rules.
+
+These gates are additive research work, not permission to assume an unproved
+principle or weaken an existing countermodel. No native Hypermath theorem was
+added, edited, or proved by this initial implementation.

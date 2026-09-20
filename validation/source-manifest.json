@@ -1,0 +1,15 @@
+{
+  "files": {
+    "pyproject.toml": "c79a3fde9229c950ef5ed60add57f4cecc38c45f1c425f4f473cc7ec0121aad8",
+    "src/metamathethicology/__init__.py": "fd45ccd3f7a653e3dae305b9574ef638ea9e3608ce18ac7433c02cb640da105e",
+    "src/metamathethicology/__main__.py": "2afd5814a2d959619ced714cdd438d3d3feb046480b233450eb24b57c04b70c8",
+    "src/metamathethicology/examples.py": "7dd67a18d81850a9a3cd39294be7fc801698adab1a2e2c60fbd22b9a212b1d13",
+    "src/metamathethicology/py.typed": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "src/metamathethicology/representation.py": "83639bcd90fde558a89f1450afc7fef8c281b8c727044f042f613b5468d4b974",
+    "src/metamathethicology/spaces.py": "b1c9e1fa7955f6bc856123ca49db34903ed908c65f1c52ba041dfb8f87f33a67",
+    "tests/test_ecosystem.py": "9bce77733d99fc745ccc22d9b19ee283a2e90c1bacd02414436731d1756c9964",
+    "tests/test_representation.py": "ffc8ee048a4ca67e2d75bd66d2fda48f476bc41cd6adf7cb86037bac43c0ab4a",
+    "tests/test_spaces.py": "ed3d147718a238bfa0034982000342d988f384db50c4809e49e51ae6da16a2ad"
+  },
+  "manifest_sha256": "31c3c83cced376070e4af0d4b31ed6760967d5a15a5bf6bbaf04d1414be13d76"
+}

@@ -1,0 +1,42 @@
+[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "metamathethicology"
+version = "0.1.0.dev0"
+description = "Ordinatics-first operation spaces for metamath, metaphysics, metaethics, and metalogic"
+requires-python = ">=3.10"
+readme = "README.md"
+license = "Apache-2.0"
+license-files = ["LICENSE"]
+authors = [{name = "Tyler Roost"}]
+dependencies = [
+    "ordinatics @ git+https://github.com/TimeLordRaps/ordinatics.git@1564656fc5a740b595c018e96b904781954a85c8",
+]
+
+[project.optional-dependencies]
+ecosystem = [
+    "grounded-hypercalculi @ git+https://github.com/TimeLordRaps/grounded-hypercalculi.git@e3fd9f803d11b355b257fb7c8270bec414827930",
+    "grounded-hyperset-theory @ git+https://github.com/TimeLordRaps/grounded-hyperset-theory.git@0e1d836dba07975ce6319ab459ec88ab53564e3a",
+]
+test = ["pytest>=8", "pytest-timeout>=2.3"]
+dev = ["pytest>=8", "pytest-timeout>=2.3", "ruff>=0.11", "build>=1.2"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+metamathethicology = ["py.typed"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]
+addopts = "-vv -s --durations=10 --timeout=30"
+
+[tool.ruff]
+target-version = "py310"
+line-length = 100
+
+[tool.ruff.lint]
+select = ["E4", "E7", "E9", "F", "I"]
