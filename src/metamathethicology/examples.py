@@ -6,6 +6,7 @@ from ordinatics.ordinals import OMEGA, ONE
 
 from .representation import decode_space, encode_space
 from .spaces import Assumption, Domain, Judgment, OperationSpace, Rule, close, reflect, replay
+from .will_electrophysics import electrophysics_space
 
 
 def deliberation_space(*, include_norm: bool = True) -> OperationSpace:
@@ -28,6 +29,30 @@ def deliberation_space(*, include_norm: bool = True) -> OperationSpace:
     return OperationSpace("conditional-deliberation", OMEGA + ONE, tuple(assumptions), (rule,))
 
 
+def electrophysics_demo() -> dict[str, object]:
+    """Show that the will-electrophysical transport rests on an adopted licence.
+
+    With the licence the drops form and close into the will balance. Without it
+    the electrical premises stay exactly where they are, in METAPHYSICS, and no
+    will conclusion is derivable at all. Nothing false appears either way; the
+    difference is the whole content of the borrowing.
+    """
+    will_predicates = {"termformed", "will-balance"}
+    licensed = electrophysics_space()
+    unlicensed = electrophysics_space(include_licence=False)
+    derived = [j for j in replay(licensed, close(licensed)) if j.predicate in will_predicates]
+    without = [j for j in replay(unlicensed, close(unlicensed)) if j.predicate in will_predicates]
+    bridged = sum(1 for rule in licensed.rules if rule.bridge is not None)
+    return {
+        "will_conclusions_with_licence": len(derived),
+        "will_conclusions_without_licence": len(without),
+        "rules_crossing_a_domain_boundary": f"{bridged} of {len(licensed.rules)}",
+        "every_crossing_names_a_bridge": bridged == len(licensed.rules),
+        "transport_soundness": "NOT_ESTABLISHED (hyperphysics GC-4)",
+        "will_units": "NONE (the numeric reading is dimensionless)",
+    }
+
+
 def demo() -> dict[str, object]:
     """Exercise closure, exact recovery, a missing norm, and next-stage reflection."""
     space = deliberation_space()
@@ -47,4 +72,5 @@ def demo() -> dict[str, object]:
         "reflection_predicate": reflection.predicate,
         "native_self_derivation": "UNKNOWN",
         "unrestricted_self_truth": "NOT_ESTABLISHED",
+        "will_electrophysics": electrophysics_demo(),
     }

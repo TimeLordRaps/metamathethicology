@@ -66,6 +66,54 @@ assert without_norm.rules[0].conclusion not in replay(without_norm, close(withou
 The example uses a toy norm as an explicit assumption. It neither selects an
 ethical theory nor establishes physical, metaphysical, or moral truth.
 
+## Combination fields
+
+A **combination field** is a submodule that combines two fields this package does
+not depend on. `metamathethicology.will_electrophysics` is the first one, and it
+exists because of a placement its author states directly:
+
+> Electricity hyperphysics should go in hyperphysics, underlying will foundations
+> in hyperethics, and then their combination field of will electrophysics is in
+> metamathethicology.
+
+Neither parent can host it. [`hyperphysics`](https://github.com/TimeLordRaps/hyperphysics)
+states electrical law and knows nothing of will;
+[`hyperethics`](https://github.com/TimeLordRaps/hyperethics) states what a will is
+and is a foundation that stands on the standard library alone. The transport
+between them is a cross-domain inference, and `Rule` refuses to construct one
+without a named bridge. What a foundation could only document, this field enforces.
+
+```python
+from metamathethicology import close, replay
+from metamathethicology.will_electrophysics import electrophysics_space
+
+space = electrophysics_space()
+derived = replay(space, close(space))
+assert sum(1 for j in derived if j.predicate == "termformed") == 4
+assert any(j.predicate == "will-balance" for j in derived)
+
+# The transport rests on an adopted licence, not a derived one. Delete it and
+# every will conclusion goes with it. Nothing false is derived either way; that
+# difference is the entire content of the borrowing.
+bare = electrophysics_space(include_licence=False)
+assert not any(j.predicate == "termformed" for j in replay(bare, close(bare)))
+```
+
+Neither cited package is a declared dependency, so a combination field does not
+force a physics package and a foundation into every install.
+`tests/test_citations.py` holds both citations to the exact bytes of the source
+whenever those packages happen to be importable, and skips loudly when they are
+not. **A skip means the citations were not checked on that run**, which is a
+different outcome from checking them and passing; `VALIDATION.md` records which
+of the two happened.
+
+The layer specification is [`will_electrophysics.hm`](will_electrophysics.hm).
+It carries no layer index on purpose: stages are this package's index, and
+asserting a second indexing scheme over material that already has one would put
+the two in conflict. Soundness of the transport is **NOT ESTABLISHED**, and
+`hyperphysics` records that no criterion for establishing it exists. Two of the
+six graduation criteria are discharged.
+
 ## Relation to the proposed libraries
 
 | Surface | Present implementation | Next mathematical obligation |
@@ -73,14 +121,19 @@ ethical theory nor establishes physical, metaphysical, or moral truth.
 | `ordinatics` | Actual dependency for every stage and ordinal comparison | Broader ordinal notation requires its own sound ordering and semantics |
 | `grounded-hypercalculi` | Integration tests exercise language proofs, permutation groups, and exact rational arithmetic | Typed substitutions, disjoint-variable conditions, and proof transport need separate contracts |
 | `grounded-hyperset-theory` | Integration tests exercise cyclic graph bisimulation and a refuting graph | Preserve relation witnesses across logical translations; structural self-reference is not truth |
-| `grounded-hyperphysics` | Proposed extension described in [DESIGN.md](DESIGN.md) | Metaphysical definitions, physical dimensions, observables, empirical interpretation |
-| `grounded-hyperethics` | A conditional normative inference example in the common operation-space language | Explicit ethical theories, conflicts, scope, and justified descriptive-to-normative bridges |
+| `grounded-hyperphysics` | Extension contract in [DESIGN.md](DESIGN.md); `will_electrophysics` cites [`hyperphysics`](https://github.com/TimeLordRaps/hyperphysics) laws by name and is held to their exact bytes | Metaphysical definitions, physical dimensions, observables, empirical interpretation |
+| `grounded-hyperethics` | A conditional normative inference example, plus `will_electrophysics` transporting electrical form onto the [`hyperethics`](https://github.com/TimeLordRaps/hyperethics) will tensor under a declared, deletable licence | Explicit ethical theories, conflicts, scope, and justified descriptive-to-normative bridges; a soundness criterion for any such transport |
 | `grounded-hyperlogic` | Finite rule replay and strictly staged reflection in the common core | Native proof transport from hypersets, hypercalculus, language calculus, and real analysis |
 | `hypermath` | Research ancestor; no new native bridge is claimed | Derive representation, execution, and checking from native operations |
 
 The three proposed `grounded-hyper*` projects are **not separately implemented
 libraries**. Their common operation-space substrate is implemented here; the
 extension contracts retain the intended ancestry without duplicating engines.
+
+`hyperphysics` and `hyperethics` are separate existing packages and are **not**
+the proposed `grounded-hyperphysics` and `grounded-hyperethics`. They are cited
+by name, never imported, and never restated. A combination field over them
+instantiates the relevant extension contract without claiming to discharge it.
 
 ## Boundaries and evidence
 

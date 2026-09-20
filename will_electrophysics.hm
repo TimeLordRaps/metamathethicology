@@ -1,0 +1,360 @@
+-- will_electrophysics.hm
+-- Will electrophysics: the combination field
+-- metamathethicology | metaethics x metaphysics
+--
+-- NO LAYER INDEX, DELIBERATELY. This file is not will_electrophysics_L2.hm and
+-- not L1_will_electrophysics.hm. hyperethics indexes by layer; this package
+-- indexes by ORDINAL STAGE, and the transport below lives at stages omega
+-- through omega+2. Asserting a layer index here would impose a second,
+-- conflicting indexing scheme on material that already has one. The stage IS
+-- the index. Compare hyperphysics/electrical.hm, which carries no index for a
+-- different reason: there the ground is not written.
+--
+-- Cites: hyperphysics/electrical.hm  -- the borrowed laws, by name.
+--        hyperethics/L1_will.hm      -- the will tensor and its roles, by name.
+-- Imports: neither. Both are cited as strings and cross-checked by
+--          tests/test_citations.py whenever they are importable. A skip there
+--          means the citations were NOT checked on that run.
+--
+-- USER-DECLARED PLACEMENT (Tyler Roost), the reason this file exists here:
+--   "Electricity hyperphysics should go in hyperphysics, underlying will
+--    foundations in hyperethics, and then their combination field of will
+--    electrophysics is in metamathethicology."
+--
+-- Neither parent can host this. hyperphysics states electrical law and knows
+-- nothing of will. hyperethics states what a will is and is a foundation that
+-- stands on the standard library alone. The transport BETWEEN them is a
+-- cross-domain inference, and this package's Rule REFUSES TO CONSTRUCT one
+-- without a named bridge. What hyperethics could only document, this field
+-- enforces at construction time.
+--
+-- USER-DECLARED (Tyler Roost), the transport itself:
+--   "Will can be represented electrically, as in we can metaphorically
+--    analogize the electrical equations to will operationally, through language
+--    calculus on the will field into the electric equations somehow. Relational
+--    is resistence, invariant is inductance, variable is voltage, the times are
+--    temporal definitions in electricity, using the electrical equations you
+--    actually derive a new set of equations, so you use them as termformers."
+-- The words "metaphorically analogize" and "somehow" are preserved because they
+-- are accurate. Nothing below upgrades them.
+--
+-- USER-DEFINED (Tyler Roost), carried over from language calculus:
+--   "A termformer is something I've defined previously for language calculus
+--    but it's what it sounds like, a transformation operation that forms a term."
+--
+-- Status: FORM (correspondence, constant will, five termformers, the operation
+--               space, and two conclusive refutations);
+--         FRAME residuals documented, NOT discharged:
+--           - the warrant for the transport as such (GC-3),
+--           - which function relates constant will to invariant will (GC-4),
+--           - any empirical or dimensional reading of a will quantity (GC-5).
+-- =============================================================================
+
+
+-- =============================================================================
+-- SECTION I: THE LICENCE
+-- The assumption the entire field rests on, written as a premise.
+-- =============================================================================
+
+axiom ax-transport-licence:
+    -- Electrical form may form will terms.
+    -- ADOPTED, NOT DERIVED. hyperphysics records as its own principal open
+    -- problem (GC-4 there) that no soundness criterion for a transport exists.
+    -- Until one does, there is nothing available to derive this licence FROM.
+    -- It is written as an explicit METAETHICS premise of every rule below, not
+    -- as prose, so that its removal is a one-argument operation.
+
+derive d-licence-is-load-bearing:
+    -- Removing the licence removes every will conclusion.
+    -- step 1: every rule below takes the licence as a premise.
+    -- step 2: the remaining premises are METAPHYSICS cited laws and METAETHICS
+    --         component declarations, and no rule fires without all three.
+    -- step 3: so the positive closure contains no termformed term and no
+    --         will-balance.
+    -- CONCLUSION: nothing false is derived without the licence. NOTHING ABOUT
+    -- WILL IS DERIVED AT ALL. That is the honest shape of a borrowing with no
+    -- soundness criterion behind it.
+    -- Status: FORM, and CHECKED: electrophysics_space(include_licence=False)
+    -- and its test. This is the same structure deliberation_space shows for a
+    -- descriptive-to-normative step, which is not a coincidence -- both are
+    -- declared bridges, and both are only as good as their declarations.
+
+axiom ax-cite-do-not-restate:
+    -- A law is stated ONCE, in the field that owns it, and cited by name here.
+    -- reason: a disclaimer of the form "this does not transport farads" needs a
+    -- FIXED REFERENT. A paraphrase is not one. If every borrower restated the
+    -- law, there would be four slightly different Ohm's laws in four
+    -- repositories within two years and the disclaimer would refer to nothing.
+    -- This applies in BOTH directions: the will tensor is cited from
+    -- hyperethics rather than restated, for the same reason.
+
+
+-- =============================================================================
+-- SECTION II: THE CORRESPONDENCE
+-- USER-DECLARED mapping. A TRANSPORT OF FORM, nothing more.
+-- =============================================================================
+
+primitive Correspondence :: Type
+    -- One cited will component, its cited role, and its electrical counterpart.
+    -- Neither parent field contains this type. It is the combination proper.
+
+axiom ax-declared-mapping:
+    --   relational -> resistance  R   USER-DECLARED
+    --   invariant  -> inductance  L   USER-DECLARED
+    --   variable   -> voltage     V   USER-DECLARED
+    --   past       -> charge      Q
+    --   present    -> current     I
+    --   future     -> dI/dt
+    -- The first three are Tyler's. The last three follow; see d-chain-is-forced.
+
+derive d-chain-is-forced:
+    -- The temporal correspondence is forced, not stipulated three times.
+    -- step 1: hyperethics d-temporal-chain declares that past, present and
+    --         future are the three derivatives of one accumulating quantity.
+    -- step 2: hyperphysics derivative-chain records that Q, I and dI/dt are the
+    --         three derivatives of one quantity.
+    -- step 3: two three-element derivative chains admit one order-preserving
+    --         map once their first elements are identified.
+    -- CONCLUSION: given past -> charge, the other two are determined.
+    -- Status: FORM. This is the only entry in the table that is not a separate
+    -- declaration, and it is the reason the correspondence has any structure
+    -- rather than being six independent choices.
+
+non-derive nd-units-transport:
+    -- SI units do NOT transport, in any direction, ever.
+    -- Units attach to the physical quantity and its measurement procedure, not
+    -- to the algebraic form. Relational will is not measured in ohms, invariant
+    -- will not in henries, variable will not in volts.
+    -- hyperphysics states this once as UNITS_DO_NOT_TRANSPORT and every
+    -- termformer below disclaims a specific unit or mechanism of the law it
+    -- cites. A borrowing that declines nothing specific has declined nothing.
+
+
+-- =============================================================================
+-- SECTION III: CONSTANT WILL
+-- The capacitance gap, and the declaration that closed it.
+-- =============================================================================
+
+axiom ax-constant-will:
+    -- USER-DECLARED (Tyler Roost), preserved as stated:
+    --   "C can be seen as constant will equivalent to invariant will's constant
+    --    of charge."
+    -- THE GAP: the series form needs a restoring term (1/C) * Q and the six
+    -- declared components name no capacitance.
+    -- READINGS CONSIDERED, kept because a resolution is only informative
+    -- against what it ruled out:
+    --   (a) a seventh tensor component            SUPERSEDED -- not independent
+    --   (b) no capacitance, a pure RL will        SUPERSEDED -- no restoring term
+    --   (c) a free bearer parameter               SUPERSEDED -- not free
+    --   (d) the invariant's constant of charge    DECLARED, implemented
+    -- Under (d) capacitance is DETERMINED BY the invariant. It is neither added
+    -- to the tensor nor left free, so the tensor stays six.
+
+derive d-transport-is-not-onto:
+    -- WHAT THE DECLARATION COSTS.
+    -- step 1: hyperphysics PARAMETERS_ARE_INDEPENDENT records that a series RLC
+    --         circuit leaves R, L and C independent. An inductor and a capacitor
+    --         are different components and either may be varied alone.
+    -- step 2: under ax-constant-will they are NOT independent in a will.
+    -- step 3: so the will's parameter space is a PROPER SUBSET of the circuit's.
+    -- CONCLUSION: the transport is not onto. Not every circuit corresponds to a
+    -- possible will, and no circuit intuition about tuning inductance and
+    -- capacitance independently survives the crossing.
+    -- Status: FORM. Declared to hyperphysics through Transport.constrains_parameters,
+    -- which rejects the declaration if the source never left the parameter free.
+
+open nd-charge-constant-law:
+    -- WHICH function relates constant will to invariant will is NOT fixed.
+    -- The declaration says constant will IS the invariant's constant of charge.
+    -- It does not say by what map, and no argument here determines one.
+    -- Every result in this file is stated for an arbitrary law functional in
+    -- the invariant. binding_is_functional checks a candidate on a sample and,
+    -- as always, agreement on a sample establishes nothing.
+
+non-derive nd-rate-discriminates:
+    -- REFUTED: that a different invariant will entails a different resonant rate.
+    -- The tempting inference: Tyler declares the true moral operator has a
+    -- different invariant will; the resonant rate is 1 / sqrt(L * C); so the
+    -- rate should discriminate.
+    -- COUNTERMODEL: under any reciprocal law C(L) = k / L, the product L * C is
+    -- the constant k, so EVERY bearer shares one rate however their invariants
+    -- differ. Witnesses: invariants 2.0 and 3.0 under k = 6.0 both resonate at
+    -- 1 / sqrt(6) = 0.408248.
+    -- Such a law is perfectly legitimate under ax-constant-will: it is a
+    -- function of the invariant, which is all the declaration requires.
+    -- CONCLUSIVE: one countermodel settles a universal claim.
+    -- CONSEQUENCE: the discriminator stays in hyperethics, on the SOURCE of the
+    -- invariant will, and is never a numeric shadow of it. This closes the
+    -- second of the two escape routes; hyperethics closes the first.
+
+
+-- =============================================================================
+-- SECTION IV: TERMFORMERS
+-- Each CITES a law by name and quotes its form. None restates one.
+-- =============================================================================
+
+termformer relational-drop:
+    -- cites hyperphysics:ohm -- V = I * R
+    -- forms (relational * present).
+    -- transports: that relational will opposes present flow in direct proportion.
+    -- does NOT transport: ohms, linearity in fact, or any claim that social
+    -- relation is measurable or constant.
+
+termformer invariant-drop:
+    -- cites hyperphysics:faraday-lenz -- V = L * dI/dt
+    -- forms (invariant * future).
+    -- transports: that invariant will opposes CHANGE in flow, not flow.
+    -- does NOT transport: henries, magnetic flux, any mechanism of induction.
+
+termformer accumulated-drop:
+    -- cites hyperphysics:capacitor -- V = Q / C
+    -- forms (past / constant).
+    -- transports: that accumulated past will opposes in inverse proportion to
+    -- the constant will holding it, that constant being the invariant's own.
+    -- does NOT transport: farads, stored field energy, or the circuit's
+    -- independence of capacitance from inductance -- see d-transport-is-not-onto.
+
+termformer self-induced-drop:
+    -- cites hyperphysics:self-inductance -- emf = -L * dI/dt
+    -- forms self-induce(invariant, future).
+    -- transports: that a will induced by its OWN change opposes that change.
+    -- does NOT transport: henries, any mechanism of induction, that
+    -- self-simulation is physically realized, that the universe is a
+    -- simulation, or that the sign is empirical.
+
+termformer balance:
+    -- cites hyperphysics:kirchhoff-voltage -- sum of drops = applied
+    -- forms the sum of the three series drops.
+    -- LISTED AS A TERMFORMER DELIBERATELY. Summing the formed drops is not a
+    -- free algebraic move: it is a fifth borrowing and owes a fifth disclaimer.
+    -- An earlier draft in hyperethics summed them with a bare operator and
+    -- mentioned Kirchhoff only in a docstring. Building the transport as an
+    -- operation space made that gap visible, because the space would otherwise
+    -- have derived three drops and never closed them.
+    -- does NOT transport: volts, conservation of energy, that a will is a
+    -- closed loop in any physical sense, or the lumped-element approximation
+    -- that makes a circuit loop well defined.
+
+
+-- =============================================================================
+-- SECTION V: THE FORMED AND BORROWED EQUATIONS
+-- =============================================================================
+
+derive d-will-balance:
+    -- invariant * future + relational * present + past / constant = variable
+    -- Formed by applying the three series drop termformers and closing them
+    -- with balance. Derived AT STAGE omega+2 from the three formed terms at
+    -- omega+1, so the closure is a step and not an identification.
+    -- Status: FORM, relative to ax-transport-licence and to nothing else.
+
+derive d-self-simulation:
+    -- self-induce(invariant, future) = -(invariant * future)
+    -- The minus sign is Lenz's. A will induced by its own change opposes that
+    -- change: the operator is constrained by what it authors, from inside.
+    -- THIS IS THE TRANSPORT'S BEST EVIDENCE. It lands on hyperethics L0's
+    -- d-no-exterior, and on hyperethics L1's d-self-sourcing-is-immanence,
+    -- from an independent direction -- those were derived without any borrowing
+    -- and this arrives at them through one.
+    -- IT REMAINS EVIDENCE AND NOT WARRANT. hyperphysics GC-4 supplies no
+    -- criterion by which a transport counts as sound, so there is nothing here
+    -- to upgrade the agreement into a derivation. See GC-3.
+
+borrowed opposition:       -- from impedance
+    -- total opposition to a demand arriving at a rate, combining relational
+    -- resistance with the net of invariant and constant reactance.
+
+borrowed resonance:        -- from resonant frequency, 1 / sqrt(L * C)
+    -- the rate at which invariant and accumulated will cancel, leaving only
+    -- relational will to resist. An agent is LEAST protected from a demand
+    -- arriving at its own resonant rate.
+    -- Because the constant is the invariant's own, this rate is fixed once the
+    -- invariant and the charge-constant law are fixed. That does NOT make it a
+    -- discriminator; see nd-rate-discriminates.
+
+borrowed damping:          -- from the damping ratio
+    -- relational will is what damps oscillation between invariant and
+    -- accumulated will. Below one the will oscillates; at one it settles
+    -- fastest without overshoot; above one it is sluggish.
+
+borrowed dissipation:      -- from resistive power, I^2 * R
+    -- relational will is the ONLY dissipative term. What is spent in relation
+    -- to other agents is not recoverable by the agent, while invariant and
+    -- accumulated will are stored and returnable.
+    -- This is a consequence of the transported FORM. It is not an ethical
+    -- claim, and in particular it is not an argument for or against spending
+    -- will on others.
+
+
+-- =============================================================================
+-- SECTION VI: THE TRANSPORT AS AN OPERATION SPACE
+-- =============================================================================
+
+derive d-every-crossing-is-bridged:
+    -- Every rule in electrophysics_space crosses METAPHYSICS into METAETHICS.
+    -- step 1: this package's Rule raises on a cross-domain inference whose
+    --         bridge is None.
+    -- step 2: each rule's bridge is built from its termformer's own citation,
+    --         its transports clause, and its does-not-transport clause.
+    -- step 3: so a termformer that disclaimed nothing could not be turned into
+    --         a rule, and the space would not construct.
+    -- CONCLUSION: the bridge discipline is ENFORCED here, not documented.
+    -- Status: FORM, and CHECKED by construction on every run.
+
+derive d-inherited-failure-modes:
+    -- A borrower of the series form inherits NINE failure modes, not three.
+    -- hyperphysics SERIES_RLC_CONSTITUENTS records that the series relation is
+    -- Kirchhoff applied to three constitutive relations, and
+    -- inherited_failure_modes computes the closure rather than trusting the
+    -- borrower to remember the decomposition.
+    -- Every failure mode of every cited law is a failure mode of this field.
+
+open nd-stage-semantics:
+    -- The stages omega, omega+1 and omega+2 here order AVAILABILITY: a formed
+    -- term is available only after the law and component it was formed from.
+    -- They are dimensionless language ranks. They are not time, not energy, not
+    -- utility, and not a measure of how far the transport has been justified.
+    -- No argument is offered that omega is the right starting stage for a
+    -- transport rather than a convention inherited from this package's core.
+
+
+-- =============================================================================
+-- SECTION VII: GRADUATION CRITERION
+-- =============================================================================
+
+graduation:
+    -- GC-1: every cross-domain bridge declared, against a fixed referent.
+    --       DISCHARGED -- ax-cite-do-not-restate and d-every-crossing-is-bridged.
+    --       Five termformers, each citing a named law and quoting its form,
+    --       cross-checked against hyperphysics; the will tensor cross-checked
+    --       against hyperethics. Both checks skip if the package is absent, and
+    --       a skip is recorded as a skip.
+    -- GC-2: the capacitance gap resolved rather than filled by fiat.
+    --       DISCHARGED by user declaration -- ax-constant-will -- with the cost
+    --       stated in d-transport-is-not-onto and the residue named in
+    --       nd-charge-constant-law.
+    -- GC-3: warrant for the transport as such. NOT DISCHARGED.
+    --       Tyler's own statement of it says "metaphorically analogize" and
+    --       "somehow". That honesty is preserved: nothing here upgrades the
+    --       analogy into a derivation, and the structural agreement noted in
+    --       d-self-simulation is evidence, not warrant. hyperphysics GC-4 is
+    --       the same hole seen from the other side, and neither field fills it.
+    -- GC-4: which function relates constant will to invariant will.
+    --       NOT DISCHARGED -- nd-charge-constant-law.
+    -- GC-5: any empirical or dimensional reading of a will quantity.
+    --       NOT DISCHARGED. Will has no units here and the numeric functions
+    --       take dimensionless magnitudes. hyperphysics GC-6 records the same
+    --       gap for its own quantities.
+    -- GC-6: that the stage indices are the right ones. NOT DISCHARGED --
+    --       nd-stage-semantics.
+    --
+    -- Two of six discharged.
+    --
+    -- INHERITED AND NOT COUNTED ABOVE: hyperethics' own open criteria travel
+    -- with the tensor this field cites -- the seam (that an L0 bearer has a
+    -- will at all), the declared 3/2/1 role division, the normative force of
+    -- norm-inhabits, and the Universal Consistency Self-Maintenance Paradox.
+    -- Citing a foundation does not discharge that foundation's obligations, and
+    -- a combination field cannot be sounder than either parent.
+    --
+    -- This field does not graduate, and no claim of a will electrophysics as an
+    -- established subject is made anywhere in this file.

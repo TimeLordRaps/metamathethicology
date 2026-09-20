@@ -1,7 +1,7 @@
 # Mathematical contract and research ancestry
 
 Status: proposed research architecture plus an implemented finite reference
-calculus. Date: 2026-09-19. This is not a proof of the full research program.
+calculus. Date: 2026-09-20. This is not a proof of the full research program.
 
 ## Transfinite beginnings
 
@@ -83,6 +83,14 @@ real-analysis representations where available and distinguish finite numerical
 screens from convergence proofs. An empirical law needs observation evidence
 beyond a syntactic derivation. None of this is supplied by the toy ontology tag.
 
+`will_electrophysics` exercises the citation half of this contract without
+claiming the rest of it. It names five laws in `hyperphysics`, quotes each
+form, and is held to those exact bytes by `tests/test_citations.py`. It supplies
+no dimensions, no units, and no observables: `UNITS_DO_NOT_TRANSPORT` is the
+standing rule on both sides, and every borrowed term declines a specific unit or
+mechanism of the law it cites. A transport that declines nothing specific has
+declined nothing.
+
 ### Grounded hyperethics
 
 Base on the Grounded Hypercalculi language calculus and extend it through explicit
@@ -92,6 +100,56 @@ bridge must explain why its descriptive premises license its normative
 conclusion within the selected theory. Conflict-sensitive consequence and
 scope must be formalized before adding inconsistent norm sets. The initial
 example only implements a conditional implication under one stipulated norm.
+
+`will_electrophysics` implements the bridge requirement rather than describing
+it. Every rule there crosses METAPHYSICS into METAETHICS, so `Rule` refuses to
+construct any of them without a named bridge, and each bridge is assembled from
+its termformer's own citation and disclaimer. A termformer that disclaimed
+nothing could not become a rule and the space would fail to build. What that
+buys is narrow and worth stating exactly: the declaration is enforced, the
+declaration's truth is not. See the next section.
+
+### Combination fields
+
+A combination field is a submodule that combines two fields this package does not
+depend on. It is placed here rather than in either parent, and the reason is
+structural rather than editorial: a field that states a law cannot also state
+what borrows the law without becoming the borrower, and a foundation that had to
+cite another field to say what its own subject matter is would not be a
+foundation. The combination is a third thing, and it belongs where cross-domain
+inference is already a checked notion.
+
+`will_electrophysics` is the first, following a placement its author states
+directly: electricity hyperphysics in `hyperphysics`, the will foundation in
+`hyperethics`, the combination in this package. It carries four constraints that
+any later combination field should carry too.
+
+1. **Cite, do not restate.** A law is stated once, in the field that owns it, and
+   quoted here by name. A disclaimer of the form "this does not transport farads"
+   needs a fixed referent, and a paraphrase is not one. Restating would produce
+   four slightly different Ohm's laws in four repositories inside two years.
+2. **Enforce the citation at construction.** `Correspondence` rejects a component
+   or role the cited foundation does not declare, so the combination cannot
+   quietly grow a will of its own. Cross-package agreement is then a test, not a
+   convention.
+3. **Make the licence deletable.** The transport rests on an adopted premise, and
+   that premise is an argument rather than prose: `include_licence=False` removes
+   it, and the closure then contains no will conclusion at all. Nothing false is
+   derived without it. This mirrors `deliberation_space(include_norm=False)`, and
+   the mirroring is not decorative. Both are declared bridges and both are worth
+   exactly as much as their declarations.
+4. **Do not import either parent.** A combination field should not force its two
+   subjects into every install of an operation-space library, and a foundation
+   that imported its own combination field would cycle. The cost is that the
+   cross-checks can be skipped, so a skip is reported as a skip and recorded in
+   `VALIDATION.md`, never silently counted as a pass.
+
+None of this establishes that a transport is sound. `hyperphysics` records the
+absence of any soundness criterion for a transport as its own principal open
+problem, so there is currently nothing to derive such a licence from. A
+combination field also inherits every open obligation of both parents; citing a
+foundation does not discharge that foundation's obligations, and the combination
+cannot be sounder than either side of it.
 
 ### Grounded hyperlogic
 
