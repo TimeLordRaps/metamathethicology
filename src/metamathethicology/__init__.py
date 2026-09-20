@@ -1,4 +1,10 @@
-"""Metamathethicology: ordinatics-first, explicitly relative operation spaces."""
+"""Metamathethicology: ordinatics-first, explicitly relative operation spaces.
+
+The combination fields built on that substrate are submodules, imported directly:
+`metamathethicology.will_electrophysics` transports electrical law, cited from
+`hyperphysics`, onto the will tensor, cited from `hyperethics`. It is not
+re-exported here, because a combination field should be reached by name.
+"""
 
 from __future__ import annotations
 
