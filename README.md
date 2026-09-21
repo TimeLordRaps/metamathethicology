@@ -149,6 +149,11 @@ see Feferman's primary account, [Turing's Thesis](https://math.stanford.edu/~fef
 The separate [Metamath project](https://us.metamath.org/) checks proofs relative
 to specified axioms; this package does not implement its full language.
 
+**No preprint exists for this repository**, and none is drafted. That is
+recorded so a reader can tell "not yet" from "not needed": novelty and
+native adequacy are unestablished, and they are what a manuscript would
+have to argue.
+
 See [DESIGN.md](DESIGN.md) for the exact target distinctions and
 [VALIDATION.md](VALIDATION.md) for the local validation coordinate and exclusions.
 Novelty, native adequacy, unrestricted self-verification, and completeness remain

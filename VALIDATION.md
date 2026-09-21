@@ -232,3 +232,7 @@ The host checker trusts Python, its dependencies, and ordinary in-process object
 integrity. Decoding validates submitted representations, but arbitrary code with
 permission to mutate the running interpreter is outside the trust model. Bridge
 bases and assumption provenance are declarations; their truth is not certified.
+
+**No preprint exists for this repository**, none is drafted, and no check
+here bears on one. A combination field's manuscript would have to argue for
+the combination itself, and this receipt establishes nothing about it.
