@@ -301,7 +301,7 @@ derive d-every-crossing-is-bridged:
     -- Status: FORM, and CHECKED by construction on every run.
 
 derive d-inherited-failure-modes:
-    -- A borrower of the series form inherits NINE failure modes, not three.
+    -- A borrower of the series form inherits FOURTEEN failure modes, not three.
     -- hyperphysics SERIES_RLC_CONSTITUENTS records that the series relation is
     -- Kirchhoff applied to three constitutive relations, and
     -- inherited_failure_modes computes the closure rather than trusting the
