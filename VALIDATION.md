@@ -70,7 +70,11 @@ schema invalidates this receipt as evidence for the changed configuration.
 The tested implementation, tests, and package configuration are byte-bound in
 [`validation/source-manifest.json`](validation/source-manifest.json). The digest
 of its canonical `files` mapping is
-`558a4e94710722986e761cfa43677d0c863f3ba6b98ca9456d7da875e28f6871`. It was
+`98fe3b786db087e3b1a9d02231e5a370f150dafb8279b32cbd44c56cc76195be`. It was
+`558a4e94710722986e761cfa43677d0c863f3ba6b98ca9456d7da875e28f6871` before line
+304 of `will_electrophysics.hm` was corrected from nine inherited failure modes
+to the fourteen that `hyperphysics` computes at `ec9a9a2`. Only that file's
+entry differs. It was
 `c94eaf9241369a45c501cbed25f16fc8a7a18c965c57b4952a1d85247a52419b` when the
 second combination field was first committed, before two docstrings in
 `oreality.py` were corrected to say what is published rather than what is
@@ -79,8 +83,8 @@ committed. It was
 first combination field was added, and
 `31c3c83cced376070e4af0d4b31ed6760967d5a15a5bf6bbaf04d1414be13d76` before it.
 Since 2026-09-23 every entry is the SHA-256 of the file's LF-normalized bytes,
-the form Git stores. The Oreality section below says why the earlier digest is
-superseded rather than extended.
+the form Git stores. The Oreality section below says why the first combination
+field's digest is superseded rather than extended.
 This manifest identifies tested bytes; it does not sign or independently certify them.
 
 ## Observed checks
