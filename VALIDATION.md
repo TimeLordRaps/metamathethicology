@@ -1,9 +1,9 @@
 # Local validation receipt
 
-Date: 2026-09-20. Status: the initial implementation and the first combination
-field, `will_electrophysics`, are validated for the bounded claims below. Native
-self-derivation, the soundness of any transport, and the complete research target
-remain open.
+Date: 2026-09-20, extended 2026-09-23. Status: the initial implementation and
+two combination fields, `will_electrophysics` and `oreality`, are validated for
+the bounded claims below. Native self-derivation, the soundness of any transport
+or reading, and the complete research target remain open.
 
 This receipt extends the one dated 2026-09-19 rather than replacing it. The
 42-test core is unchanged and its wheel and build passes are not repeated here;
@@ -29,6 +29,11 @@ checks.
   that pass**. Every test in it completed in well under a second, but the guard
   itself was absent, and that is a difference from the earlier configuration
   rather than a detail.
+- The 2026-09-23 pass ran in a separate Git worktree on branch `feat/oreality`,
+  created from `b48f580`, before commit. It used Python 3.12.8, pytest 8.3.5 and
+  pytest-timeout from the base interpreter the virtual environment inherits, and
+  ruff 0.16.8. It ran with the project's own options, so **`--timeout=30` was in
+  force on that pass**.
 - `hyperphysics` and `hyperethics` are **not** dependencies, pinned or otherwise.
   They are cited by name and cross-checked only when importable. For the citation
   pass they were put on `PYTHONPATH` from adjacent working checkouts, which is a
@@ -36,6 +41,17 @@ checks.
   work at the time of the run. The cross-check therefore establishes agreement
   with the bytes described in those repositories' own receipts of the same date,
   and nothing about any published release of either.
+- For the 2026-09-23 pass the cited packages were again put on `PYTHONPATH` from
+  adjacent checkouts. The table gives their coordinates. The first two identify
+  the imported bytes by Git commit. The third does not: the `will_electrophysics`
+  citation checks passed against a `hyperethics` working tree that no commit
+  records.
+
+  | Cited package | Commit | Working tree |
+  |---|---|---|
+  | [hyperprobability](https://github.com/TimeLordRaps/hyperprobability) | `cb1b169d1d3c320b687a1c495bc43824c4ae2c65`, branch `feat/hyperprobability-0.1`, not merged | clean |
+  | [hyperphysics](https://github.com/TimeLordRaps/hyperphysics) | `ec9a9a25fdb5a840363e9fa416ac1ac27a900ef9`, `main` | `src/` clean; three uncommitted files outside it, none importable |
+  | [hyperethics](https://github.com/TimeLordRaps/hyperethics) | `f64a3b2247b0bf59d37600d5058076a470f7faad`, branch `l4-consent` | uncommitted changes inside `src/` |
 - Public source dependencies were exported from the exact commits below for the
   first test pass, then independently fetched and installed from those Git
   revisions for the installed-dependency pass. Existing uncommitted changes in
@@ -54,9 +70,13 @@ schema invalidates this receipt as evidence for the changed configuration.
 The tested implementation, tests, and package configuration are byte-bound in
 [`validation/source-manifest.json`](validation/source-manifest.json). The digest
 of its canonical `files` mapping is
-`7de4f373c19a106fcc2ecb7b3d0e891e7fce6adb50245bdc3f37391f748f158e`, and was
-`31c3c83cced376070e4af0d4b31ed6760967d5a15a5bf6bbaf04d1414be13d76` before the
-combination field was added.
+`c94eaf9241369a45c501cbed25f16fc8a7a18c965c57b4952a1d85247a52419b`. It was
+`7de4f373c19a106fcc2ecb7b3d0e891e7fce6adb50245bdc3f37391f748f158e` after the
+first combination field was added, and
+`31c3c83cced376070e4af0d4b31ed6760967d5a15a5bf6bbaf04d1414be13d76` before it.
+Since 2026-09-23 every entry is the SHA-256 of the file's LF-normalized bytes,
+the form Git stores. The Oreality section below says why the earlier digest is
+superseded rather than extended.
 This manifest identifies tested bytes; it does not sign or independently certify them.
 
 ## Observed checks
@@ -86,6 +106,21 @@ python -m build --no-isolation
   result stands for the bytes it covered and is not extended to the 100 tests
   added since; those were exercised in the source tree only. Nothing here
   establishes that the new module packages or installs correctly.
+- **2026-09-23, the second combination field. The suite was run in three
+  configurations, all with `--timeout=30` in force, and all three are reported
+  here.**
+  - With no cited package importable: **213 passed, 70 skipped.** The skips are
+    `tests/test_citations.py`, skipped as one module, and the 69 checks in
+    `tests/test_oreality_citations.py`.
+  - With `hyperprobability` and `hyperphysics` on the path: **282 passed, 1
+    skipped.** Every Oreality citation check executed. The skip is
+    `tests/test_citations.py`, which also needs `hyperethics`.
+  - With all three on the path: **308 passed, zero skips.**
+  - The rootdir was the worktree, and `metamathethicology.oreality` imported. That
+    module exists only in the worktree, so the package under test was the
+    worktree's and not the adjacent checkout's.
+  - Lint passed with no findings. Every Python block in `README.md` was executed
+    and ran. The wheel and build runs were not repeated.
 - The closure oracle independently enumerates every closed superset of a small
   presented theory, then intersects them. All 16 starting assumption sets agree
   with closure/replay. This is bounded test evidence, not a general machine proof.
@@ -151,6 +186,66 @@ python -m build --no-isolation
   the transport does not assert that any universe is a simulation.
 - The superseded capacitance readings are asserted to be kept rather than erased,
   because a resolution is only informative against what it ruled out.
+
+### Oreality, the second combination field
+
+- **Every reading rests on the licence, and that is checked rather than
+  asserted.** `oreality_space()` derives four realm readings: Areality and
+  Preality at omega+1, Oreality at omega+2 and our reality at omega+3.
+  `oreality_space(include_licence=False)` takes zero steps. Nothing false is
+  derived without the licence, and nothing about any realm is derived at all.
+- **Every rule crosses METAMATH into METAPHYSICS and names a bridge.** Each
+  bridge is built from its realm's citation and disclaimer. A test builds a
+  reading rule with no bridge and asserts that `Rule` refuses it.
+- **The declaration is held verbatim.** Each realm's fragment is asserted to
+  occur in it. A paraphrase, an undeclared realm and a realm that arises from
+  itself are each refused at construction.
+- **The O's expansion is asserted to carry no weight.** It is labelled
+  PROPOSED, and no judgment in the space mentions it.
+- **Every citation is checked against hyperprobability's SPEC and package.** All
+  14 headings, with their claim labels, occur exactly once. Every quotation
+  occurs inside the result it is cited from, and every cited code name resolves.
+- **Every recorded value is what the package computes**, for all seven
+  presentations: the in-universe law, frequency, hyperprobability and strange
+  loops.
+  - For every presentation, collapsing every attractor makes the law at omega
+    equal the recorded in-universe law (Proposition 2.7(c)).
+  - The three Kac records match, including tightness. The clock is tight at 2;
+    the coins, at omega, are not.
+  - Proposition 4.9 is exercised on the coins over four event and start pairs,
+    and Corollary 5.3 on the four witnesses without strange loops.
+  - Theorem 5.2 is exercised on LOOP: all the mass that arrives at omega arrives
+    through the loop on {a, b}.
+  - `hyperprobability` refuses a limit key that is not an attractor. That is the
+    one coherence check `Presentation` leaves to it.
+- **Two universal claims are refuted conclusively.**
+  - That our reality fixes Oreality: LOOP and its collapse share an in-universe
+    law, and their guarantees are omega and infinity.
+  - That possibility fixes our reality: the fair and biased coins share every
+    support and every guarantee, and their frequencies are 1/2 and 1/3.
+
+  Each refutation re-checks its witnesses when called. For each, a test
+  substitutes a witness that has lost its shape and asserts that the refutation
+  raises instead of passing vacuously.
+- **The spring stays OPEN and is checked only as a candidate.**
+  - The quoted form equals the `hyperphysics` series-rlc form exactly.
+  - `hyperphysics.validate` accepts the candidate's shape as a transport.
+  - Adopting it would inherit 14 failure modes: 3 of the law's own and 11 from
+    its four constituents, as `inherited_failure_modes` computes them.
+
+  No rule in the space takes a spring premise.
+- **The manifest is corrected, not extended.**
+  - The 2026-09-20 manifest recorded three entries as SHA-256 digests of CRLF
+    bytes: `__init__.py`, `examples.py` and `will_electrophysics.py`. The
+    repository stores those files with LF, because `.gitattributes` sets
+    `eol=lf`, and the other eleven entries are digests of LF bytes.
+  - Converting each committed file to CRLF reproduces the three recorded digests
+    exactly. The tested bytes therefore differed from the committed ones in line
+    endings only.
+  - Every entry is now the digest of the file's LF-normalized bytes, the form
+    Git stores.
+  - `__init__.py` also changed on 2026-09-23. The new digest identifies
+    different bytes by construction and certifies nothing about the old ones.
 
 ## Adjacent foundational repair
 
@@ -222,6 +317,26 @@ ordinal repair; its own ranks use Ordinatics directly.
   force of `norm-inhabits`, and the **Universal Consistency Self-Maintenance
   Paradox** as open. Citing a foundation does not discharge that foundation's
   obligations, and a combination cannot be sounder than either side of it.
+- **No realm reading is established, and `hyperprobability` defines no realm.**
+  Every reading in `oreality_space` rests on an adopted licence. That the licence
+  is load-bearing is checked; that any reading is true of its realm is not. The
+  SPEC labels its own readings of the user's phrases INTERPRETATION.
+- **`hyperprobability`'s results are cited, not re-proved.** Its SPEC says that
+  no proof in it is machine-checked, and the cited commit is on a branch that
+  has not been merged. The witnesses exhibit its theorems on seven finite
+  presentations. They do not prove them, although each of the two refutations
+  is conclusive because one countermodel settles a universal claim.
+- **The dimension counts, the O's expansion and the spring are unread.** "4D" and
+  "5+dimensional" are preserved and attach to nothing, because
+  `hyperprobability` has no dimensions. The expansion of the O is PROPOSED, and
+  no spring law is adopted.
+- **The stage indices of the readings are a convention.** They order when each
+  reading becomes available. They do not rank the realms, and they are not time.
+- **Other statements of reality kinds are not reconciled.** `oreality.hm` records
+  two such points as open rather than resolving them: another expansion the user
+  has given for Areality, and a reality-kinds layer drafted for `hyperethics`
+  that states no order and no projection. Two of the field's seven graduation
+  criteria are discharged.
 - Existing Hypermath and Ordinatics calculi were inspected but not edited. Their
   full suites were outside this change; integration tests cover only the listed
   imported operations, not those projects' complete correctness. Those broader
