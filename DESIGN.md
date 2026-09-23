@@ -144,6 +144,29 @@ any later combination field should carry too.
    cross-checks can be skipped, so a skip is reported as a skip and recorded in
    `VALIDATION.md`, never silently counted as a pass.
 
+`oreality` is the second, and its second parent is a declaration rather than a
+field. Its author declared four realms in one statement and placed their
+definition here. No published source states those realms. Earlier writing uses
+some of the names, but none of it is published and none of it names Oreality, so
+the declaration is quoted verbatim and treated as their only referent. That is
+constraint 1 applied to a parent that is not a package: `Realm` refuses a
+fragment the declaration does not contain, as `Correspondence` refuses a
+component `hyperethics` does not declare.
+
+The mathematical parent, `hyperprobability`, is cited by SPEC number, claim label
+and quotation, and a citation carrying a label the SPEC does not use cannot be
+built. Recorded values of what that package computes are checked at construction
+against three of its results: Definition 2.6, Corollary 5.3 and Theorem 6.2.
+Some transcription errors are therefore unrepresentable, not just tested for.
+
+The field adds one thing the first did not need: refutations beside the
+readings. Our reality does not fix Oreality, and possibility does not fix our
+reality. Each is settled by one countermodel that `hyperprobability` computes.
+The countermodels are statements about that package's structure and hold
+without the licence; only reading them as statements about realms needs it. The
+licence says what the structure may be read as. The countermodels show that each
+"through" in the declaration carries information of its own.
+
 None of this establishes that a transport is sound. `hyperphysics` records the
 absence of any soundness criterion for a transport as its own principal open
 problem, so there is currently nothing to derive such a licence from. A

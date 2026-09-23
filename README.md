@@ -114,6 +114,69 @@ the two in conflict. Soundness of the transport is **NOT ESTABLISHED**, and
 `hyperphysics` records that no criterion for establishing it exists. Two of the
 six graduation criteria are discharged.
 
+`metamathethicology.oreality` is the second combination field, and its second
+parent is a declaration rather than a package:
+
+> And also then this allows for us in metamathethicology through ordinatics to
+> define the Oreality, we already should have Areality (Abstraction reality where
+> abstract thoughts exist), Oreality springs out from Areality (might actually use
+> spring like hyperphysical equations), then also Preality (Possibility reality)
+> [holds 5+dimensional objects like the block multiverse]. Our reality is the 4D
+> projection of possibility reality through our coherent projections of Areality
+> hyperprobabilistically through Oreality.
+
+The mathematical parent is
+[`hyperprobability`](https://github.com/TimeLordRaps/hyperprobability). It
+states contained universes, the law at every ordinal stage below ω^ω, strange
+loops, the least stage that guarantees an event, and the Kac bridge. No
+published source states the realms, so the declaration itself is the referent:
+every realm quotes it verbatim, and `Realm` refuses a fragment it does not
+contain. Under an adopted licence the four realms are read as follows:
+
+- Areality through its coherent projections, which are contained presentations
+  whose coherence is checked when they are built;
+- Preality as the support graphs and the transfinite runs they allow;
+- Oreality as the ordinal-staged law;
+- our reality as the in-universe law.
+
+```python
+from metamathethicology import close, replay
+from metamathethicology.oreality import (
+    oreality_space,
+    our_reality_does_not_fix_oreality,
+    possibility_does_not_fix_our_reality,
+)
+
+space = oreality_space()
+read = [j for j in replay(space, close(space)) if j.predicate == "realm-reading"]
+assert [j.arguments[0] for j in read] == ["Areality", "Preality", "Oreality", "our reality"]
+
+# Two claims the declaration might seem to license are refuted by countermodel.
+loop, collapsed = our_reality_does_not_fix_oreality()  # one in_uni; guarantees ω and ∞
+fair, biased = possibility_does_not_fix_our_reality()  # one guarantee; frequencies 1/2, 1/3
+
+# As before, the readings rest on the licence, and deleting it deletes them.
+assert not close(oreality_space(include_licence=False)).steps
+```
+
+Four things are held back on purpose:
+
+- The reading of the O as Ordinal is PROPOSED, not declared, and nothing rests
+  on it.
+- The dimension counts are preserved and read by nothing, because
+  hyperprobability has no dimensions.
+- The spring is OPEN. A series-RLC candidate from `hyperphysics` is recorded with
+  its citation and four reasons it is not adopted, and no rule takes it as a
+  premise.
+- Our reality is read as a law, not as one realized run. The reading that was
+  passed over is kept.
+
+`tests/test_oreality_citations.py` holds the citations to their sources under the
+same skip rule. Each heading, quote, code name and recorded value is checked
+against hyperprobability's SPEC and package, and the spring candidate against
+`hyperphysics`. The layer specification is [`oreality.hm`](oreality.hm). Two of
+its seven graduation criteria are discharged.
+
 ## Relation to the proposed libraries
 
 | Surface | Present implementation | Next mathematical obligation |

@@ -1,0 +1,410 @@
+-- oreality.hm
+-- Oreality: the combination field
+-- metamathethicology | metamath x metaphysics
+--
+-- NO LAYER INDEX, DELIBERATELY. This file is not oreality_L2.hm. This package
+-- indexes by ORDINAL STAGE, and the readings below live at stages omega through
+-- omega+3. Asserting a layer index here would impose a second, conflicting
+-- indexing scheme on material that already has one. The stage IS the index.
+--
+-- Cites: hyperprobability/SPEC.md    -- the mathematical half, by result number.
+--        hyperphysics/electrical.hm  -- series-rlc, by name, as an OPEN spring
+--                                       candidate only. No rule takes it.
+-- Imports: neither. Both are cited as strings and cross-checked by
+--          tests/test_oreality_citations.py whenever they are importable. A
+--          skip there means the citations were NOT checked on that run.
+--
+-- USER-DECLARED (Tyler Roost, 2026-09-23), the declaration this file exists for:
+--   "And also then this allows for us in metamathethicology through ordinatics
+--    to define the Oreality, we already should have Areality (Abstraction
+--    reality where abstract thoughts exist), Oreality springs out from Areality
+--    (might actually use spring like hyperphysical equations), then also
+--    Preality (Possibility reality) [holds 5+dimensional objects like the block
+--    multiverse]. Our reality is the 4D projection of possibility reality
+--    through our coherent projections of Areality hyperprobabilistically
+--    through Oreality."
+-- "This" is hyperprobability, the package the declaration was said about.
+-- The word "might" is preserved because it is accurate. Nothing below upgrades
+-- it.
+--
+-- The declaration places the field here and supplies both halves. The
+-- mathematical half is hyperprobability: contained universes, the law at every
+-- ordinal stage, strange loops, hyperprobability H and the Kac bridge, each
+-- stated once in its SPEC under a claim label. The realm half has no committed
+-- statement anywhere this file can cite, so THE DECLARATION IS THE REFERENT.
+-- Every realm quotes it verbatim, and Realm refuses to construct from a
+-- fragment the declaration does not contain.
+--
+-- PROPOSED, NOT DECLARED: the O in Oreality read as Ordinal. The declaration
+-- defines Oreality "through ordinatics" and routes our reality
+-- "hyperprobabilistically through Oreality", and both point that way. Tyler has
+-- not said so, and no reading below depends on it. See nd-o-expansion.
+--
+-- Status: FORM (coherent projections, the four readings, two conclusive
+--               refutations, the Kac exhibit, and the operation space);
+--         FRAME residuals documented, NOT discharged:
+--           - the warrant for the readings as such (GC-3),
+--           - what the O stands for (GC-4),
+--           - the spring law (GC-5),
+--           - any reading of the declared dimension counts (GC-6),
+--           - that the stage indices are the right ones (GC-7).
+-- =============================================================================
+
+
+-- =============================================================================
+-- SECTION I: THE LICENCE
+-- The assumption the entire field rests on, written as a premise.
+-- =============================================================================
+
+axiom ax-reading-licence:
+    -- hyperprobability's structure may read the declared realms.
+    -- ADOPTED, NOT DERIVED. hyperprobability's SPEC defines no realm. It reads
+    -- each of Tyler's phrases one way and labels the reading INTERPRETATION
+    -- (its section 0.1, Remark 1.3 and Remark 5.4), so no result there
+    -- establishes that its structure is what any realm is. There is nothing
+    -- to derive this licence FROM. It is written as an explicit METAPHYSICS
+    -- premise of every rule below, not as prose, so that its removal is a
+    -- one-argument operation.
+
+derive d-licence-is-load-bearing:
+    -- Removing the licence removes every realm reading.
+    -- step 1: every rule below takes the licence as a premise.
+    -- step 2: the remaining premises are METAMATH cited results and
+    --         METAPHYSICS declared realms, and no rule fires without the
+    --         licence as well.
+    -- step 3: so the positive closure contains no realm reading.
+    -- CONCLUSION: nothing false is derived without the licence. NOTHING ABOUT
+    -- ANY REALM IS DERIVED AT ALL.
+    -- Status: FORM, and CHECKED: oreality_space(include_licence=False) and its
+    -- test.
+
+axiom ax-cite-do-not-restate:
+    -- A result is stated ONCE, in the field that owns it, and cited by number
+    -- here. Each citation carries the SPEC's claim label, so a reader can tell
+    -- a DEFINITION from a PROVED result from an INTERPRETATION without another
+    -- lookup, and its quotes are held to the SPEC character for character.
+    -- This applies to the realm half too: the declaration is quoted, never
+    -- paraphrased, because a disclaimer needs a FIXED REFERENT and a paraphrase
+    -- is not one.
+
+
+-- =============================================================================
+-- SECTION II: THE REALMS AS DECLARED
+-- USER-DECLARED, quoted verbatim. Nothing in this section is a reading.
+-- =============================================================================
+
+primitive Realm :: Type
+    -- One declared realm: its verbatim fragment of the declaration, its
+    -- reading, what the reading transports, what it does not, and the SPEC
+    -- results it cites. Neither parent contains this type. It is the
+    -- combination proper.
+
+axiom ax-areality:
+    -- "Areality (Abstraction reality where abstract thoughts exist)"
+    -- The declaration says "we already should have Areality". This file cites
+    -- no earlier statement of it; the declaration is the referent.
+
+axiom ax-oreality:
+    -- "Oreality springs out from Areality (might actually use spring like
+    --  hyperphysical equations)"
+
+axiom ax-preality:
+    -- "Preality (Possibility reality) [holds 5+dimensional objects like the
+    --  block multiverse]"
+
+axiom ax-our-reality:
+    -- "Our reality is the 4D projection of possibility reality through our
+    --  coherent projections of Areality hyperprobabilistically through
+    --  Oreality."
+
+axiom ax-declared-order:
+    -- Oreality springs out from Areality. Our reality passes through
+    -- possibility reality, through coherent projections of Areality, and
+    -- through Oreality. These are the declaration's own relations, and they
+    -- are the only order this file puts on the realms. See d-readings-are-staged.
+
+
+-- =============================================================================
+-- SECTION III: THE READINGS
+-- Each is licence-dependent. Each cites the results it rests on.
+-- =============================================================================
+
+axiom ax-read-areality:
+    -- cites hyperprobability: Definition 1.1, Remark 1.3.
+    -- reads: NOT Areality itself but its coherent projections, read as
+    -- contained presentations: finitely many states, exact rational rows
+    -- summing to one, and limit targets that are states.
+    -- transports: that coherence is containment, which Remark 1.3 calls the
+    -- constraint, so whether a projection is coherent is CHECKED when it is
+    -- built rather than assumed. Presentation refuses an incoherent one.
+    -- does NOT transport: which abstract thoughts exist, what a thought is,
+    -- whether Areality also holds incoherent objects, or that a presentation
+    -- is a thought.
+
+axiom ax-read-preality:
+    -- cites hyperprobability: Proposition 4.9, Remark 2.8.
+    -- reads: which transitions are possible -- the support graphs of K_0
+    -- through K_d, and the transfinite runs they allow. Each run is a block of
+    -- every stage below omega^omega, and the runs of one presentation are its
+    -- block multiverse.
+    -- transports: that possibility is support and not weight. Proposition 4.9
+    -- proves H depends only on the support graphs, so Preality fixes every
+    -- guarantee of a presentation and not its in-universe law.
+    -- does NOT transport: the count 5+ or any dimension, block-universe
+    -- physics, identification with any cosmology stated elsewhere, or any
+    -- weight or probability, which belong to presentations.
+
+axiom ax-read-oreality:
+    -- cites hyperprobability: Definitions 1.2, 2.1, 3.2 and 4.1, Theorem 5.2,
+    -- Corollary 5.3.
+    -- reads: the ordinal-staged law -- the law mu K_alpha at every stage alpha
+    -- below omega^omega, and the guarantees H it fixes, generated level by
+    -- level from a coherent projection.
+    -- transports: "springs out from Areality" as GENERATION: the level
+    -- recursion builds every stage law from a presentation. At a limit stage
+    -- it resolves an attractor to anything but that attractor's in-universe
+    -- law only at a strange loop, which is the only way first arrival can
+    -- jump at a limit (Theorem 5.2). Without strange loops, the chance of
+    -- having met an event is constant from omega on (Corollary 5.3).
+    -- does NOT transport: what the O stands for, any spring law, time (a stage
+    -- counts evaluations, not seconds), which run is realized, or that any
+    -- universe is a simulation.
+    -- The stages are ordinals because the declaration defines Oreality
+    -- "through ordinatics", not because of the letter O.
+
+axiom ax-read-our-reality:
+    -- cites hyperprobability: Definition 2.6, Proposition 2.7, Remark 2.8,
+    -- Proposition 4.9, Remark 5.4, Theorem 6.2.
+    -- reads: the in-universe law in_uni -- ordinary probability, the law at
+    -- omega once every attractor collapses.
+    -- READINGS CONSIDERED, kept because a choice is only informative against
+    -- what it passed over:
+    --   (a) one realized run, a single history drawn   NOT ADOPTED -- nothing
+    --       from Preality                              in hyperprobability
+    --                                                  selects which run occurs
+    --   (b) the in-universe law                        ADOPTED -- the
+    --                                                  declaration calls our
+    --                                                  reality a projection,
+    --                                                  and in_uni is one; see
+    --                                                  d-our-reality-is-a-projection
+    -- transports: that our reality passes through Areality, because its
+    -- weights come from a coherent projection and not from possibility; that it
+    -- is reached hyperprobabilistically, see d-oreality-bounds-our-reality;
+    -- and that it is blind to strange loops (Proposition 2.7).
+    -- does NOT transport: the counts 4 and 5+, spacetime, any physics,
+    -- identification with any other named reality, or which run is ours.
+
+derive d-our-reality-is-a-projection:
+    -- Our reality is a projection in two exact senses.
+    -- step 1: in_uni depends only on K_0 (Proposition 2.7), so it is the same
+    --         for a presentation and for the presentation with every limit
+    --         rule removed.
+    -- step 2: when every attractor collapses, the law at omega is in_uni
+    --         (Proposition 2.7(c)).
+    -- step 3: the law at a stage is the one-stage marginal of the process of
+    --         whole runs (Remark 2.8).
+    -- CONCLUSION: our reality is the stage-omega marginal of the runs of the
+    -- collapsed presentation: a projection of the runs Preality holds onto one
+    -- stage, through the weights a coherent projection supplies.
+    -- Status: FORM from cited results, and CHECKED on every witness: the
+    -- collapsed law at omega equals the recorded in-universe law.
+
+
+-- =============================================================================
+-- SECTION IV: WHAT EACH REALM FIXES, AND WHAT IT DOES NOT
+-- Two tempting claims, refuted. One cited theorem, exhibited.
+-- =============================================================================
+
+non-derive nd-our-reality-fixes-oreality:
+    -- REFUTED: that our reality determines Oreality.
+    -- The tempting inference: our reality comes through Oreality, so Oreality
+    -- can be recovered from what our reality shows.
+    -- COUNTERMODEL: the loop {a, b} with its strange loop exiting to `out`, and
+    -- the same kernel collapsed. Both have in-universe law 1/2 on a and 1/2 on
+    -- b, and `out` has frequency 0 in both. In the loop, H(out) = omega. In the
+    -- collapse, H(out) is infinite. A second witness exits through a
+    -- three-step chain: same in-universe law, H(out) = omega + 3.
+    -- CONCLUSIVE: one countermodel settles a universal claim.
+    -- CONSEQUENCE: our reality is blind to strange loops. Oreality carries
+    -- information our reality does not.
+
+non-derive nd-possibility-fixes-our-reality:
+    -- REFUTED: that Preality, or Oreality's guarantees, determine our reality.
+    -- COUNTERMODEL: a fair coin and a biased coin allow exactly the same
+    -- transitions. They share their possibility, and by Proposition 4.9 every
+    -- guarantee: from T, H(H) = omega in both. The in-universe frequency of H
+    -- is 1/2 under one and 1/3 under the other.
+    -- CONCLUSIVE: one countermodel settles a universal claim.
+    -- CONSEQUENCE: "through our coherent projections of Areality" is
+    -- load-bearing. What separates the coins is weight, and weight is what a
+    -- coherent projection adds to possibility.
+
+derive d-oreality-bounds-our-reality:
+    -- "hyperprobabilistically", read through the Kac bridge.
+    -- step 1: Theorem 6.2, PROVED in hyperprobability: inside an attractor A
+    --         meeting an event E, pi_A(E) >= 1/iota(H+_A(E)), with equality
+    --         exactly when H+ is a finite N and every return takes N steps.
+    -- step 2: the clock returns to tock in exactly two steps, so H+ = 2 and the
+    --         bound is TIGHT: the frequency is exactly 1/2.
+    -- step 3: the coins return to H surely but within no bounded number of
+    --         steps, so H+ = omega and the bound is the infinitesimal 1/omega.
+    --         It holds strictly, and equally for the frequencies 1/2 and 1/3.
+    -- CONCLUSION: Oreality bounds our reality from below without fixing it.
+    -- Status: the bound is PROVED where it is stated; the witnesses exhibit
+    -- its two cases and establish nothing beyond them. CHECKED against kac.
+    --
+    -- Together with the two refutations: Preality fixes every H but neither the
+    -- stage laws nor our reality; our reality does not fix H; a coherent
+    -- projection fixes all of them. Of the declaration's terms, the coherent
+    -- projection is the one that determines the rest.
+
+
+-- =============================================================================
+-- SECTION V: WHAT DOES NOT TRANSPORT
+-- =============================================================================
+
+non-derive nd-dimensions-transport:
+    -- The declared counts do NOT transport. hyperprobability has no dimensions.
+    -- A universe there is a finite set of states with exact rational laws, and
+    -- nothing in it is a spatial or temporal axis. "4D" and "5+dimensional" are
+    -- preserved as stated and read by nothing here. Stated once as
+    -- DIMENSIONS_DO_NOT_TRANSPORT, and the two realms the counts touch,
+    -- Preality and our reality, each disclaim them.
+
+open nd-o-expansion:
+    -- What the O in Oreality stands for is NOT fixed.
+    -- PROPOSED: Ordinal, on the evidence of "through ordinatics" and
+    -- "hyperprobabilistically through Oreality". It is recorded as
+    -- O_IS_ORDINAL, which is no assumption's basis. No judgment in
+    -- oreality_space contains the word, and a test checks that.
+
+
+-- =============================================================================
+-- SECTION VI: THE SPRING
+-- =============================================================================
+
+open nd-spring-law:
+    -- USER-DECLARED: "(might actually use spring like hyperphysical equations)"
+    -- CANDIDATE, recorded and NOT ADOPTED:
+    --   cites hyperphysics:series-rlc -- L * d2Q/dt2 + R * dQ/dt + (1/C) * Q = V
+    --   target form: the stage laws of an attractor swing about its rest law
+    --   pi_A; a collapse returns them to rest at the limit, and a strange loop
+    --   releases them to its exit e_A.
+    --   does NOT transport: the henry, the ohm, the farad, the volt and the
+    --   coulomb; any physical mechanism; continuous time; any assignment of L,
+    --   R, C or V to part of a universe.
+    -- NOT ADOPTED BECAUSE:
+    --   - the declaration says "might";
+    --   - series-rlc is second order in continuous time, while stage laws are
+    --     first order and discrete: the law at alpha + 1 is the law at alpha
+    --     times K_0;
+    --   - nothing here determines which part of a universe L, R, C or V is;
+    --   - hyperphysics states no discrete-time law a stage recursion could
+    --     borrow instead.
+    -- A borrower of the series form would inherit every failure mode of
+    -- series-rlc and of its four constituents. hyperphysics'
+    -- inherited_failure_modes computes that set, and the citation test checks
+    -- the candidate against it rather than against a count written here.
+    -- No rule takes a spring premise, and no reading depends on one.
+
+
+-- =============================================================================
+-- SECTION VII: THE READINGS AS AN OPERATION SPACE
+-- =============================================================================
+
+derive d-every-reading-is-bridged:
+    -- Every rule in oreality_space crosses METAMATH into METAPHYSICS.
+    -- step 1: this package's Rule raises on a cross-domain inference whose
+    --         bridge is None.
+    -- step 2: each rule's bridge is built from its realm's citation, its
+    --         transports clause, and its does-not-transport clause.
+    -- step 3: so a realm that disclaimed nothing could not be turned into a
+    --         rule, and the space would not construct.
+    -- CONCLUSION: the bridge discipline is ENFORCED here, not documented.
+    -- Status: FORM, and CHECKED by construction on every run.
+
+derive d-readings-are-staged:
+    -- A reading is available one stage after everything it reads through.
+    -- step 1: the cited results, the declared realms and the licence are
+    --         assumptions at omega.
+    -- step 2: Areality and Preality are read at omega+1.
+    -- step 3: Oreality is read at omega+2, after the Areality reading, because
+    --         it springs out from Areality.
+    -- step 4: our reality is read at omega+3, after all three.
+    -- CONCLUSION: the stages follow ax-declared-order and nothing else.
+    -- Status: FORM, and CHECKED: close(oreality_space()).
+
+open nd-stage-semantics:
+    -- The stages omega through omega+3 order AVAILABILITY. They do not rank
+    -- the realms, and nothing here says one realm is more real than another.
+    -- They are dimensionless language ranks: not time, not energy, and not a
+    -- measure of how far a reading has been justified.
+    -- No argument is offered that omega is the right starting stage rather
+    -- than a convention inherited from this package's core.
+
+
+-- =============================================================================
+-- SECTION VIII: TENSIONS PRESERVED
+-- Recorded, not resolved.
+-- =============================================================================
+
+open nd-areality-expansion:
+    -- This declaration expands Areality as "Abstraction reality where abstract
+    -- thoughts exist". Tyler has elsewhere expanded it as "abstract artificial
+    -- reality". Both are preserved and neither is chosen. The reading in
+    -- ax-read-areality reads only Areality's coherent projections, and holds
+    -- under either expansion.
+
+open nd-reality-kinds-elsewhere:
+    -- A reality-kinds layer an agent drafted for hyperethics, not yet
+    -- committed, states no order among reality kinds and no projection
+    -- operator. It is a draft, not a statement Tyler made. This file
+    -- orders only when readings become available (nd-stage-semantics), which
+    -- is compatible with the first. It reads our reality as a projection
+    -- because the declaration calls it one, which is in tension with the
+    -- second. Reconciliation is owed and is not attempted here.
+
+
+-- =============================================================================
+-- SECTION IX: GRADUATION CRITERION
+-- =============================================================================
+
+graduation:
+    -- GC-1: every cross-domain bridge declared, against a fixed referent.
+    --       DISCHARGED -- ax-cite-do-not-restate and d-every-reading-is-bridged.
+    --       Fourteen results cited by number and label, their headings,
+    --       quotes and code names cross-checked against hyperprobability, and
+    --       every recorded value recomputed there; every realm fragment
+    --       checked verbatim against the declaration. The cross-checks skip if
+    --       the package is absent, and a skip is recorded as a skip.
+    -- GC-2: each "through" in the declaration shown to carry information.
+    --       DISCHARGED by countermodel. The coherent projection carries weight
+    --       that possibility lacks (nd-possibility-fixes-our-reality), and
+    --       Oreality carries strange loops that our reality cannot see
+    --       (nd-our-reality-fixes-oreality). The other links, "springs out
+    --       from" and "projection of", are read, not tested by countermodel.
+    -- GC-3: warrant for the readings as such. NOT DISCHARGED.
+    --       hyperprobability labels its own readings INTERPRETATION, and
+    --       nothing here upgrades a reading into a derivation.
+    -- GC-4: what the O stands for. NOT DISCHARGED -- nd-o-expansion.
+    -- GC-5: the spring law. NOT DISCHARGED -- nd-spring-law.
+    -- GC-6: any reading of the declared dimension counts. NOT DISCHARGED --
+    --       nd-dimensions-transport.
+    -- GC-7: that the stage indices are the right ones. NOT DISCHARGED --
+    --       nd-stage-semantics.
+    --
+    -- Two of seven discharged.
+    --
+    -- INHERITED AND NOT COUNTED ABOVE: hyperprobability's own open questions
+    -- travel with the results this field cites -- stages below omega^omega
+    -- only, finite state spaces only, stage-independent limit rules, whether
+    -- its ordinal probability supports conditioning or independence, a
+    -- quantitative theory of quantiles, metastability (a CONJECTURE), and an
+    -- axiomatic characterization with machine-checked proofs. Its name is
+    -- OPEN, and no proof in it is machine-checked. This package's own open
+    -- obligations travel too. Citing a result does not discharge its field's
+    -- obligations, and a combination field cannot be sounder than either
+    -- parent.
+    --
+    -- This field does not graduate, and no claim of an Oreality as an
+    -- established subject is made anywhere in this file.
