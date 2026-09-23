@@ -128,8 +128,8 @@ parent is a declaration rather than a package:
 The mathematical parent is
 [`hyperprobability`](https://github.com/TimeLordRaps/hyperprobability). It
 states contained universes, the law at every ordinal stage below ω^ω, strange
-loops, the least stage that guarantees an event, and the Kac bridge. The realms
-have no committed statement anywhere, so the declaration itself is the referent:
+loops, the least stage that guarantees an event, and the Kac bridge. No
+published source states the realms, so the declaration itself is the referent:
 every realm quotes it verbatim, and `Realm` refuses a fragment it does not
 contain. Under an adopted licence the four realms are read as follows:
 

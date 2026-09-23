@@ -6,7 +6,7 @@
     "src/metamathethicology/__init__.py": "184467208be8c72d6900f010027dafc864cdf3b1faf716ebe1a65e9a33712c44",
     "src/metamathethicology/__main__.py": "2afd5814a2d959619ced714cdd438d3d3feb046480b233450eb24b57c04b70c8",
     "src/metamathethicology/examples.py": "1ee5b2b9ee210c1aa3250c7c9b1c10073b5c7d9cc6bc8ab10daf281de8a41729",
-    "src/metamathethicology/oreality.py": "1617c34ed0b2d17c81174af6cb40bcd1300d2ed72d38145db48890d3e2bb5fbc",
+    "src/metamathethicology/oreality.py": "500e3d2a440241ad6f70af50e5f77b02499aa9c5fc9e92ac52c123db2038396b",
     "src/metamathethicology/representation.py": "83639bcd90fde558a89f1450afc7fef8c281b8c727044f042f613b5468d4b974",
     "src/metamathethicology/spaces.py": "b1c9e1fa7955f6bc856123ca49db34903ed908c65f1c52ba041dfb8f87f33a67",
     "src/metamathethicology/will_electrophysics.py": "532b103d5e0deaeb7319e2715e7287345c805c72176bed2743538645e0589456",
@@ -19,5 +19,5 @@
     "tests/test_spaces.py": "ed3d147718a238bfa0034982000342d988f384db50c4809e49e51ae6da16a2ad",
     "tests/test_will_electrophysics.py": "2e199877079291a4b84a69566c017d2069048ed42c5628f86490803fffd044dc"
   },
-  "manifest_sha256": "c94eaf9241369a45c501cbed25f16fc8a7a18c965c57b4952a1d85247a52419b"
+  "manifest_sha256": "558a4e94710722986e761cfa43677d0c863f3ba6b98ca9456d7da875e28f6871"
 }
