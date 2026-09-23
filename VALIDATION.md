@@ -70,7 +70,11 @@ schema invalidates this receipt as evidence for the changed configuration.
 The tested implementation, tests, and package configuration are byte-bound in
 [`validation/source-manifest.json`](validation/source-manifest.json). The digest
 of its canonical `files` mapping is
-`c94eaf9241369a45c501cbed25f16fc8a7a18c965c57b4952a1d85247a52419b`. It was
+`558a4e94710722986e761cfa43677d0c863f3ba6b98ca9456d7da875e28f6871`. It was
+`c94eaf9241369a45c501cbed25f16fc8a7a18c965c57b4952a1d85247a52419b` when the
+second combination field was first committed, before two docstrings in
+`oreality.py` were corrected to say what is published rather than what is
+committed. It was
 `7de4f373c19a106fcc2ecb7b3d0e891e7fce6adb50245bdc3f37391f748f158e` after the
 first combination field was added, and
 `31c3c83cced376070e4af0d4b31ed6760967d5a15a5bf6bbaf04d1414be13d76` before it.

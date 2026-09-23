@@ -15,10 +15,11 @@ USER-DECLARED (Tyler Roost, 2026-09-23), preserved as stated. "This" is
 The declaration places the field here and supplies its two halves. The
 mathematical half is stated in `hyperprobability`: contained universes, the law
 at every ordinal stage, strange loops, hyperprobability and the Kac bridge, each
-stated once in its SPEC under a claim label. The realm half is not stated
-anywhere in committed form, so the declaration itself is the referent. Every
-realm below quotes it verbatim, and `Realm` refuses a fragment the declaration
-does not contain.
+stated once in its SPEC under a claim label. The realm half has no published
+statement anywhere. Earlier writing uses some of these names, but none of it is
+published and none of it names Oreality, so the declaration itself is the
+referent. Every realm below quotes it verbatim, and `Realm` refuses a fragment
+the declaration does not contain.
 
 THE DEFINITION
 --------------
@@ -809,8 +810,8 @@ class Realm:
     """One declared realm, quoted from the declaration and read through hyperprobability.
 
     `declared` must occur verbatim in `DECLARATION`: the realm half of this field
-    has no other statement, so a paraphrase would leave it with no referent at
-    all. `cites` names the SPEC results the reading rests on, and must name
+    has no other published statement, so a paraphrase would leave it with no
+    referent at all. `cites` names the SPEC results the reading rests on, and must name
     cited results. `arises_from` records the declared order, in which Oreality
     springs out from Areality and our reality passes through the other three.
 

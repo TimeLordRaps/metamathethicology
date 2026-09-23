@@ -146,8 +146,9 @@ any later combination field should carry too.
 
 `oreality` is the second, and its second parent is a declaration rather than a
 field. Its author declared four realms in one statement and placed their
-definition here. Nothing else states those realms in committed form, so the
-declaration is quoted verbatim and treated as their only referent. That is
+definition here. No published source states those realms. Earlier writing uses
+some of the names, but none of it is published and none of it names Oreality, so
+the declaration is quoted verbatim and treated as their only referent. That is
 constraint 1 applied to a parent that is not a package: `Realm` refuses a
 fragment the declaration does not contain, as `Correspondence` refuses a
 component `hyperethics` does not declare.
