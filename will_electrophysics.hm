@@ -3,7 +3,7 @@
 -- metamathethicology | metaethics x metaphysics
 --
 -- NO LAYER INDEX, DELIBERATELY. This file is not will_electrophysics_L2.hm and
--- not L1_will_electrophysics.hm. hyperethics indexes by layer; this package
+-- not L2_will_electrophysics.hm. hyperethics indexes by layer; this package
 -- indexes by ORDINAL STAGE, and the transport below lives at stages omega
 -- through omega+2. Asserting a layer index here would impose a second,
 -- conflicting indexing scheme on material that already has one. The stage IS
@@ -11,7 +11,7 @@
 -- different reason: there the ground is not written.
 --
 -- Cites: hyperphysics/electrical.hm  -- the borrowed laws, by name.
---        hyperethics/L1_will.hm      -- the will tensor and its roles, by name.
+--        hyperethics/L2_will.hm      -- the will tensor and its roles, by name.
 -- Imports: neither. Both are cited as strings and cross-checked by
 --          tests/test_citations.py whenever they are importable. A skip there
 --          means the citations were NOT checked on that run.
@@ -252,7 +252,7 @@ derive d-self-simulation:
     -- The minus sign is Lenz's. A will induced by its own change opposes that
     -- change: the operator is constrained by what it authors, from inside.
     -- THIS IS THE TRANSPORT'S BEST EVIDENCE. It lands on hyperethics L0's
-    -- d-no-exterior, and on hyperethics L1's d-self-sourcing-is-immanence,
+    -- d-no-exterior, and on hyperethics L2's d-self-sourcing-is-immanence,
     -- from an independent direction -- those were derived without any borrowing
     -- and this arrives at them through one.
     -- IT REMAINS EVIDENCE AND NOT WARRANT. hyperphysics GC-4 supplies no
@@ -301,7 +301,7 @@ derive d-every-crossing-is-bridged:
     -- Status: FORM, and CHECKED by construction on every run.
 
 derive d-inherited-failure-modes:
-    -- A borrower of the series form inherits NINE failure modes, not three.
+    -- A borrower of the series form inherits FOURTEEN failure modes, not three.
     -- hyperphysics SERIES_RLC_CONSTITUENTS records that the series relation is
     -- Kirchhoff applied to three constitutive relations, and
     -- inherited_failure_modes computes the closure rather than trusting the
@@ -350,9 +350,11 @@ graduation:
     -- Two of six discharged.
     --
     -- INHERITED AND NOT COUNTED ABOVE: hyperethics' own open criteria travel
-    -- with the tensor this field cites -- the seam (that an L0 bearer has a
-    -- will at all), the declared 3/2/1 role division, the normative force of
-    -- norm-inhabits, and the Universal Consistency Self-Maintenance Paradox.
+    -- with the tensor this field cites -- the seam (that an entity has a will
+    -- at all; narrowed from every realm to entities on 2026-09-21, which
+    -- discharged nothing, since norm-entity is opaque), the declared 3/2/1
+    -- role division, the normative force of norm-inhabits, and the
+    -- Universal Consistency Self-Maintenance Paradox.
     -- Citing a foundation does not discharge that foundation's obligations, and
     -- a combination field cannot be sounder than either parent.
     --

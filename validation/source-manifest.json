@@ -1,6 +1,6 @@
 {
   "files": {
-    "will_electrophysics.hm": "5234d88406afd86b8d92ade235c1f40a3811d822ee0e7ce079b166c36482d10a",
+    "will_electrophysics.hm": "f3f6b5b4f06de6748642605cf77ac2f8f3968245c19df12d8b4efe48d48a5d10",
     "oreality.hm": "49839200321f6c904fe21d73d9e814de9b89f5906376b606f471bf2ecc9cca6c",
     "pyproject.toml": "c79a3fde9229c950ef5ed60add57f4cecc38c45f1c425f4f473cc7ec0121aad8",
     "src/metamathethicology/__init__.py": "184467208be8c72d6900f010027dafc864cdf3b1faf716ebe1a65e9a33712c44",
@@ -19,5 +19,5 @@
     "tests/test_spaces.py": "ed3d147718a238bfa0034982000342d988f384db50c4809e49e51ae6da16a2ad",
     "tests/test_will_electrophysics.py": "2e199877079291a4b84a69566c017d2069048ed42c5628f86490803fffd044dc"
   },
-  "manifest_sha256": "558a4e94710722986e761cfa43677d0c863f3ba6b98ca9456d7da875e28f6871"
+  "manifest_sha256": "fa5de7f261f484df7195cd41df4fca31bb340f95cdcb91204d3a9ae79464489f"
 }
