@@ -52,6 +52,14 @@ checks.
   | [hyperprobability](https://github.com/TimeLordRaps/hyperprobability) | `cb1b169d1d3c320b687a1c495bc43824c4ae2c65`, branch `feat/hyperprobability-0.1`, not merged | clean |
   | [hyperphysics](https://github.com/TimeLordRaps/hyperphysics) | `ec9a9a25fdb5a840363e9fa416ac1ac27a900ef9`, `main` | `src/` clean; three uncommitted files outside it, none importable |
   | [hyperethics](https://github.com/TimeLordRaps/hyperethics) | `f64a3b2247b0bf59d37600d5058076a470f7faad`, branch `l4-consent` | uncommitted changes inside `src/` |
+- The re-derivation of the `hyperethics` citations in `will_electrophysics.hm`,
+  also on 2026-09-23, read that repository's layer sources from the same working
+  tree, and no commit identifies those bytes either. `L2_will.hm`, the file the
+  citation now names, exists there only as a staged rename of `L1_will.hm`; no
+  commit in that checkout records it on any branch. What was read is identified
+  by Git blob instead: `99a707167a8013f3d021e2f9e14ad00c6f5c83e2` for
+  `L2_will.hm`, and `18143db01aac4b807e7cafdda87ce66bc43aad58` for the
+  working-tree bytes of `L0_creation.hm`, which differ from its staged ones.
 - Public source dependencies were exported from the exact commits below for the
   first test pass, then independently fetched and installed from those Git
   revisions for the installed-dependency pass. Existing uncommitted changes in
@@ -70,11 +78,14 @@ schema invalidates this receipt as evidence for the changed configuration.
 The tested implementation, tests, and package configuration are byte-bound in
 [`validation/source-manifest.json`](validation/source-manifest.json). The digest
 of its canonical `files` mapping is
-`98fe3b786db087e3b1a9d02231e5a370f150dafb8279b32cbd44c56cc76195be`. It was
+`fa5de7f261f484df7195cd41df4fca31bb340f95cdcb91204d3a9ae79464489f`. It was
+`98fe3b786db087e3b1a9d02231e5a370f150dafb8279b32cbd44c56cc76195be` before the
+citations of `hyperethics` in `will_electrophysics.hm` were re-derived against
+that repository's renumbered layers. It was
 `558a4e94710722986e761cfa43677d0c863f3ba6b98ca9456d7da875e28f6871` before line
-304 of `will_electrophysics.hm` was corrected from nine inherited failure modes
-to the fourteen that `hyperphysics` computes at `ec9a9a2`. Only that file's
-entry differs. It was
+304 of that file was corrected from nine inherited failure modes to the
+fourteen that `hyperphysics` computes at `ec9a9a2`. Each of those two steps
+changed only that file's entry. It was
 `c94eaf9241369a45c501cbed25f16fc8a7a18c965c57b4952a1d85247a52419b` when the
 second combination field was first committed, before two docstrings in
 `oreality.py` were corrected to say what is published rather than what is
@@ -178,6 +189,27 @@ python -m build --no-isolation
   chain agrees with the one it orders. `Correspondence` rejects a component or
   role the foundation does not declare, so the combination cannot grow a will of
   its own between releases.
+- **The `hyperethics` citations were re-derived after that repository
+  renumbered its layers.** On 2026-09-21 `hyperethics` moved will from L1 to L2
+  and entity from L2 to L1, added consciousness as L3, and narrowed the seam
+  from every realm to entities. `will_electrophysics.hm` now cites `L2_will.hm`
+  for the tensor and its roles, places `d-self-sourcing-is-immanence` at L2,
+  gives `L2_will_electrophysics.hm` as the `hyperethics`-style name its header
+  declines, and states the inherited seam as that an entity has a will at all,
+  adding that the narrowing discharged nothing. Only comments changed. No
+  derivation, status or criterion did, and the file's own name needed no change,
+  because it carries no layer index.
+- **The rest of what the field cites was checked and left unchanged.**
+  `d-no-exterior` is still L0's, and its text is identical to its text at
+  `f64a3b2`. `d-self-sourcing-is-immanence` and `d-temporal-chain` are L2's.
+  The other inherited criteria keep their names, and this field's six criteria
+  keep their numbers, which `hyperethics` cites for three of them. L3 imports
+  L2's tensor and temporal chain and adds nothing to them. L4, which no commit
+  records, imports will and nothing else from L2, and it records as not
+  derivable that consent is one of the six components or computable from them.
+  These are readings of source, not tests: the citation tests compare the
+  tensor, roles and temporal chain in the Python package, and none of them reads
+  a layer's file name or number.
 - **The split is checked in both directions.** `is_true_moral_operator` and
   `WillProfile` are asserted absent from this module, and `hyperethics.will` is
   asserted to contain no termformer and no correspondence.
