@@ -1,7 +1,7 @@
 {
   "files": {
     "will_electrophysics.hm": "5234d88406afd86b8d92ade235c1f40a3811d822ee0e7ce079b166c36482d10a",
-    "pyproject.toml": "c79a3fde9229c950ef5ed60add57f4cecc38c45f1c425f4f473cc7ec0121aad8",
+    "pyproject.toml": "908e97ae56c05f1264c1c7e4d51063d1df91e32b8a3739dec1c288deff3240ee",
     "src/metamathethicology/__init__.py": "3ae6996c68a46a62f144361b37c94ea36cd906ff8bf99cd6da5a908b06ae9248",
     "src/metamathethicology/__main__.py": "2afd5814a2d959619ced714cdd438d3d3feb046480b233450eb24b57c04b70c8",
     "src/metamathethicology/examples.py": "12bc7a0ab46c00668ba071b21916ecb48bccf3af6620d4dad016ba15c751b5f9",
@@ -15,5 +15,5 @@
     "tests/test_spaces.py": "ed3d147718a238bfa0034982000342d988f384db50c4809e49e51ae6da16a2ad",
     "tests/test_will_electrophysics.py": "2e199877079291a4b84a69566c017d2069048ed42c5628f86490803fffd044dc"
   },
-  "manifest_sha256": "7de4f373c19a106fcc2ecb7b3d0e891e7fce6adb50245bdc3f37391f748f158e"
+  "manifest_sha256": "0582e23594eb09a05c9d6912ad85bdf7633aa482b8184a75bc5a74152f147450"
 }
