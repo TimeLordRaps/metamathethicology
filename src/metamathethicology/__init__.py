@@ -2,8 +2,10 @@
 
 The combination fields built on that substrate are submodules, imported directly:
 `metamathethicology.will_electrophysics` transports electrical law, cited from
-`hyperphysics`, onto the will tensor, cited from `hyperethics`. It is not
-re-exported here, because a combination field should be reached by name.
+`hyperphysics`, onto the will tensor, cited from `hyperethics`, and
+`metamathethicology.oreality` reads four declared realms through the structure
+`hyperprobability` states. Neither is re-exported here, because a combination
+field should be reached by name.
 """
 
 from __future__ import annotations
