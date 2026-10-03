@@ -12,13 +12,13 @@ license = "Apache-2.0"
 license-files = ["LICENSE"]
 authors = [{name = "Tyler Roost"}]
 dependencies = [
-    "ordinatics @ git+https://github.com/TimeLordRaps/ordinatics.git@1564656fc5a740b595c018e96b904781954a85c8",
+    "ordinatics @ git+https://github.com/TimeLordRaps/ordinatics.git@ded754dd7b64410ee5c1ec0b0c47688c78fdcca1",
 ]
 
 [project.optional-dependencies]
 ecosystem = [
-    "grounded-hypercalculi @ git+https://github.com/TimeLordRaps/grounded-hypercalculi.git@e3fd9f803d11b355b257fb7c8270bec414827930",
-    "grounded-hyperset-theory @ git+https://github.com/TimeLordRaps/grounded-hyperset-theory.git@0e1d836dba07975ce6319ab459ec88ab53564e3a",
+    "grounded-hypercalculi @ git+https://github.com/TimeLordRaps/grounded-hypercalculi.git@4018ac3086dc6ee1a223697711fb322e30cd0417",
+    "grounded-hyperset-theory @ git+https://github.com/TimeLordRaps/grounded-hyperset-theory.git@9a86434450416cf135ca1e23aa5c04b511fdbee8",
 ]
 test = ["pytest>=8", "pytest-timeout>=2.3"]
 dev = ["pytest>=8", "pytest-timeout>=2.3", "ruff>=0.11", "build>=1.2"]
