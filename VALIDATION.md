@@ -47,6 +47,9 @@ checks.
 | [Grounded Hypercalculi](https://github.com/TimeLordRaps/grounded-hypercalculi) | `e3fd9f803d11b355b257fb7c8270bec414827930` |
 | [Grounded Hyperset Theory](https://github.com/TimeLordRaps/grounded-hyperset-theory) | `0e1d836dba07975ce6319ab459ec88ab53564e3a` |
 
+These commits no longer exist on GitHub: the dependencies' histories were rewritten
+on 2026-10-02. `pyproject.toml` now pins their rewritten counterparts; see
+[Re-pin after the 2026-10-02 history rewrite](#re-pin-after-the-2026-10-02-history-rewrite).
 These are Git source coordinates, not claims about current package-index releases.
 Changing these revisions, the package source, the runtime, or the representation
 schema invalidates this receipt as evidence for the changed configuration.
@@ -54,7 +57,8 @@ schema invalidates this receipt as evidence for the changed configuration.
 The tested implementation, tests, and package configuration are byte-bound in
 [`validation/source-manifest.json`](validation/source-manifest.json). The digest
 of its canonical `files` mapping is
-`7de4f373c19a106fcc2ecb7b3d0e891e7fce6adb50245bdc3f37391f748f158e`, and was
+`0582e23594eb09a05c9d6912ad85bdf7633aa482b8184a75bc5a74152f147450` since the
+2026-10-02 re-pin. It was `7de4f373c19a106fcc2ecb7b3d0e891e7fce6adb50245bdc3f37391f748f158e` for this receipt, and was
 `31c3c83cced376070e4af0d4b31ed6760967d5a15a5bf6bbaf04d1414be13d76` before the
 combination field was added.
 This manifest identifies tested bytes; it does not sign or independently certify them.
@@ -178,6 +182,52 @@ files were identical before and after this work; their edits were preserved.
 No library version was changed, and the patch was neither committed nor pushed.
 The new project's public dependency pin therefore does not include this local
 ordinal repair; its own ranks use Ordinatics directly.
+
+## Re-pin after the 2026-10-02 history rewrite
+
+On 2026-10-02 the histories of this repository and its family were rewritten to
+remove text that should not have been published, and every commit identifier
+changed. The commits pinned above went away with that history. `pyproject.toml`
+now pins their rewritten counterparts:
+
+| Dependency | Pinned above (old history) | Rewritten commit | Tree |
+|---|---|---|---|
+| Ordinatics | `1564656fc5a740b595c018e96b904781954a85c8` | `ded754dd7b64410ee5c1ec0b0c47688c78fdcca1` | identical |
+| Grounded Hypercalculi | `e3fd9f803d11b355b257fb7c8270bec414827930` | `4018ac3086dc6ee1a223697711fb322e30cd0417` | identical |
+| Grounded Hyperset Theory | `0e1d836dba07975ce6319ab459ec88ab53564e3a` | `9a86434450416cf135ca1e23aa5c04b511fdbee8` | identical |
+
+"Identical" means the two commits have the same Git tree object, so the
+dependency source bytes the receipt above exercised are exactly the bytes now
+pinned. Only their coordinates changed. The rewrite changed nothing in this
+repository's `src/`, `tests/` or `pyproject.toml`.
+
+The checks were rerun at the new pins, on 2026-10-02 at 22:05 -07:00. The
+environment was a fresh virtual environment on Python 3.12.8 (Windows), with
+pytest 9.1.1, pytest-timeout 2.4.0 and ruff 0.16.10. That run:
+
+- installed this package and its `ecosystem` extra from the three rewritten
+  commits, fetched from GitHub. That every pin resolves is itself part of the
+  evidence;
+- installed `hyperphysics` at `e78fb8ca79f35fa3be33fd73e2f8919029f883b3` and
+  `hyperethics` at `e1f7c75223f849e81965137c79943b783c5cada9` from GitHub, so the
+  citation tests ran instead of skipping;
+- ran `python -m pytest tests -vv -s -rs --durations=10 --timeout=30 -o pythonpath=`.
+  The result was **142 passed, 0 skipped, 0 failed**, recounted from the JUnit
+  report. Imports resolved to the installed package in `site-packages`, not the
+  source tree. Unlike the 2026-09-20 pass, the 30-second timeout was in force.
+- `ruff check src tests` passed, and `python -m metamathethicology` exited 0.
+- `python -m build` succeeded with build isolation; the receipt above used
+  `--no-isolation`.
+
+In `validation/source-manifest.json`, the `pyproject.toml` digest and the manifest
+digest are updated for the new pins. Every other entry is unchanged.
+
+One discrepancy predates the rewrite, and recording it here does not repair it.
+Three manifest digests do not match the committed blobs as recorded on 2026-09-20:
+`src/metamathethicology/__init__.py`, `examples.py` and `will_electrophysics.py`.
+Each one matches the committed blob after LF→CRLF conversion, so those digests were
+taken over Windows working-tree bytes. A digest check run against a checkout made
+with `core.autocrlf=false` will report those three files as changed.
 
 ## Exclusions and remaining obligations
 
