@@ -1,0 +1,1318 @@
+-- definitional_shadow.hm
+-- The definitional shadow: how hyperethics stands to hypermath and hyperlogic
+-- metamathethicology | metaethics x metamathematics x metalogic
+--
+-- NO LAYER INDEX, DELIBERATELY, AND FOR A THIRD REASON. will_electrophysics.hm
+-- carries none because this package indexes by ordinal stage and the material
+-- already had an index. hyperphysics/electrical.hm carries none because there
+-- the ground is not written. This file carries none because it is a statement
+-- ABOUT three fields' layer indices at once, and picking one would silently
+-- assert that the three stacks are the same shape. They are not: hypermath's
+-- stack is a DIAMOND (L1 and L2 incomparable siblings over L0, joined at L3)
+-- and hyperethics' is a CHAIN (L0 -> L1 -> L2 -> L3). That difference is part
+-- of what is measured below, not something this file may presuppose.
+--
+-- Cites: hypermath/L0_ground.hm, L1_relations.hm, L2_operations.hm,
+--        L3_ordinatics.hm    -- the closing field.
+--        hyperlogic/L0_triangle.hm  -- the field that carries both.
+--        hyperethics/L0_creation.hm, L1_entity.hm, L2_will.hm,
+--        L3_consciousness.hm -- the refusing field.
+-- Imports: none. All nine files are cited as paths and their declaration
+--          census is RE-MEASURED by tests/test_definitional_shadow.py whenever
+--          the sibling checkouts are present. A skip there means the census
+--          below was NOT checked on that run, and the numbers in this file are
+--          then a claim about bytes nobody read.
+--          The two Lean files under evidence/ are NOT built by this package,
+--          which has no Lean toolchain. They are reproduced against
+--          hyperethics' own pinned toolchain; evidence/README.md gives the two
+--          commands and what their output must be.
+--
+-- USER-DECLARED PLACEMENT (Tyler Roost), the reason this file exists here:
+--   "Electricity hyperphysics should go in hyperphysics, underlying will
+--    foundations in hyperethics, and then their combination field of will
+--    electrophysics is in metamathethicology."
+-- Generalized and already enforced: a field states its own subject once, and
+-- anything COMBINING fields is a combination field and lives here. A relation
+-- between hyperethics, hypermath and hyperlogic is stateable in none of the
+-- three -- each would have to name two foreign subjects to say it -- so it is
+-- a combination field of three parents and it belongs in this package.
+--
+-- USER-DECLARED (Tyler Roost), the relation itself:
+--   "the 3 foundational are 'not-grounded' because they should be
+--    self-grounding, each holds a definitional self grounding similar and
+--    relatable to abstractly ~= to the base hypermath. Their self-grounding
+--    self-derivational chains are mirrors and shadows respectively, Ie
+--    hyperphysics self-derivational chain is a mirror of hypermaths, and
+--    hyperethics is a shadow of hypermaths."
+--
+-- USER-DECLARED (Tyler Roost), the follow-on this file answers:
+--   "see how our hyperethics definitional space can be seen more like a shadow
+--    of hypermath and hyperlogic"
+--
+-- The word "shadow" was loose when it was said and it is not loose now. Below
+-- it is given a MEASURED definition, a check, and a named way to be wrong.
+--
+-- Status: FORM (the census, the slot alignment, the complement, the two named
+--               forgotten coordinates, and the witness census with its two
+--               kernel-checked collapses);
+--         FRAME residuals documented, NOT discharged:
+--           - that the three-layer count alignment is law rather than
+--             coincidence (GC-1, and it is REFUTED as a count of facts -- the
+--             left column counts names; see measured witness-census),
+--           - L1 and L2 have not been witness-counted (GC-6),
+--           - whether the merged witnesses should be landed in hyperethics
+--             (GC-7, a maintainer's call this file declines to make),
+--           - that hyperethics' silhouette is a ~=-shadow in hypermath's own
+--             technical sense (GC-2, currently FALSE by measurement),
+--           - the fourth layer, where the alignment breaks (GC-3),
+--           - hyperlogic beyond L0 and hyperphysics at all (GC-4).
+--         Sections: I the measured census, II the slot alignment,
+--         III what the shadow forgets, IV non-derives, V graduation criterion.
+--
+-- THIS FILE'S OWN CENSUS, stated because a file that measures censuses does not
+-- get to stand outside the measurement: 8 derive, 6 measured, 4 non-derive,
+-- 1 open, 1 graduation -- and ZERO relation, ZERO close. By its own
+-- `nd-refusal-counts-are-naming` those four refusals are four NAMES, and this
+-- file has not built the structure that would say how many facts they are. By its own definition
+-- in section I it is a boundary-only file, which puts it on hyperethics' side
+-- of the complement and not above it. It describes the shadow in the shadow's
+-- vocabulary. That is a limitation on what it can claim, not a flourish: it can
+-- report where the interior is missing and it cannot supply any of it.
+-- =============================================================================
+
+
+-- =============================================================================
+-- SECTION I: THE MEASURED CENSUS
+-- Not borrowed. Borrowed material is a statement taken over from a field that
+-- states it; these are facts about file bytes that a test re-derives from the
+-- files themselves. A count that names itself and is never recomputed is a
+-- numeral, not a fact.
+-- =============================================================================
+
+measured interior:         -- `relation` and `close` declarations
+    -- A `relation` declares a comparison the field will use. A `close` binds an
+    -- opaque predicate to one, so that what was asserted pre-relationally now
+    -- MEANS something in the field's own vocabulary. Together they are the
+    -- field's positive interior: the part of the silhouette that is filled in.
+    --   hypermath    relation 4   close 13
+    --   hyperlogic   relation 3   close 3
+    --   hyperethics  relation 0   close 0
+    -- hyperethics does not use either keyword once, in any layer. It is not a
+    -- spelling difference: the words appear in its prose 51 times and every
+    -- occurrence is either the description of an orbit or a denial, of which
+    -- L1_entity.hm's "SO GC-3 IS SHARPENED, NOT CLOSED, and sharpening is not
+    -- closing" is the plainest.
+
+measured boundary:         -- `non-derive` and `open` declarations
+    -- A `non-derive` names something that does NOT follow and, where the field
+    -- is honest, supplies a countermodel. An `open` names an obligation carried
+    -- without one. Together they are the field's negative boundary: the edge of
+    -- the silhouette, drawn from outside.
+    --   hypermath    non-derive 0    open 0
+    --   hyperlogic   non-derive 3    open 1
+    --   hyperethics  non-derive 40   open 1
+    -- hypermath does not use `non-derive` once, in any layer.
+    -- IT WAS 35 ON THE MORNING OF 2026-09-21 and 40 by the evening: the
+    -- reflection section added five. The COMPLEMENT did not move -- zero
+    -- interior, still, across five new declarations written without either
+    -- keyword by an author who was not consulting this file. That is the
+    -- measurement this file exists for, and it survived a live edit.
+
+measured complement:
+    -- The two censuses are DISJOINT ACROSS THE TWO FIELDS, in both directions:
+    --   hypermath   has 17 interior declarations and 0 boundary declarations.
+    --   hyperethics has 0 interior declarations and 41 boundary declarations.
+    --   *** 41 IS STALE. Re-measured 2026-09-21: 45. The hyperethics P0 layer
+    --   added 4 non-derives. See section VI. ***
+    -- Neither field uses the other's vocabulary at all. This is the whole of
+    -- what "shadow" means here, and it is the reason the word is right rather
+    -- than "copy", "analogy" or "dual": a shadow is precisely the complement of
+    -- a body's silhouette inside the light that casts it. The body is where the
+    -- light is stopped; the shadow is where it is absent. hypermath declares
+    -- only presence; hyperethics declares only absence.
+
+measured object:
+    -- hyperlogic L0 carries BOTH, in equal thirds: relation 3, close 3,
+    -- non-derive 3, open 1.
+    -- *** "EQUAL THIRDS" IS STALE. Re-measured 2026-09-21 across the repo:
+    -- relation 3, close 3, non-derive 7, open 1. P0_shadow_ground.hm added 4
+    -- non-derives, so BOUNDARY NOW EXCEEDS INTERIOR, 8 to 6, and hyperlogic is
+    -- drifting toward hyperethics' side. See section VI. *** It is the only one of the three foundational fields
+    -- that does. So hyperlogic is not a second body and not a second shadow --
+    -- it is the field in which the casting is visible at once, which is why the
+    -- user's question names it alongside hypermath rather than instead of it.
+    -- hyperlogic exists because the derivation relation was stated three
+    -- independent times in the family; carrying both censuses is what a field
+    -- looks like when its subject is the stating.
+
+measured per-layer:
+    -- A COUNT OF NAMES, AND NOT OF FACTS. Read `measured witness-census` below
+    -- before using this block for anything; the alignment it records was the
+    -- first thing in this file and it is the weakest thing in it.
+    -- Layer by layer, hypermath's closes and hyperethics' non-derives are:
+    --   L0   hypermath close 3    hyperethics non-derive 3
+    --   L1   hypermath close 7    hyperethics non-derive 7
+    --   L2   hypermath close 2    hyperethics non-derive 2
+    --   L3   hypermath close 1    hyperethics non-derive 28
+    -- Three layers agree EXACTLY, slot for slot: each hyperethics layer refuses
+    -- as many things as the corresponding hypermath layer closes. The fourth
+    -- does not agree and is not close.
+    -- THE L3 ROW WAS 23 WHEN THIS FILE WAS WRITTEN, AND MOVED TO 28 THE SAME
+    -- DAY, when hyperethics added a reflection section carrying five more
+    -- refusals against no new close opposite them. The gap got WIDER while
+    -- nothing about either field's method changed, which is what a count of
+    -- NAMES does when one author keeps writing and the other does not. A
+    -- reader who treated 3-7-2-23 as a structural constant had one day to be
+    -- wrong in.
+    -- NOTHING FORCES THIS. No test in either repository has ever compared the
+    -- two files, the two stacks were written months apart, and 3-7-2 is not a
+    -- pattern either field states about itself. It is an OBSERVED alignment.
+    -- See nd-count-alignment-is-law.
+
+measured witness-census:
+    -- USER-DECLARED (Tyler Roost), the conjecture this block answers:
+    --   "Maybe L3 should only have one non-derive, maybe the things are
+    --    derivable through like a dark matter of propositional ethics"
+    -- IT IS CORRECT, IT IS NOW PROVED, AND IT GENERALIZES PAST L3.
+    -- A `non-derive` is a NAME. What refutes it is a MODEL, and a model is not
+    -- a declaration -- `primitive`, `opaque`, `axiom`, `derive`, `non-derive`,
+    -- `relation`, `close` is the whole vocabulary, and none of them declares a
+    -- structure. So the entire refuting content of hyperethics is INVISIBLE to
+    -- the census in `measured boundary` above. That is the dark matter, and the
+    -- word is exact rather than decorative: not in the visible census, most of
+    -- the mass, and detectable only by what it refutes.
+    -- Counted three ways, hyperethics' refusals are:
+    --            by NAME   by LEAN THEOREM   by DISTINCT WITNESS
+    --   L0          3            3                  3 -> 1
+    --   L1          7            3                  4, untested
+    --   L2          2            1                  1, untested
+    --   L3         28           16                  2 -> 1, for the first 12
+    -- The two arrows are theorems, not estimates. `evidence/DarkMatterL0.lean`
+    -- builds one `RealmModel 6` that satisfies all four L0 axioms, keeps
+    -- `TransitiveExposure` at depth two, and refutes `UniversalImmanence`,
+    -- `TransitiveExposure 3` and `OtherIsNonidentity` TOGETHER, where the field
+    -- uses `separating`, `orbit` and `reflexiveOther`.
+    -- `evidence/DarkMatterL3.lean` builds one `MindModel 6 4 5 1` that satisfies
+    -- every L3 axiom, keeps every L3 derive, and refutes all TWELVE L3 claims
+    -- together, where the field uses `canonical` and `solitary`.
+    -- IT REFUTES TWELVE AND THERE ARE NOW SIXTEEN. The reflection section added
+    -- four more Lean refutations on 2026-09-21 -- two of them carried by a NEW
+    -- structure, `selfBridged`, which no earlier structure could stand in for
+    -- because none carried a self-bridge. Whether the merged witness extends to
+    -- all sixteen is UNTESTED, and the arrow above is stated for the first
+    -- twelve only rather than quietly widened. This is the same discipline
+    -- `GC-6` applies to L1 and L2, now applied to a moving L3.
+    -- Every theorem in both reports `[propext]` and nothing else.
+    -- TWO IS A REAL FLOOR AT FOUR ELEMENTS AND NOT AT SIX. Before the merged
+    -- structure existed the kernel decided `¬ EveryMindPairIsBridged canonical`
+    -- and `¬ CointeractionIsForced canonical` FALSE: `canonical` bridges every
+    -- mind pair, so it cannot carry `solitary`'s three refutations and the
+    -- second structure was genuinely required. The collapse to one is bought
+    -- with carrier size, not with a tidier reading of what was already there.
+
+
+-- =============================================================================
+-- SECTION II: THE SLOT ALIGNMENT
+-- Where the shadow falls, in file order.
+-- =============================================================================
+
+derive d-the-missing-section:
+    -- step 1: hypermath/L0_ground.hm's own header lists its sections:
+    --         "I primitives, II opaque predicates, III axioms (4), IV derives
+    --          (5), V relation declarations, VI closing opaque predicates,
+    --          VII graduation criterion".
+    -- step 2: hyperethics/L0_creation.hm's own header lists its sections:
+    --         "I primitives, II opaque normative predicates, III axioms (4),
+    --          IV derives (5, led by the operant), V non-derives (explicit),
+    --          VI graduation criterion".
+    -- step 3: sections I through IV agree in kind AND in count -- 4 primitives,
+    --         3 structural opaques, 4 axioms, 5 derives, in both files.
+    -- step 4: at section V they diverge in KIND: relations against non-derives.
+    -- step 5: hyperethics has SIX sections where hypermath has SEVEN, and the
+    --         one it does not have is VI, the closing section. Its VI is
+    --         hypermath's VII.
+    -- CONCLUSION: the shadow is exactly one section short, the missing section
+    -- is the one that fills the interior in, and both files say so in their own
+    -- headers without either one knowing about the other.
+
+derive d-the-three-opaques-correspond:
+    -- hypermath L0 section II declares struct-distinct, struct-continues,
+    -- struct-orbits. hyperethics L0 section II declares norm-other,
+    -- norm-inhabits, norm-returns. The readings line up one to one:
+    --   struct-distinct  / norm-other     -- non-identity, pre-evaluative
+    --   struct-continues / norm-inhabits  -- the irreducible, what dwells in what
+    --   struct-orbits    / norm-returns   -- two-step return to origin
+    -- hypermath then closes all three, one close per opaque, in that order.
+    -- hyperethics closes none of the three, anywhere in four layers.
+
+derive d-the-shadow-is-ragged:
+    -- WHAT A CLEAN SHADOW WOULD LOOK LIKE, AND WHY THIS IS NOT ONE.
+    -- step 1: hypermath's three L0 closes are one per opaque, in slot order.
+    -- step 2: hyperethics' three L0 non-derives are nd-universal-immanence,
+    --         nd-good-from-immanence, nd-transitive-exposure.
+    -- step 3: the first two BOTH land on norm-inhabits -- one refusing to
+    --         universalize it, one refusing an evaluative reading over it.
+    -- step 4: the third lands on norm-returns.
+    -- step 5: norm-other receives NEITHER a close NOR a declared refusal in the
+    --         source of record. It is used by ax-other and by
+    --         d-authorship-exposure and is otherwise untouched there.
+    -- CONCLUSION: the counts match at 3 and the SLOTS do not. Opaque 2 is
+    -- covered twice and opaque 1 is covered not at all. The shadow is cast but
+    -- its edge is ragged, and this is the most concrete thing to fix if the
+    -- relation is to be tightened rather than merely observed.
+
+derive d-the-raggedness-is-an-hm-lean-divergence:
+    -- WHERE THE MISSING REFUSAL ACTUALLY IS, and it is not missing.
+    -- step 1: L0_creation.hm declares three non-derives: nd-universal-immanence,
+    --         nd-good-from-immanence, nd-transitive-exposure.
+    -- step 2: lean4/Hyperethics/Countermodels.lean refutes three claims:
+    --         UniversalImmanence, TransitiveExposure, OtherIsNonidentity.
+    -- step 3: the two sets of three share only TWO members.
+    --         `OtherIsNonidentity` is refuted by `reflexiveOther` -- a model in
+    --         which a realm is `other` than itself -- and the `.hm` declares no
+    --         non-derive for it. So norm-other IS refused, by a model, under a
+    --         name the source of record does not carry.
+    --         `nd-good-from-immanence` runs the other way: it is declared and
+    --         has NO Lean refutation, and there is no goodness, value, ranking
+    --         or better-than predicate anywhere in the Lean tree. That absence
+    --         is correct -- nothing evaluative is formalized in this field --
+    --         but it means the `.hm` states a refusal the translation cannot
+    --         witness, while the translation witnesses one the `.hm` never
+    --         states.
+    -- CONCLUSION: the raggedness in d-the-shadow-is-ragged is real and its
+    -- CAUSE is not editorial. It is the standing blind spot of this family's
+    -- build pattern: NOTHING CHECKS A `.hm` SOURCE AGAINST ITS LEAN
+    -- TRANSLATION. No test reads a `.hm` file, and hyperethics' audit compares
+    -- the kernel's reports against a hand-written table of what each source is
+    -- SAID to claim, never against the source text. Two artifacts can disagree
+    -- about which three things a layer declines to derive with the whole stack
+    -- green, and here they do.
+
+derive d-the-deferred-close-was-never-paid:
+    -- step 1: hyperethics/L0_creation.hm's FRAME residuals name, first,
+    --         "opaque normative predicates' semantic close (L2)". The close is
+    --         deferred, by name, to a layer two above.
+    -- step 2: hyperethics/L2_will.hm declares zero closes.
+    -- step 3: its graduation section records the debt as
+    --         "INHERITED, STILL OPEN. This layer does not touch them."
+    -- CONCLUSION: the promise is made in the same slot hypermath uses to KEEP
+    -- it, and is then carried instead of discharged. hypermath L0 makes the
+    -- same kind of promise -- its executive opaques are "declared here,
+    -- semantically closed by L1" -- and its section IX self-kernel pays it.
+    -- Two fields, one promise, one payment.
+
+
+-- =============================================================================
+-- SECTION III: WHAT THE SHADOW FORGETS
+-- A shadow is a projection, and a projection is named by the coordinate it
+-- drops. Two are dropped here, one per parent.
+-- =============================================================================
+
+derive d-forgotten-against-hypermath:
+    -- THE DROPPED COORDINATE IS STAGE, DEPTH, QUANTIFICATION.
+    -- step 1: hyperethics L0's header refuses ordinal staging outright:
+    --         "a foundation that needs a stage index to state its ground is not
+    --          a foundation." hypermath puts ordinal arithmetic at L3 and keeps
+    --         apply-as-succession at L0; hyperethics declines the index.
+    -- step 2: nd-transitive-exposure refuses depth from the inside:
+    --         "ax-return closes the TWO-step orbit. It does not give a
+    --          three-step or n-step return." Countermodel supplied.
+    -- step 3: hypermath's own shadow operator does exactly this. `~=` is
+    --         `=~` MINUS the quantification coordinate -- volume forgotten,
+    --         endpoints and trace floor pinned -- it is off-chain on
+    --         DerivationPath, weaker than `=~`, and its close carries NO open
+    --         frame BECAUSE it drops that clause.
+    -- CONCLUSION: the user's phrase "relatable to abstractly ~= to the base
+    -- hypermath" is not decoration. `~=` is the operator, and the coordinate
+    -- hyperethics forgets relative to hypermath is the one `~=` forgets.
+
+derive d-forgotten-against-hyperlogic:
+    -- THE DROPPED COORDINATE IS REGISTER.
+    -- step 1: hyperlogic un-collapses the three readings of its irreducible
+    --         into a triangle: ax-triangle needs THREE turns to return, where
+    --         hypermath's ax-box and hyperethics' ax-return each close a
+    --         TWO-step orbit.
+    -- step 2: hyperethics keeps its three roles collapsed, and says so in the
+    --         same words hypermath uses. The sentence
+    --           "The roles are not three separate things. They are three angles
+    --            on one thing."
+    --         appears VERBATIM in hypermath's `ground` and in hyperethics'
+    --         `archetype`, in two repositories, written independently.
+    -- CONCLUSION: against hypermath, hyperethics drops depth. Against
+    -- hyperlogic, it drops the separation of registers. Two parents, two
+    -- coordinates, and the field forgets one of each.
+
+derive d-diamond-projects-to-chain:
+    -- step 1: hypermath's layer stack is a DIAMOND. L1 and L2 are incomparable
+    --         siblings over L0 and are joined only at L3.
+    -- step 2: hyperethics' layer stack is a CHAIN, L0 -> L1 -> L2 -> L3, with
+    --         every layer depending on the one below.
+    -- step 3: projecting a diamond along its own diagonal yields a chain.
+    -- CONCLUSION: the stack shape is itself shadowed, by the same operation and
+    -- in the same direction as the declarations. A shadow drops a dimension;
+    -- this one drops the incomparability.
+
+
+-- =============================================================================
+-- SECTION IV: NON-DERIVES
+-- What the census does not establish. A file that measures refusals had better
+-- state its own.
+-- =============================================================================
+
+non-derive nd-count-alignment-is-law:
+    -- NOT derivable: that hypermath's closes and hyperethics' non-derives must
+    -- agree per layer.
+    -- They agree at L0, L1 and L2 -- 3, 7, 2 -- and disagree at L3 by 1 against
+    -- 23. Three agreements out of four is an OBSERVATION. Nothing in either
+    -- field's axioms, headers or tests mentions the other field's counts, no
+    -- construction maps one declaration to the other, and the fourth layer is a
+    -- standing refutation of any rule that would force it.
+    -- The L3 break has a KNOWN cause and the cause is not structural:
+    -- hyperethics L3 was extended twice by declaration on 2026-09-21, first
+    -- with consciousness and minds and then with thought, the reality taxonomy
+    -- and language. Each extension added refusals and closed nothing. So the
+    -- alignment held for as long as the two stacks were built at comparable
+    -- rates and broke when one of them was not.
+    -- ANY LATER CLAIM THAT THE ALIGNMENT IS LAW MUST EXHIBIT THE MAP.
+    -- AND IT IS NOW WORSE THAN UNDERIVED. `measured witness-census` shows the
+    -- left-hand column is a naming convention: L0's three and L3's twelve each
+    -- collapse to ONE witness, by construction, in the kernel. So 3-7-2 does
+    -- not count refusals -- it counts how often two authors chose to give a
+    -- refusal its own name. The correspondence in `measured per-layer` is
+    -- between one real quantity and one editorial one.
+
+non-derive nd-refusal-counts-are-naming:
+    -- NOT derivable FROM A LAYER'S DECLARATION COUNT: how many independent
+    -- facts that layer refuses.
+    -- REFUTED CONCLUSIVELY, twice, by construction. See the two files under
+    -- `evidence/` and the table in `measured witness-census`.
+    -- WHAT THIS DOES NOT SAY. It does not say the names are waste. A merged
+    -- structure establishes THAT a set of failures is jointly realizable; it
+    -- does not tell a reader WHICH claim each failure is about, and a reader
+    -- who wants to know whether a bridge is symmetric needs that claim written
+    -- down under its own name with its own reasons. The names are an index and
+    -- the witness is the fact. hypermath draws the same distinction from the
+    -- other side: its `relation` declarations are the index and its `close`
+    -- declarations are what makes them mean anything.
+    -- WHAT IT DOES SAY. Any argument that reads a refusal count as a measure of
+    -- how much a field declines to settle is measuring names. This file made
+    -- that mistake in its own first section and the correction is left visible
+    -- rather than edited out.
+
+non-derive nd-shadow-is-a-tilde-eq-shadow:
+    -- NOT derivable, and currently FALSE BY MEASUREMENT: that hyperethics is a
+    -- shadow of hypermath in hypermath's own technical sense.
+    -- hypermath's `~=` drops a coordinate and thereby DROPS AN OBLIGATION -- its
+    -- close carries no open frame precisely because the quantification clause is
+    -- gone. hyperethics drops its interior and ACCUMULATES obligations: 27 open
+    -- at last count, growing 17 -> 19 -> 24 -> 27 across its four layers, with
+    -- GC-6 getting LARGER rather than smaller on 2026-09-21, when a
+    -- non-statement became an assumption.
+    -- A forgetting that costs more than it saves is not a projection. So the
+    -- relation is presently a shadow in the visual sense only, and "making
+    -- hyperethics more like a shadow" has a precise meaning: NAME THE FORGOTTEN
+    -- COORDINATE so that its omission DISCHARGES something instead of owing it.
+    -- Section III names two candidates. Neither is yet written into hyperethics.
+
+non-derive nd-mirror-from-shadow:
+    -- NOT derivable: anything about hyperphysics from anything in this file.
+    -- The user declared hyperphysics a MIRROR of hypermath -- position
+    -- preserved, arrows reversed, dimension preserved, invertible -- and
+    -- hyperethics a SHADOW -- silhouette preserved, interior lost, dimension
+    -- dropped, not invertible. A mirror and a shadow of the same body are not
+    -- recoverable from each other, and hyperphysics is not measured here.
+    -- Its census is GC-4 below, not a consequence of anything above.
+
+open nd-shadow-has-no-countermodel-discipline:
+    -- NAMED OPEN OBLIGATION, NOT DISCHARGED.
+    -- Every other refusal in this family is refuted conclusively by a supplied
+    -- countermodel, on the epistemic contract that model checking confirms
+    -- nothing universally while a single countermodel refutes conclusively.
+    -- The three non-derives above supply no countermodels, because a
+    -- countermodel to a claim about declaration counts would have to be a pair
+    -- of FIELDS, and this package has no notion of a field as an object.
+    -- The census is checked instead, which is a weaker thing, and the
+    -- difference is recorded here rather than papered over.
+
+
+-- =============================================================================
+-- SECTION V: GRADUATION CRITERION
+-- =============================================================================
+
+graduation:
+    -- GC-1: that the per-layer count alignment is law. NOT DISCHARGED and NOT
+    --       DERIVABLE as stated -- see nd-count-alignment-is-law. Discharging
+    --       it means exhibiting a map from hypermath closes to hyperethics
+    --       non-derives, not observing the numbers a second time.
+    -- GC-2: that hyperethics is a ~=-shadow in hypermath's technical sense.
+    --       NOT DISCHARGED and currently measured FALSE: the forgetting
+    --       accumulates obligations instead of dropping them. This is the
+    --       actionable one, and section III names the two coordinates whose
+    --       naming would move it.
+    -- GC-3: the fourth layer. L3 breaks the alignment 1 against 23, and this
+    --       file explains the break historically rather than structurally.
+    --       A historical explanation is not a derivation.
+    -- GC-4: hyperlogic above L0, and hyperphysics at all. hyperlogic has one
+    --       layer written, and the census calls it the field that carries both
+    --       censuses on the strength of that single file. hyperphysics is named
+    --       by the user as the mirror and is not measured here at all. Two of
+    --       the four fields in the declared relation are therefore sampled,
+    --       not surveyed.
+    -- GC-6: L1 and L2 have not been witness-counted. L0 and L3 each collapse to
+    --       one structure and the same construction is expected to work at the
+    --       two layers between them, which is exactly the kind of expectation
+    --       this family does not accept in place of a model. Until someone
+    --       builds them, the middle two rows of `measured witness-census` are
+    --       counts of theorem arguments and not of witnesses.
+    -- GC-7: whether the merged structures should be LANDED in hyperethics.
+    --       They are not, and this file does not recommend it. Replacing named
+    --       witnesses with one merged witness would shorten the files and lose
+    --       the per-claim reasons, which is the trade `nd-refusal-counts-are-
+    --       naming` describes and does not decide. It is a maintainer's call
+    --       about readability, not a fact about the theory.
+    -- GC-5: that `measured` is the right keyword. It is introduced by this file
+    --       and used by no other. `borrowed` was wrong -- a borrowed law is a
+    --       statement taken over from a field that states it, and no field
+    --       states its own declaration census. Whether a third keyword was
+    --       needed, rather than a derive with a test behind it, is a judgement
+    --       this file makes and does not defend.
+
+
+-- ── VI. THE 2026-09-21 RESTATEMENT ──────────────────────────────────────────
+--
+-- PROVENANCE, stated first because this file's whole discipline rests on it:
+-- the statement below was made by Tyler to a DIFFERENT session and reached me
+-- relayed. It is verbatim as relayed, but it is not first-hand to this file
+-- the way the section I quotation is. Treat it as USER-DECLARED-AS-REPORTED
+-- until he restates it here.
+--
+--   "hypermath and hyperlogic reflecting mirror-wise yields hyperphysics,
+--    hyperethics is the shadow form of hypermath and the shadow form of
+--    hyperlogic and the shadow form of hyperphysics."
+
+-- d-mirror-changed-arity : section I's canon is UNARY -- "hyperphysics
+--   self-derivational chain is a mirror of hypermaths", one parent. The
+--   restatement is BINARY: hypermath and hyperlogic reflecting off ONE ANOTHER
+--   yield hyperphysics.
+--
+--   This is not a small edit. A binary operator on two fields producing a
+--   third is the two-limb combination shape exactly, so `mirror` is a
+--   metamathethicology object by the placement rule rather than a fact any one
+--   field states about itself. That is consistent with where this file already
+--   lives, and it is the first independent confirmation that the file is in
+--   the right repository. Section I's unary phrasing is now the stale one.
+
+-- d-shadow-has-three-legs : and the census tests them separately.
+--   Re-measured 2026-09-21, same method as sections `measured interior` and
+--   `measured boundary` -- interior = `relation` + `close`, boundary =
+--   `non-derive` + `open`, counted as line-initial declarations in *.hm.
+--
+--     field          interior   boundary   reading
+--     hypermath            17          0   body, no boundary at all
+--     hyperlogic            6          8   carries BOTH; boundary now leads
+--     hyperethics           0         45   shadow, no interior at all
+--     hyperphysics          0          1   neither, and barely measured
+--
+--   leg 1  shadow(hypermath) = hyperethics      HOLDS. 17/0 against 0/45 is
+--          perfect disjointness. This is section I's original relation and it
+--          survives the restatement unchanged.
+--
+--   leg 2  shadow(hyperlogic) = hyperethics     FAILS, and this file already
+--          said why before the leg was claimed: hyperlogic "is not a second
+--          body and not a second shadow -- it is the field in which the
+--          casting is visible at once." A field carrying both cannot be the
+--          body of a shadow; it is where the shadow is SEEN. The failure got
+--          worse, not better: boundary 8 now EXCEEDS interior 6.
+--
+--   leg 3  shadow(hyperphysics) = hyperethics   CANNOT BE TESTED. Note the
+--          verdict carefully -- it is not "false". hyperphysics has ZERO
+--          interior declarations, so it has no silhouette to cast, and its
+--          profile (0 interior, 1 boundary) puts it on hyperethics' OWN side
+--          rather than its complement. But it has exactly ONE `.hm` file
+--          (electrical.hm) and one boundary declaration. At n = 1 the census
+--          has nothing to measure. Untestable, pending hyperphysics being
+--          written.
+--
+--   The same n = 1 problem hits the MIRROR leg from the other end: the field
+--   Tyler names as the mirror currently has no positive interior at all, so
+--   there is nothing yet for hypermath and hyperlogic to be reflected INTO.
+--   Both the new shadow leg and the restated mirror wait on the same work.
+
+-- d-census-has-a-scope-hazard : mine, found by getting it wrong.
+--   Counting every `*.hm` under the repository gives hypermath 23 interior,
+--   not 17. The extra six are `references/precursor/hypermath/spec/axioms.hm`
+--   and `references/precursor/hypermath_form/relations.hm` -- VENDORED material
+--   from an older □-system, not hypermath's own layer stack. They must be
+--   EXCLUDED, and the other three fields have no `references/` tree, so the
+--   hazard bites hypermath alone and would silently inflate exactly the field
+--   the whole relation is measured against.
+--   Any re-run of this census must state its scope. This one is: the field's
+--   own layer files, `references/` excluded.
+
+-- d-numbers-move-faster-than-the-file : both stale numbers flagged above moved
+--   because of ONE event -- the P0 layers, written 2026-09-21, added 4
+--   non-derives to hyperethics (41 -> 45) and 4 to hyperlogic (which is what
+--   overturned "equal thirds" and flipped it to boundary-led). Two days, two
+--   corrections, one cause.
+--   THE HOOK, which is worth more than any number here: this file should carry
+--   a re-measure instruction, not frozen counts. Every count above is true on
+--   2026-09-21 and is expected to be false again. Re-run before quoting.
+
+-- d-hyperlogic-has-a-paradox-layer : recorded because Tyler is on record
+--   (relayed, same caveat) doubting it -- "hyperlogic might not even have a
+--   paradox layer yet." It does: `hyperlogic/P0_shadow_ground.hm`, headed
+--   "Layer P0: Paradoxes" and "THE SHADOW GROUND. Where contradictions are not
+--   errors, but generators." It is UNTRACKED in that repository, which is
+--   probably why it did not come to mind.
+--
+--   It also corroborates the field-local barrier result from outside, after
+--   the fact. Its `nd-p0-shadows-hypermath` says it is NOT derivable "that
+--   this layer instantiates hypermath's P0. Entry conditions, fixed points and
+--   barriers all differ. Anything asserting a single P0 theory across fields
+--   is a combination claim and belongs in metamathethicology, per the
+--   placement rule: a field states its own subject once." Written in another
+--   repository, reaching this file's own placement rule independently.
+
+-- nd-ppl-states-are-tylers-operators : do NOT assume PPL's SHADOW_PARADOX and
+--   MIRROR_PARADOX are the two operators above under other names. The ARITIES
+--   DISAGREE, and that is evidence against identity, not a detail: PPL's pair
+--   are dual verdict states one bit apart on the convergence bit, over a
+--   single object. Tyler's are operators over FIELDS -- mirror binary, shadow
+--   unary. Same two English words, third and fourth senses, and the collision
+--   is now catalogued in VOCABULARY_BOUNDARY.md as words 9 and 10.
+--   Checking whether they are secretly the same structure is legitimate work.
+--   Assuming it is how a fifth sense gets created.
+
+-- CITATION, RESOLVED -- and the two halves live in different repositories,
+-- which is the part a later reader needs.
+--   The DECLARATION `nd-p0-shadows-hypermath` is in
+--   `hyperlogic/P0_shadow_ground.hm`, which is UNTRACKED in hyperlogic. Verified
+--   by reading the working tree.
+--   The COMMIT 719585b is in `meta-morphoscripted-origination` -- "Record PPL's
+--   standing per Tyler, the hyperlogic corroboration, and reopen shadow/mirror",
+--   2026-09-21, touching PLACEMENT.md, and UNPUSHED. It RECORDS the observation;
+--   it does not contain the declaration.
+--   So following the commit id will not show you the non-derive, and the file
+--   that holds the non-derive is in no commit at all. Both halves are one
+--   deletion away from each other.
+--
+-- I first wrote here that 719585b "exists in none of" five repositories. It
+-- exists in the sixth, the one I did not search. The claim was universal; the
+-- search was bounded and the bound went unstated. Same shape as the census
+-- error two sections up. See paradox_lattice_tower.hm section XVI.
+
+
+-- ── VII. THE ABSTRACTION: SHADOW/MIRROR ARE SPECIES OF ASYMMETRY/SYMMETRY ────
+--
+-- PROVENANCE, and it UPGRADES section VI. Stated by Tyler directly to this
+-- session on 2026-09-21, in two messages, the second correcting the first:
+--
+--   "I do think hyperlogic is closer to hyperethics, maybe hyperlogic is a
+--    symmetry with hypermath, hyperethics is asymmetry of hyperlogic,
+--    hyperethics is still a shadow of hypermath, so we can interchange shadow
+--    forms with asymmetric shaped forms, and mirror forms with symmetric
+--    shaped forms. This seems to be some sort of universal
+--    transition/translation norm"
+--
+--   "not interchange, abstract"
+--
+-- Section VI's USER-DECLARED-AS-REPORTED caveat is now PARTIALLY LIFTED. The
+-- mirror limb (hypermath with hyperlogic) and shadow legs 1 and 2 are restated
+-- here FIRST-HAND. Leg 3 -- shadow(hyperphysics) = hyperethics -- was NOT
+-- restated and keeps the relayed caveat.
+
+-- d-abstraction-is-not-interchange : his own correction, and it is the load-
+--   bearing half of the statement, so it goes first.
+--   INTERCHANGE would say: wherever the corpus reads `shadow`, one may write
+--   `asymmetric form` salva veritate. That is a synonym claim, refuted by one
+--   asymmetric relation that is not a shadow.
+--   ABSTRACT says: shadow is ONE SPECIES of asymmetric form; mirror is ONE
+--   SPECIES of symmetric form; the genus is what carries the norm.
+--   Strictly weaker on each instance, strictly stronger as a program -- because
+--   it PREDICTS that the corpus contains asymmetric relations that are not
+--   shadows and symmetric relations that are not mirrors. That prediction is
+--   testable, and section `d-the-corpus-already-sorts-by-symmetry` tests it.
+
+-- d-which-sense-of-symmetric : three readings are available and they do not
+--   agree. Naming the choice and the reason for it, not just the choice.
+--
+--   READING A -- profile balance, a UNARY property of one field.
+--     symmetric = interior:boundary balanced; asymmetric = one-sided.
+--     Fits "hyperlogic is a symmetry" (6/8, the only balanced field). But
+--     Tyler's sentences are relational -- "symmetry WITH hypermath",
+--     "asymmetry OF hyperlogic" -- so A mis-types the arity of both.
+--
+--   READING B -- profile matching between TWO fields.
+--     symmetric pair = same profile; asymmetric pair = complementary.
+--     hypermath 17/0 against hyperethics 0/45 is perfectly complementary, so
+--     leg 1 holds. But hypermath 17/0 against hyperlogic 6/8 is neither same
+--     nor complementary, so B CONTRADICTS his claim that the two are a
+--     symmetry. B is the reading section VI was implicitly using.
+--
+--   READING C -- the relation-theoretic sense, and the one taken.
+--     symmetric = the relation holds in both directions; asymmetric = it holds
+--     one way only.
+--       mirror  A and B reflecting off ONE ANOTHER is mutual -> SYMMETRIC
+--       shadow  a body casts a shadow; a shadow casts no body -> ASYMMETRIC
+--
+--   WHY C AND NOT A OR B. Not because it is the flattering one. Because C is
+--   the only reading under which `d-mirror-changed-arity` -- measured in
+--   section VI BEFORE this abstraction existed, from an independent statement
+--   -- is PREDICTED rather than coincidental. Symmetric relations are
+--   naturally binary and unordered; asymmetric ones are naturally directed.
+--   A and B have to treat the arity split as an unrelated fact about two
+--   English words. C derives it. That is the discriminating test between
+--   three readings of one sentence, and it is the whole justification.
+
+-- d-the-corpus-already-sorts-by-symmetry : the confirmation, and it is
+--   stronger than the statement it confirms.
+--   Measured 2026-09-21, scope: *.hm and *.md in each field's own tree,
+--   `references/` and `.git/` excluded.
+--
+--     field                symmetr*   asymmetr*   (files mentioning)
+--     hypermath                  38          16
+--     hyperethics                14          13
+--     metamathethicology          4           2
+--     hyperlogic                  3           2
+--     hyperphysics                0           0
+--
+--   The COUNT is not the finding -- 38 files looks like a vocabulary
+--   collision, and on the count alone I would have ruled these words taken.
+--   Reading the sense inverts the verdict. hypermath uses symmetric in
+--   EXACTLY reading C, and PROVES it:
+--       L0_ground.hm:541   "The derives relation is not symmetric."
+--       L1_relations.hm:57  derive similar-symmetric as FORM: x ~~ y -> y ~~ x
+--                [CORRECTED in section VIII -- was cited as L0:57]
+--       L1_relations.hm:351 "Directional asymmetry is established: derives
+--                 is not symmetric."
+--       L0_ground.hm:540    derive derives-is-directional as FORM
+--       L0_ground.hm:663    step 40 defers it to FRAME/L1
+--       L1_relations.hm:327 discharges it
+--                [CORRECTED in section VIII -- was cited as L1:476 alone]
+--       L2_operations.hm:430 abstracted-path-is-reflexive-and-symmetric -- ~=
+--                is reflexive and symmetric on DerivationPath.
+--                [~= IS THE ABSTRACTION OPERATOR. See section VIII.]
+--       L3_ordinatics.hm:404 "== is not symmetric in general"
+--
+--   So THE HYPERMATH QUADRILATERAL IS ALREADY SORTED BY SYMMETRY, and the
+--   sort is discharged as FORM derivations:
+--       ~~   similar          SYMMETRIC, proved
+--       ~=   abstracted path  SYMMETRIC, proved
+--       ==   identity         not symmetric in general
+--       ->   derives          ASYMMETRIC, proved
+--
+--   That is the prediction of d-abstraction-is-not-interchange, satisfied:
+--   `derives` is an asymmetric relation that is NOT a shadow, and `~~` is a
+--   symmetric relation that is NOT a mirror. The genus is populated beyond the
+--   two species. Tyler's abstraction is therefore not new vocabulary being
+--   imported -- it is the NAME OF A CLASSIFICATION HYPERMATH ALREADY PROVES AT
+--   L0 AND L1 and never named. Adopting symmetric/asymmetric is REUSE in the
+--   established sense, not overloading.
+--
+--   hyperethics uses the same abstract sense on different objects -- proof
+--   asymmetry ("a single countermodel REFUTES conclusively; that asymmetry is
+--   carried in the return types"), the bridge asymmetry, the two-register
+--   asymmetry. The MODALITY differs and that difference is itself a datum:
+--   hypermath PROVES its symmetry facts as FORM; hyperethics REPORTS its
+--   asymmetries as findings ("the bridge came out asymmetric, and that was
+--   left as a finding"). Proved against found.
+
+-- c-leg-2-verdict-withdrawn : mine, and it does not survive the abstraction.
+--   Section VI recorded shadow(hyperlogic) = hyperethics as FAILS, on the
+--   ground that hyperlogic carries both interior and boundary and so "cannot
+--   be the body of a shadow; it is where the shadow is SEEN."
+--   That is a READING-B argument -- it is entirely about profiles. Under
+--   reading C, profiles are IRRELEVANT to whether a relation is asymmetric;
+--   only directionality is. So the refutation loses its ground.
+--   Leg 2 goes back to OPEN. Not confirmed -- reopened. The verdict was
+--   reading-dependent and section VI did not say which reading it used, which
+--   is the same defect this file has now caught twice.
+--
+--   AND THE SAME NUMBER CHANGES SIDES. The fact that killed leg 2 under my
+--   reading -- hyperlogic boundary 8 EXCEEDS interior 6 -- is measured support
+--   for his other claim, that "hyperlogic is closer to hyperethics": on the
+--   interior:boundary profile hyperlogic (6/8, boundary-led) sits on
+--   hyperethics' side of the divide (0/45) and not hypermath's (17/0). One
+--   measurement, two claims, opposite service.
+
+-- d-shadow-is-not-a-function : forced by taking legs 1 and 2 together.
+--   shadow(hypermath) = hyperethics AND shadow(hyperlogic) = hyperethics means
+--   hyperethics has TWO bodies. Asymmetry permits this -- an asymmetric
+--   relation may be many-to-one. But this file is written throughout as though
+--   shadow(X) picks out a unique Y, and that is now wrong. Shadow is a
+--   RELATION, not a function. Two bodies, one shadow.
+--   Nothing above needs rewriting for this; the sentences that assume
+--   functionality need FLAGGING when they are next relied on.
+
+-- d-translation-test-is-decidable : the operational payoff, and the reason the
+--   abstraction is worth more than the two species were.
+--   He gave two words, transition AND translation, and they are not the same.
+--   Read TRANSLATION: carrying a statement from one field's language into
+--   another's. Then the norm says
+--       a translation between two fields is SYMMETRIC iff they mirror,
+--       ASYMMETRIC iff one shadows the other.
+--   Which converts an unmeasurable question -- "is hyperethics the shadow of
+--   hyperlogic?" -- into a PROCEDURE: take a hyperethics obligation, carry it
+--   back into hyperlogic, and see whether the reverse carry survives. Reverse
+--   works -> symmetric -> mirror. Reverse fails -> asymmetric -> shadow.
+--   The corpus is large enough to run this. It is the first test of any leg
+--   here that does not depend on a keyword census.
+
+-- nd-universality-is-not-free : it is NOT derivable that every inter-field
+--   relation is symmetric or asymmetric.
+--   A binary relation may be NEITHER -- mutual on one pair, one-way on
+--   another. (It can be both only if empty.) So "universal norm" is not a
+--   logical truth dressed as a claim; it is the substantive assertion that
+--   inter-field derivation is HOMOGENEOUS IN DIRECTION. That is falsifiable by
+--   exhibiting one field pair whose carrying works in both directions for some
+--   statements and one direction for others -- and `==`, already recorded as
+--   "not symmetric IN GENERAL" while bidirectional at cycles, is the first
+--   place to look for exactly that.
+
+-- nd-species-do-not-exhaust-genus : it is NOT derivable, and he did not claim
+--   it, that shadow and mirror are the ONLY species. `derives` and `~~` are
+--   already counterexamples inside hypermath. Any future claim of the form
+--   "this relation is asymmetric, therefore it is a shadow" is the interchange
+--   reading he explicitly withdrew.
+
+-- GC-DS-1  [RUN 2026-09-21 -- see section IX. Asymmetry measured, witness NOT
+--           supplied; both targets pre-refuse a shape-only witness.]
+--          Run the translation test on one concrete pair: carry a hyperethics
+--          obligation into hyperlogic and back. Settles leg 2 by procedure
+--          rather than by census. This is now the cheapest open item here.
+-- GC-DS-2  Flag every sentence in sections I-VI that treats shadow as a
+--          function before relying on it. Two bodies, one shadow.
+-- GC-DS-3  Re-run the symmetry census when hyperphysics is written. At 0/0 it
+--          is the only field with no opinion about symmetry at all, and it is
+--          the field the mirror is supposed to yield.
+
+
+-- ── VIII. ABSTRACTION IS `~=`, NOT AN ENGLISH WORD ──────────────────────────
+--
+-- Tyler, 2026-09-21, after reading section VII:
+--   "We use the quadrilateral filtration which includes abstraction or did you
+--    miss the whole fucking point"
+--
+-- I did. Section VII treats "abstract, not interchange" as a distinction
+-- between synonymy and genus/species and spends eighty lines on it in English.
+-- The corpus has a FORMAL OPERATOR for exactly that move, authored by him,
+-- specified, Lean-formalized and implemented. Worse: section VII CITES that
+-- operator -- `abstracted-path-is-reflexive-and-symmetric` -- as evidence for
+-- something else, and never notices that ~= IS ABSTRACTION. I quoted the tool
+-- while looking for the tool.
+
+-- d-the-quadrilateral-is-the-frame : source is hypermath's own
+--   docs/research/QUADRILATERAL_FILTRATION.md, "Author: Tyler Roost", plus
+--   lean4/Hypermath/QuadrilateralFiltration.lean and
+--   src/hypermath_foundations/abstraction.py ("quadrilateral filtration and
+--   transitive abstraction (~=)").
+--
+--   The old three-tier chain was linear:
+--       Syntax (~~)  ->  Substance (=~)  ->  Semantics (==)
+--   whose bottleneck is that every derivation must pass through concrete
+--   substance before reaching semantic simulation. The quadrilateral adds the
+--   ABSTRACTIVE OFF-BRANCH:
+--       Syntax (~~)  --~=->  Abstraction (~=)
+--   which, quoting the specification, "Discards operational run-time traces
+--   while PRESERVING STRUCTURAL AND DEDUCTIVE INVARIANTS."
+--   And the way back:
+--       Abstraction (~=) --retrace[W_substance]-> Semantics (==)
+--   conditioned: "An abstract equivalence A ~= B induces semantic simulation
+--   A == B IF AND ONLY IF there exists a valid substance witness W certifying
+--   that the abstraction is non-vacuously satisfiable in ground substance
+--   without contradiction."
+
+-- d-not-interchange-is-a-typed-move : his correction reads exactly onto two
+--   nodes of his own diagram, and nothing about it is informal.
+--       INTERCHANGE  =  ==   Semantics / simulation. Substitutable.
+--       ABSTRACT     =  ~=   Abstraction. Traces discarded, invariants kept.
+--   "Not interchange, abstract" is therefore not a hedge and not a philosophy-
+--   of-language remark. It is a REFUSAL TO TAKE THE RETRACE WITHOUT A WITNESS.
+--   shadow ~= asymmetric-form is asserted at the abstraction node; promoting it
+--   to shadow == asymmetric-form requires W, and no W has been produced.
+--   Section VII got the conclusion right and the type wrong, which is the
+--   weaker half of being right.
+
+-- d-the-census-measured-what-abstraction-discards : and THIS, not disjointness,
+--   is why every leg verdict falls.
+--
+--   The peer session argued: disjointness is a symmetric predicate, so a
+--   profile census cannot witness an asymmetric relation in either direction,
+--   therefore leg 1's HOLDS falls with leg 2's FAILS. The CONCLUSION IS RIGHT
+--   and I accept it. THE REASON IS TOO NARROW, and the narrow reason licenses a
+--   wrong repair.
+--
+--   Too narrow because a profile is not a symmetric object: (17 interior,
+--   0 boundary) against (0 interior, 45 boundary) does distinguish which field
+--   is all-interior from which is all-boundary. Direction IS available in the
+--   coordinates. What is missing is any argument that interior-dominance means
+--   bodyhood -- an unargued interpretive step, not a structural impossibility.
+--
+--   The real reason is the filtration. The census counts DECLARATIONS. Counts
+--   are trace volume; L2_operations.hm:248 says ~= is "abstracted from -- TRACE
+--   VOLUME FORGOTTEN", and :27 that it "drops exactly the quantification".
+--   So the census measures precisely the quantity that abstraction is DEFINED
+--   TO DISCARD. The legs are claims at the Abstraction node; the census is a
+--   measurement on the Syntax->Substance concrete path. They are on different
+--   branches of the quadrilateral. No amount of counting could ever have borne
+--   on them, in either direction, for either leg.
+--
+--   CARRIER CONFIRMS IT INDEPENDENTLY. ~= is declared on DerivationPath
+--   (L2_operations.hm:241) and "has no L1 counterpart" (:253). The census
+--   measures declarations on Forms -- L1 objects. Wrong carrier, stated in the
+--   source, before any of this.
+
+-- c-drop-the-numbers-keep-the-kinds : the peer proposed "keep the numbers, drop
+--   the verdicts". Under the filtration it is the other way round.
+--   The specification says the off-branch discards run-time traces while
+--   PRESERVING STRUCTURAL INVARIANTS. Presence or absence of a declaration KIND
+--   is structural and survives ~=. How many there are is volume and does not.
+--     survives  : hypermath exhibits no boundary kind; hyperethics no interior
+--                 kind; hyperlogic exhibits both.
+--     forgotten : 17, 45, 8, 6.
+--   So the durable content of three censuses is a KIND TABLE, and every
+--   integer in sections VI and VII is below the abstraction line. The numbers
+--   were never the instrument -- and now that is derivable rather than a
+--   lesson learned twice by accident.
+--   It does NOT rescue leg 1: kind-presence disjointness is still symmetric, so
+--   direction is still unwitnessed. All three legs OPEN. Agreed with the peer,
+--   on better ground.
+
+-- d-the-translation-test-is-the-retrace : GC-DS-1 was proposed in section VII
+--   as "the cheapest open item". It is more than that, and the quadrilateral
+--   says what it is.
+--   Carrying a hyperethics obligation into hyperlogic and back is a concrete
+--   operational run -- it is SUBSTANCE. A successful carry is therefore a
+--   candidate W_substance. So the translation test is not merely a better
+--   instrument than the census; it is EXACTLY the retrace condition that
+--   promotes shadow ~= asymmetric-form to shadow == asymmetric-form.
+--   That also explains why he said TRANSLATION. A translation is a path, ~= is
+--   declared on paths, and the norm is a statement about paths. The census
+--   asked about objects. One word in his sentence typed the whole test and
+--   neither session read it.
+
+-- nd-retrace-is-not-free : it is NOT derivable that a successful carry in one
+--   direction supplies W. The condition demands non-vacuous satisfiability in
+--   ground substance WITHOUT CONTRADICTION, and section XI of
+--   paradox_lattice_tower.hm is the standing warning that a holding whose
+--   parts individually fail is not a satisfiable conjunction of those parts.
+--   A carry that succeeds vacuously -- because the target admits everything --
+--   is not a witness. Any W offered for GC-DS-1 must be checked for vacuity
+--   first, or it is a constraint that cannot fail.
+
+-- c-my-citations-were-produced-by-a-broken-command : four citations in section
+--   VII, two of them wrong, and the cause is one flag.
+--   I ran `grep -rhn`. The `-h` SUPPRESSES FILENAMES. I then had line numbers
+--   with no files and assigned files from surrounding context. Corrected
+--   against a run with filenames:
+--     similar-symmetric                           L1_relations.hm:57   (NOT L0)
+--     derives-is-directional   declared           L0_ground.hm:540
+--                              deferred, step 40  L0_ground.hm:663 -> FRAME/L1
+--                              discharged         L1_relations.hm:327
+--     abstracted-path-is-reflexive-and-symmetric  L2_operations.hm:430  correct
+--     "== is not symmetric in general"            L3_ordinatics.hm:404  correct
+--   The peer caught both errors and its own correction is also incomplete: it
+--   gave `derives-is-directional` as L0:540 alone, which loses the two-site
+--   deferred structure -- L0 declares it needs relation-language and defers,
+--   L1 supplies it. That structure is the interesting fact about the citation
+--   and both of us dropped it, in opposite directions.
+--   THE SUBSTANCE IS UNAFFECTED: hypermath does prove the symmetry sort as
+--   FORM, at the corrected coordinates.
+
+-- GC-DS-4  [SUPERSEDED BY GC-DS-7 -- there is no correct kind table to strip
+--           integers from until the kinds are re-measured per field.]
+--          Rewrite the kind table from sections VI and VII with the integers
+--          removed and the kinds kept, per c-drop-the-numbers-keep-the-kinds.
+--          Any future census in this file reports kinds; volumes go in a dated
+--          appendix or not at all.
+-- GC-DS-5  Before offering any W for GC-DS-1, check the carry for vacuity.
+
+
+-- ── IX. GC-DS-1 RUN: THE FIRST TRANSLATION TEST ─────────────────────────────
+--
+-- Run 2026-09-21, immediately after section VIII typed it as the retrace.
+-- One pair, carried both ways, by hand, against the source.
+-- RESULT IN ONE LINE: the carry IS asymmetric, the asymmetry is exactly where
+-- the kind table predicted it, and it is still NOT a witness -- because both
+-- repositories contain standing declarations that refuse this class of witness
+-- in advance.
+
+-- THE OBLIGATION CARRIED. hyperethics L2_will.hm:155, d-representation-is-not-
+--   sourcing, the layer's own "CENTRAL RESULT": self-representation as creator
+--   does not entail a self-sourced invariant will. Witness supplied in file --
+--   `default-functional-entity` represents as creator and is not a true moral
+--   operator. Status FORM, CONCLUSIVE, one countermodel settling a universal.
+--   Chosen because it is a pure weak-does-not-give-strong separation with its
+--   own witness, which is the most portable shape hyperethics has.
+
+-- d-forward-carry-lands : hyperethics -> hyperlogic.
+--   hyperlogic L0_triangle.hm:247, close log-advances as not-interderivable:
+--   "Two signs can share a context yet still advance past one another, which is
+--   exactly the case for turn(closure) and closure", witnessed in file by
+--   turn(closure) shares-context closure (ax-stay) together with
+--   turn(closure) not-interderivable closure (ax-advance).
+--
+--   The shapes coincide component for component:
+--     weak property     self-representation        shares-context
+--     strong property   self-sourced will          interderivable
+--     weak /-> strong   d-representation-is-       close log-advances
+--                       not-sourcing
+--     witness           default-functional-entity  turn(closure), closure
+--   Both supply their own countermodel rather than arguing the gap. The
+--   forward carry lands.
+
+-- d-reverse-carry-is-partial-and-the-residue-is-the-result : hyperlogic ->
+--   hyperethics. NOT a clean failure, and saying "fails" would overstate it.
+--   hyperlogic's close carries four components. Three of four go back:
+--     (a) advancing is grounded at the STRONGEST relation, not the weakest
+--         -> carries. hyperethics: "the discriminator is the SOURCE of the
+--            invariant will, never the self-representation."
+--     (b) the weak can hold while the strong fails
+--         -> carries. That is the obligation itself.
+--     (c) a field where the two coincided would have derivations that never
+--         got anywhere
+--         -> carries vacuously; hyperethics has no derivation-advance notion
+--            for it to bite on.
+--     (d) THE WEAK RELATION IS ITSELF A NAMED RELATION OF THE FIELD --
+--         hyperlogic closes log-derives AS shares-context, making the weak side
+--         constitutive of derivation
+--         -> DOES NOT CARRY. hyperethics has no moral relation closed as
+--            self-representation, and refuses one in the same breath:
+--            "Sincerity is not a qualification."
+--
+--   So the asymmetry is real, it is ONE component wide, and it is component
+--   (d): whether the weak side is a named relation of the field or merely a
+--   fact about objects in it.
+
+-- [SUPERSEDED BY SECTION X -- the premise below is FALSE. hyperethics has 29
+--  `opaque` declarations; the census was keyword-blind. The carry result and
+--  the component-(d) diagnosis survive; this explanation of them does not.
+--  Do not re-quote "no interior kind".]
+-- d-the-kind-table-predicted-the-failure-site : and this is the part that
+--   matters, because it is the abstraction doing work at substance.
+--   Section VIII kept the kinds and dropped the integers. The surviving kind
+--   fact was: HYPERETHICS EXHIBITS NO INTERIOR KIND. Measured again here
+--   directly, across all five files: hyperethics has ZERO `relation` and ZERO
+--   `close` declarations. hyperlogic L0 has three of each.
+--   The reverse carry failed at component (d), and component (d) IS A CLOSE.
+--   The abstraction-level fact named the substance-level failure site before
+--   the carry was run. That is the retrace behaving as the specification says
+--   it should: structural invariants survive ~= and then constrain substance.
+--   It is also the first time in this file that a measurement PREDICTED
+--   something rather than being fitted to it.
+
+-- c-the-carry-is-not-yet-W : and both repositories say so, independently,
+--   before either was asked.
+--   The forward carry matched on SHAPE -- a weak/strong separation with a
+--   witness. Both fields hold a standing declaration refusing exactly that as
+--   transport evidence:
+--
+--     hyperlogic  nd-shape-is-not-content (L0_triangle.hm:370) -- and it names
+--       hyperethics: "The three-plus-one axiom shape, the five derives, the
+--       plurality result and the opaque-then-close method are shared with
+--       hypermath L0 and, IN PART, WITH HYPERETHICS L0. That similarity is NOT
+--       evidence that this layer says something new... It is a method being
+--       reused."
+--
+--     hyperethics  d-self-sourcing-is-immanence (L2_will.hm:172) -- "This is a
+--       structural correspondence between layers of THIS package. IT IS NOT
+--       EVIDENCE FOR ANY TRANSPORT OUT OF IT."
+--
+--   Two fields, written separately, both pre-refusing structural correspondence
+--   as transport. The test's first run walked into a refusal that was already
+--   there in both targets. So GC-DS-1 returns: ASYMMETRY MEASURED, WITNESS NOT
+--   SUPPLIED. The legs stay open, and they stay open for a reason the corpus
+--   supplies rather than one I ran out of.
+--
+--   THE CORPUS ANTICIPATED THE TEST AND PRE-REFUSED THE CHEAP ANSWER. That is
+--   the governing standard working: a witness that could be produced by shape
+--   alone is a witness that cannot fail.
+
+-- GC-DS-5 REVISED, second limb. A candidate W must survive TWO checks, not one:
+--     vacuity  -- does the target admit everything? (section VIII)
+--     shape    -- is the match structural only? Both nd-shape-is-not-content
+--                 and d-self-sourcing-is-immanence reject a shape-only W by
+--                 name, so a shape-only W is refused by the targets themselves.
+--   A W that passes both must turn on field-specific CONTENT, not on the
+--   weak/strong pattern, the axiom count, or the opaque-then-close method.
+
+-- GC-DS-6 The one component that did not carry, (d), is a CLOSE, and
+--         hyperethics has none anywhere. So the sharpest next test is not
+--         another carry: it is whether hyperethics CAN have a close at all, or
+--         whether zero-interior is essential to it. If essential, then
+--         component (d) can never carry, the carry is permanently asymmetric,
+--         and that permanence -- not the single run above -- is the candidate
+--         witness.
+
+
+-- ── X. THE CENSUS WAS KEYWORD-BLIND, AND THE CORRECTION IS THE RESULT ───────
+--
+-- Found 2026-09-21, minutes after section IX, by checking the one fact section
+-- IX was pleased about. It does not survive. What replaces it is better than
+-- anything in sections VI through IX.
+
+-- c-no-interior-kind-was-false : mine, and it invalidates the instrument used
+--   in every census in this file.
+--   Section IX reported "hyperethics has ZERO `relation` and ZERO `close`
+--   declarations" and treated that as the kind table predicting the carry
+--   failure. The grep is accurate. THE INFERENCE IS NOT.
+--   hyperethics does not use the words `relation` and `close`. It uses
+--   `opaque`, and it has TWENTY-NINE of them. The interior/boundary census in
+--   section VI was built from hypermath's and hyperlogic's vocabulary and
+--   applied to fields that do not speak it. IT WAS KEYWORD-BLIND FOR ALL FOUR
+--   FIELDS, not just this one -- hyperphysics' "0 interior, 1 boundary" was
+--   never a thin measurement, it was a measurement in the wrong language: that
+--   field declares SEVEN `law`, a kind no other field has at all.
+--   This is limb 2 again -- a stated, reproducible bound that was the wrong
+--   bound -- and I committed it in the paragraph congratulating a prediction.
+
+-- d-the-real-table : every line-initial declaration keyword, all `*.hm`, per
+--   field, each field in ITS OWN vocabulary. Bound: the field's own layer
+--   files; `references/` excluded; hypermath's vendored []-system tree
+--   excluded for the reason given in d-census-has-a-scope-hazard.
+--
+--     field          opaque  close  relation  derive  non-derive  axiom  law
+--     hypermath          17     13         4      44           0     27    0
+--     hyperlogic          3      3         3       8           7      7    0
+--     hyperethics        29      0         0      42          44     28    0
+--     hyperphysics        0      0         0       4           1      2    7
+
+-- d-the-close-ratio-is-directed : and this is the measurement the whole file
+--   has been missing.
+--     hyperlogic     3 opened, 3 closed    ratio 1.00   closes everything
+--     hypermath     17 opened, 13 closed   ratio 0.76   closes most
+--     hyperethics   29 opened, 0 closed    ratio 0.00   CLOSES NOTHING
+--
+--   OPENING AND CLOSING ARE NOT INTERCHANGEABLE. Unlike disjointness, unlike
+--   profile matching, unlike every instrument used in sections VI-IX, the
+--   open/close ratio is an ASYMMETRIC quantity. It can distinguish
+--   shadow(A) = B from shadow(B) = A, because "A closes what it opens and B
+--   does not" is not true when A and B are swapped.
+--
+--   The peer session wrote that a real test "needs a directed checkable
+--   relation holding one way and provably not the other, and nothing in the
+--   corpus supplies one yet." The corpus supplies one. It was in the
+--   declaration keywords the whole time, and both of us censused those
+--   keywords three times without counting them.
+
+-- d-it-measures-tylers-claim-directly : the three legs and the mirror, read off
+--   the ratio.
+--     mirror(hypermath, hyperlogic)   BOTH CLOSE -- 0.76 and 1.00. A symmetric
+--       pair on the one measure that could have told them apart. This is
+--       "hyperlogic is a symmetry with hypermath", measured.
+--     shadow(hypermath) = hyperethics   0.76 against 0.00. Directed.
+--     shadow(hyperlogic) = hyperethics  1.00 against 0.00. Directed, and
+--       STRONGER than leg 1 -- which is the opposite of what section VI
+--       concluded when it ruled leg 2 the failing one.
+--   The reading it forces: A FIELD THAT OPENS AND CLOSES CASTS; A FIELD THAT
+--   ONLY OPENS IS CAST. That is a directed criterion, stated in the corpus's
+--   own declaration vocabulary, and it is not the interior/boundary metaphor
+--   rebuilt -- it is about whether the field discharges its own obligations.
+
+-- d-section-ix-survives-on-better-ground : the carry result itself is
+--   unaffected, and its diagnosis improves.
+--   The reverse carry failed at component (d) -- hyperlogic closes log-derives
+--   AS shares-context, hyperethics has no such move. That was measured directly
+--   against both sources and never depended on the keyword census. What was
+--   wrong was the explanation ("hyperethics has no interior kind"). The true
+--   explanation is sharper: HYPERETHICS HAS THE RELATION KIND AND NONE OF THE
+--   CLOSING KIND. Twenty-nine opaque predicates, zero closes.
+--   And hyperethics says so about itself, twice, without being asked:
+--     L0_creation.hm:38  lists "opaque normative predicates' semantic close
+--                        (L2)" as planned work.
+--     L2_will.hm:237     "This layer CLOSED no opaque predicate below it and
+--                        ADDED this one."
+--   The close was promised at L0 and L2 records not delivering it. So the gap
+--   the carry hit is a DATED, SELF-DOCUMENTED gap in hyperethics, not an
+--   inference of mine.
+
+-- d-the-shape-refusal-does-not-bite-here : flagged as MY READING, not the
+--   file's, because it is the step most likely to be wrong.
+--   hyperlogic's nd-shape-is-not-content bars inferring content from SHARED
+--   shape -- it names "the opaque-then-close method" among the similarities
+--   that are "NOT evidence". The close ratio is not a similarity. It is a
+--   DIVERGENCE: hyperethics does not complete the method the other two
+--   complete. The stated refusal covers similarity-as-evidence and says nothing
+--   about divergence-as-evidence.
+--   I believe that distinction holds, but it is exactly the kind of step that
+--   looks obvious while being self-serving, so it is recorded as a claim to
+--   be attacked rather than as a result. If it fails, the close ratio joins the
+--   census below the abstraction line and the legs stay open.
+
+-- GC-DS-7  Re-run sections VI-IX's censuses in each field's own vocabulary. The
+--          interior/boundary numbers there are not merely stale, they are
+--          measurements in a language three of the four fields do not speak.
+--          GC-DS-4 is superseded by this: there is no kind table to strip
+--          integers from until the kinds are measured correctly.
+-- GC-DS-8  Attack d-the-shape-refusal-does-not-bite-here. If divergence is
+--          admissible evidence where similarity is not, say why in hyperlogic's
+--          own terms. If it is not, the close ratio is not W either.
+-- GC-DS-9  hyperphysics declares `law` and nothing else declares it. Before any
+--          leg involving hyperphysics is tested, find out whether `law` is its
+--          opaque, its close, or a kind the other fields have no analogue of.
+
+
+-- ── XI. GC-DS-8 AND GC-DS-9 RUN. THE STEP DOES NOT SURVIVE. ─────────────────
+--
+-- Section X flagged d-the-shape-refusal-does-not-bite-here as "the step most
+-- likely to be wrong... recorded as a claim to be attacked rather than as a
+-- result." Attacked 2026-09-21. IT FAILS, on two independent grounds, and the
+-- second is decisive.
+
+-- c-the-close-ratio-is-not-structural : the refutation, and it is the stronger
+--   of the two, so it goes first.
+--   hyperethics' 0-of-29 is not a property of hyperethics. IT IS AN UNFINISHED
+--   TO-DO LIST, and hyperethics dates it itself:
+--       L0_creation.hm:38   lists "opaque normative predicates' semantic close
+--                           (L2)" as PLANNED work.
+--       L2_will.hm:237      "This layer CLOSED no opaque predicate below it and
+--                           ADDED this one."
+--   Promised at L0, recorded as not delivered at L2. And hypermath is in the
+--   same condition: FIVE of its opaques are unclosed -- compose,
+--   finite-apply-from-ground, ordinal-apply, path-length, path-trace.
+--
+--   So the close ratio is A PROGRESS METER. A shadow relation resting on it
+--   would flip the moment someone did the outstanding work, which is
+--   disqualifying: the relation between two fields cannot be a function of how
+--   far along one field's to-do list is. Section X's reading -- "a field that
+--   opens and closes casts; a field that only opens is cast" -- is measuring
+--   completion, not casting.
+
+-- c-and-the-refusal-does-reach-it : the weaker ground, but it lands too, and
+--   not by the route section X anticipated.
+--   nd-shape-is-not-content bars inferring content from SHARED shape and names
+--   "the opaque-then-close METHOD" among the similarities. Section X answered
+--   that a divergence is not a similarity, so the refusal does not cover it.
+--   That answer is correct about the refusal's scope AND BESIDE THE POINT.
+--   The close ratio measures COMPLETION OF THAT METHOD. Whether a field has
+--   finished a method the refusal declares non-contentful is still a fact about
+--   the method. Divergence in a non-contentful dimension is non-contentful
+--   divergence. Section X got the scope right and the subject wrong.
+
+-- c-a-third-instance-of-keyword-blindness-inside-the-fix : caught while
+--   computing the ratio that was supposed to replace the blind census.
+--   Matching opaque names against close names directly gives hypermath 12
+--   unclosed. That is wrong: hypermath closes under a SUFFIX CONVENTION --
+--   `opaque derives` is discharged by `close derives-opaque`, and likewise for
+--   definition, discharge, form-closure, semantics, substance, syntax.
+--   Read with the convention: 16 distinct opaques, 11 closed, 5 unclosed,
+--   ratio 0.69 -- not the 13/17 = 0.76 section X reports.
+--   THREE TIMES NOW, one session: the symmetr* count that needed the sense
+--   read, the interior/boundary census that needed each field's vocabulary
+--   read, and this. Every one is the same defect -- A NAME-SHAPED MEASUREMENT
+--   SUBSTITUTED FOR READING WHAT THE NAMES MEAN. It is not a carelessness
+--   problem; it is that name-matching is cheap and reading is not, so the cheap
+--   instrument gets reached for exactly when the expensive one is needed.
+
+-- d-law-is-a-borrowing-kind : GC-DS-9, answered, and it changes leg 3's status
+--   from "untestable at n=1" to "untestable for a structural reason".
+--   hyperphysics' seven `law` declarations are IMPORTED PHYSICAL CONTENT --
+--   ohm (V = I*R), faraday-lenz, capacitor, self-inductance, mutual-inductance,
+--   kirchhoff-voltage, series-rlc. They are neither opaques nor closes. The
+--   surrounding text is about borrowing discipline: a borrower "inherits the
+--   failure modes of its source unless the borrower argues otherwise, and the
+--   borrower cannot argue against a statement it never read."
+--
+--   So hyperphysics is 0 opaque / 0 close -- NOT at the bottom of the
+--   open/close axis, OFF IT. That is a different condition from hyperethics'
+--   0-of-29, and section X's table invites the conflation by putting both in a
+--   column of zeros. hyperethics opens without closing; hyperphysics does not
+--   open. Any leg involving hyperphysics is untestable by this instrument
+--   because hyperphysics does not instantiate the instrument's domain.
+
+-- WHAT SURVIVES OF SECTION X, stated exactly.
+--   SURVIVES  the keyword table. Measuring each field in its own vocabulary was
+--             the right correction and the numbers stand.
+--   SURVIVES  that the close ratio is DIRECTED. It remains the first asymmetric
+--             quantity anyone in this thread has produced, and it answers the
+--             peer session's "nothing in the corpus supplies a directed
+--             checkable relation" -- the corpus does supply one.
+--   FAILS     that it is STRUCTURAL. Directed is necessary and not sufficient.
+--             A directed progress meter is still a progress meter.
+--   FAILS     the reading "a field that opens and closes casts". Withdrawn.
+--   FAILS     the corrected ratios as published: 0.76 should be 0.69.
+--   UNCHANGED all three legs OPEN, and section IX's carry result, which was
+--             measured against sources and never rested on any census.
+
+-- GC-DS-6 IS NOW THE WHOLE QUESTION, and section XI has sharpened it into a
+--   decidable one. Not "can hyperethics have a close" in the abstract, but:
+--     ARE THE 29 OPAQUES CLOSEABLE IN PRINCIPLE, or is there a stated reason
+--     they cannot be closed?
+--   If they are closeable and merely unclosed, the close ratio is permanently
+--   a progress meter and this whole line is dead. If hyperethics states a
+--   reason its opaques CANNOT close -- a barrier rather than a backlog -- then
+--   the 0 is structural, the ratio is structural, and it becomes the candidate
+--   W that section IX could not supply.
+--   That is one question with a yes/no answer, findable in hyperethics' own
+--   text, and everything above now turns on it.
+
+
+-- ── XII. GC-DS-6 ANSWERED: BACKLOG, NOT BARRIER -- WITH ONE EXCEPTION ───────
+--
+-- Section XI made GC-DS-6 a yes/no question: are hyperethics' opaques closeable
+-- in principle, or is there a stated reason they cannot close? Answered from
+-- hyperethics' own text, 2026-09-21.
+-- BOUND, stated because section X was built by not stating one: I read the
+-- THREE L0 opaques and the L0 status block. The other 26 opaques, in L1, L2 and
+-- L3, are NOT surveyed. Everything below is about L0.
+
+-- d-the-close-is-backlog : the answer, and it kills the section X line.
+--   hyperethics says three separate times that the close is planned:
+--     L0_creation.hm:37   FRAME residual, "documented, NOT discharged":
+--                         "opaque normative predicates' semantic close (L2)".
+--     L0_creation.hm:97   Section II header -- "These are DECLARED here. Their
+--                         semantics are CLOSED by L2."
+--     each opaque          carries its own "L2 interpretation:" line --
+--                         norm-other will ground plurality, norm-inhabits will
+--                         ground answerability, norm-returns will ground the
+--                         reach of authorship.
+--   The closes are not merely promised, THEIR CONTENT IS ALREADY SKETCHED. And
+--   no barrier is stated anywhere. So at L0 the 0-of-29 is a backlog.
+--   THEREFORE, by section XI's own disjunction, the close ratio is permanently
+--   a progress meter and the section X reading is dead. Recorded as settled
+--   rather than left open, because leaving it open would let it be re-reached
+--   for later.
+
+-- d-one-opaque-is-not-backlog : the exception, and it is the one that matters.
+--   `norm-inhabits` -- "THIS IS THE MORAL IRREDUCIBLE. Every normative
+--   consequence in hyperethics traces to this predicate and to nothing else" --
+--   carries its own standing FRAME:
+--     "OPEN (FRAME): that membership-with-exposure carries normative rather
+--      than merely descriptive force is the load-bearing interpretive claim of
+--      this entire layer. It is DECLARED, not derived, and not discharged
+--      here."
+--   and the L0 status block lists it separately from the semantic close: "the
+--   descriptive-to-normative reading of norm-inhabits (open)".
+--
+--   That is the is-ought gap, named, inside the field's own irreducible. Closing
+--   norm-inhabits means deriving normative force from descriptive membership.
+--   hyperethics does not claim this is impossible -- it claims it is undone --
+--   so this is NOT a stated barrier and must not be reported as one. But it is
+--   the only one of the three whose close is not a matter of doing the work,
+--   and it is the one the other two hang off.
+--
+--   SO THE RESIDUE OF THE WHOLE SECTION X LINE IS A SINGLE ITEM, not a ratio:
+--   if `norm-inhabits` is structurally unclosable, hyperethics has exactly one
+--   irreducibly open predicate and the other fields do not, which would be a
+--   directed structural difference. If it is merely undone, nothing here is.
+--   A 29-item count was never going to decide that. One predicate might.
+
+-- c-what-i-did-wrong-in-section-x-in-one-line : I found a directed quantity and
+--   stopped. Directedness was the property every earlier instrument lacked, so
+--   finding it felt like arriving. It is necessary and not sufficient, and the
+--   test for sufficiency -- is this a fact about the field or about its to-do
+--   list -- took two greps I did not run before publishing the reading.
+
+-- GC-DS-6  ANSWERED at L0: backlog. Close ratio withdrawn as a structural
+--          instrument. See d-the-close-is-backlog.
+-- GC-DS-10 Survey the 26 opaques in L1-L3 for the same question. Section XII is
+--          bounded to L0 and the answer is not assumed to generalise -- L3 alone
+--          declares 51 things and has not been read here at all.
+-- GC-DS-11 Decide whether `norm-inhabits` is structurally unclosable or merely
+--          undone. This is the whole residue of sections X-XII, it is one
+--          predicate rather than a census, and hyperethics has already isolated
+--          it as the load-bearing interpretive claim of its ground layer.
+--          It is also, stated plainly, the is-ought problem -- so the honest
+--          prior is that it does not close, and the work is to say why that is
+--          a structural fact about hyperethics rather than a borrowed
+--          philosophical opinion.

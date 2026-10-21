@@ -1,0 +1,302 @@
+-- p0_barrier.hm
+-- The P0 barrier: why the shadow ground is field-local, and what broke
+-- metamathethicology | metaethics x metamathematics x metalogic
+--
+-- NO LAYER INDEX, DELIBERATELY, AND FOR A FOURTH REASON. The three reasons
+-- already on record are in definitional_shadow.hm. This file carries none for
+-- a reason of its own: it is a statement about a layer that sits BELOW every
+-- index, in three fields whose ground layers are not the same shape, and an
+-- index here would assert that P0 occupies one position in a single shared
+-- stack. That is the exact claim this file refutes.
+--
+-- Cites: hyperethics/P0_shadow_ground.hm, L0_creation.hm, L2_will.hm
+--        hyperlogic/P0_shadow_ground.hm, L0_triangle.hm, src/hyperlogic/models.py
+--        hypermath/P0_STATUS.md, L1_relations.hm, L3_ordinatics.hm,
+--                 lean4/FullAxiomModel.lean, lean4/Hypermath/L3Ordinatics.lean
+--        hyperphysics/P0_PRECONDITION.md, electrical.hm
+-- Imports: none. Every count below is a claim about bytes, and a claim about
+--          bytes is worthless unless someone re-reads them. Two of the four
+--          cited repositories are private and one is not published at all, so
+--          this file states its measurements in a form that can be re-run
+--          rather than asking to be believed.
+--
+-- PLACEMENT, and why this file could not go in any of the four fields it is
+-- about: each of the four P0 artifacts already refuses to make this statement.
+-- hyperethics/P0_shadow_ground.hm carries
+--   non-derive nd-p0-shadows-hypermath
+-- whose text is: "Anything asserting a single P0 theory across fields is a
+-- combination claim and belongs in metamathethicology, per the placement rule:
+-- a field states its own subject once." hyperlogic's P0 carries the same
+-- clause. So the four fields have each declared this statement out of scope,
+-- in writing, and the statement is nonetheless true and worth having. That is
+-- precisely what a combination field is for.
+--
+-- STATUS: the four artifacts this file summarizes are ALL UNCOMMITTED, in
+-- four separate working trees, as of 2026-09-21. Nothing below has survived
+-- review by anyone but its author.
+
+-- ---------------------------------------------------------------------------
+-- SECTION I: WHAT P0 WAS SUPPOSED TO BE
+-- ---------------------------------------------------------------------------
+--
+-- A layer BELOW L0 -- the "shadow ground" -- whose objects are the field's own
+-- oppositions: pairs that are similar and not identical, taken as generators
+-- rather than as errors. Every field in this family has such pairs and none of
+-- them has a layer that owns them.
+--
+-- Generalizing from the one draft that exists, a P0 layer needs four things,
+-- and the field beneath it must supply all four:
+--
+--   (i)   an OPPOSITION CONDITION -- two relations over the same pairs that
+--         ought to coincide and do not, with no axiom reconciling them;
+--   (ii)  an EXHAUSTION FACT guaranteeing that a chain of oppositions
+--         terminates;
+--   (iii) a PERIODICITY INVARIANT that the resulting fixed point violates;
+--   (iv)  a CLOSURE NOTION, so that carrying an unclosed hole is a definite
+--         failure rather than an absence.
+--
+-- Ingredients (i) and (iv) turn out to be cheap: every field here has them.
+-- (ii) and (iii) are where the fields differ, and where the work is.
+
+-- ---------------------------------------------------------------------------
+-- SECTION II: THE MEASURED CENSUS
+-- ---------------------------------------------------------------------------
+--
+-- Four fields were examined on 2026-09-21. Each produced either a P0 layer or
+-- a written refusal. No field produced nothing.
+--
+--   field          artifact                    barrier candidate      status
+--   -----------------------------------------------------------------------
+--   hyperethics    P0_shadow_ground.hm   ~400  displacement           UNRUN
+--   hyperlogic     P0_shadow_ground.hm   ~345  the Section VI closes  HOLDS
+--   hypermath      P0_STATUS.md       refusal  arithmetic             BROKEN
+--   hyperphysics   P0_PRECONDITION.md refusal  none -- no ground      N/A
+--
+-- The three barriers are not three versions of one barrier. They are three
+-- different KINDS of object, and that is the finding.
+--
+-- hyperethics bars by DISPLACEMENT. `create` is the only endofunction in
+-- L0-L3, and ax-other gives norm-other(create(x), archetype) for every x, so
+-- `create` never fixes its archetype. A non-displacing self-application is
+-- therefore not statable in L0-L3 and needs a layer of its own. The barrier is
+-- an AXIOM: a semantic commitment about what creation is.
+--
+-- hyperlogic bars by a CLOSE. Its degenerate structure -- collapsed_model, at
+-- src/hyperlogic/models.py:105 -- satisfies ALL FOUR L0 axioms. Nothing in the
+-- axiom set excludes it. What excludes it is a Section VI close, which is
+-- prose with a name, not a theorem. The consequence is stated in that file and
+-- is worth repeating here because it is the sharpest sentence the P0 program
+-- produced: a reader who deletes Section VI does not get a weaker hyperlogic;
+-- they get P0. The barrier is DOCUMENTATION, and it is honest about that.
+--
+-- hypermath bars by ARITHMETIC, or tried to. The draft claims period 1 is
+-- arithmetically forbidden in the L-layers, citing a numerical-semigroup
+-- result: return-lengths at == form <2,3> = N\{1}. The barrier is a THEOREM.
+--
+-- hyperphysics bars by nothing, because it has no ground to bar from.
+-- electrical.hm says of itself: "LAYER INDEX DELIBERATELY UNASSIGNED.
+-- hyperphysics' ground is not written. This file is NOT L0 and does not claim
+-- to be." No relation ladder, no closes, no irreducible, no orbit structure.
+-- A field with no ground has no gap, and P0 is the study of the gap.
+
+-- ---------------------------------------------------------------------------
+-- SECTION III: THE THEOREM IS THE ONE THAT BROKE
+-- ---------------------------------------------------------------------------
+--
+-- The arithmetic barrier fails, and it fails in ways that do not depend on one
+-- another. Each was checked against live hypermath on 2026-09-21; the full
+-- citations are in hypermath/P0_STATUS.md.
+--
+--   1. NOT PRESENT. `semigroup` has zero occurrences across every .hm, .lean,
+--      .md and .py file in hypermath, and zero commits on any branch. The word
+--      `period` appears nowhere in L0 through L3 or in any Lean module. Live
+--      hypermath has no period concept at all. The result lives only in an
+--      unpublished precursor's uncommitted working tree.
+--
+--   2. GENERATORS GONE, ONE MACHINE-REFUTED. Both generators of <2,3> have
+--      zero occurrences in hypermath. The 2-generator's content is refuted:
+--      FullAxiomModel.lean:528 proves nontrivial_simulation_claim_fails inside
+--      a model satisfying all 38 clauses, and L3Ordinatics.lean:335 keeps the
+--      statement only as a Prop, recording the admitted theorem as withdrawn.
+--
+--   3. PERIOD 1 IS NOT FORBIDDEN -- IT IS THE EASY CASE. `trace-levels` states
+--      a disjunction whose FIRST case is apply(x) == x, a period-1 == orbit,
+--      admitted by the very axiom the draft cites one step before excluding
+--      it. And L3Ordinatics.lean:603, driverCycleWitness_of_fixed_deriver, is
+--      docstringed "A fixed point makes the certificate free." The asymmetry
+--      the draft needs is not merely unsupported. It is REVERSED.
+--
+--   4. THE EXHAUSTION PREMISE REVERSES ITS OWN CITATION. The draft reads the
+--      semigroup result as characterizing FINITELY many orbit classes. The
+--      result concludes N\{1}, which is infinite -- the result's own name says
+--      -is-omega -- and never mentions orbit classes or finiteness. Worse, the
+--      supply of oppositions is provably unbounded on hypermath's own clauses:
+--      axDiffInRelationLanguage gives an opposition pair for EVERY x, so every
+--      form yields one and nothing ever exhausts. That is ingredient (ii)
+--      failing outright, not failing to be proved.
+--
+--   5. THE ENTRY WITNESS DOES NOT INSTANTIATE. The draft takes x := ground,
+--      y := apply(ground). L1_relations.hm:94 proves the facts in the other
+--      order. Flipping them needs symmetry of ~~, which is a sorry at
+--      L1Relations.lean:58 and independently refuted in Countermodels, or
+--      symmetry of ==, which L3_ordinatics.hm:405 denies outright.
+--
+-- Failure 5 is repairable by rewriting the witness in the proved order. The
+-- other four are not repairable by editing the draft.
+--
+-- PROVENANCE, stated because the distinction matters: the citation was honest
+-- when it was written. The precursor forked from hypermath at 819f685 on
+-- 2026-04-16 and the cited result exists there, in its uncommitted tree, with
+-- all five references resolving exactly. Live hypermath then moved 43 commits
+-- and refuted the content. This is ROT, NOT FABRICATION, and the difference
+-- is the whole reason the fifth failure is repairable and the others are not.
+
+-- ---------------------------------------------------------------------------
+-- SECTION IV: THE RESULT
+-- ---------------------------------------------------------------------------
+--
+-- THE P0 BARRIER IS FIELD-LOCAL.
+--
+-- Three fields examined, three different candidate barriers, of three
+-- different kinds, and the one that tried to be arithmetic is the one that
+-- broke. What is shared across fields is the SHAPE of a P0 layer -- the four
+-- ingredients of Section I. What is not shared, and what cannot be lifted from
+-- one field to another, is the argument that separates P0 from L0-L3.
+--
+-- This is not a consolation prize for a failed unification. It is the stronger
+-- reading of what P0 is, and it was already implicit in the one sentence the
+-- program kept arriving back at:
+--
+--   P0 IS THE FIELD READ FROM THE ONE POINT WHERE THE FIELD'S OWN
+--   SIMILARITY/IDENTITY GAP CLOSES.
+--
+-- If P0 is the field read from its own gap, then P0 inherits the gap's
+-- shape, and the gap is made of the field's own relations. hypermath's gap is
+-- between ~~ and ==; hyperethics' is between norm-inhabits and norm-other;
+-- hyperlogic's is between two signs that share a context and still advance
+-- past one another. Nothing licenses the assumption that three gaps built from
+-- three unrelated relation-ladders are separated from their fields by one
+-- argument. The draft assumed it, and the assumption is what carried the
+-- arithmetic claim across a repository boundary where it had already died.
+--
+-- A SECOND PATTERN, at three data points and therefore NOT A LAW: the barriers
+-- rank by how theorem-like they claim to be, inversely to how well they held.
+-- The close held and is honest about being prose. The axiom holds and has
+-- never been run. The theorem broke. See nd-kind-predicts-survival.
+
+-- ---------------------------------------------------------------------------
+-- SECTION V: THE SELF-APPLICATION
+-- ---------------------------------------------------------------------------
+--
+-- The P0 program's own central question is an instance of the P0 question,
+-- and this is the part that makes P0 a meta-paradox layer rather than merely
+-- a low layer.
+--
+-- The question "what separates the layer that studies what a field cannot
+-- settle from inside, from the field itself?" is asked FROM INSIDE THE FIELD.
+-- There is no other place to ask it from. hyperethics proves this about its
+-- own ground: d-no-exterior establishes that L0 has no vantage outside itself,
+-- which is exactly why open nd-consistency-self-maintenance -- named in that
+-- file as the principal open problem of hyperethics -- can be stated there and
+-- not discharged there.
+--
+-- So the barrier cannot be established from a position exterior to the field,
+-- because no such position exists. Every barrier must be built from the
+-- field's own clauses. THAT IS WHY THE BARRIER IS FIELD-LOCAL, and it is also
+-- why a barrier imported from a sibling field is not a weaker argument but a
+-- category error. The arithmetic barrier did not merely fail on the facts. It
+-- was the wrong kind of thing to look for.
+--
+-- AND THE AUTHOR MADE THE SAME MISTAKE. Both P0 layers were written with an
+-- axiom named ax-p0-no-return, intended as a barrier at the axiom level. It
+-- CANNOT FAIL: the shadow kind and the parent carrier are different kinds, so
+-- the statement it forbids is already a sorting error, and the sortal barrier
+-- carries it for free. By this family's own governing standard -- a constraint
+-- that cannot fail is not being checked -- those axioms are not barriers. They
+-- are decoration on a barrier that was already there.
+--
+-- This is recorded in both files as GC-P0-6, with two named repairs and
+-- neither applied. It is left standing rather than quietly fixed because a
+-- program whose finding is "the over-claimed barrier is the one that broke"
+-- has no business silently repairing its own over-claim.
+
+-- ---------------------------------------------------------------------------
+-- SECTION VI: NON-DERIVES
+-- ---------------------------------------------------------------------------
+
+non-derive nd-single-p0-theory
+  -- This file does NOT assert that a single P0 theory exists across fields,
+  -- and the field-local result is not a weaker version of one. Three barriers
+  -- of three kinds is evidence AGAINST unification, not evidence for a
+  -- unification not yet found. Anyone constructing a cross-field P0 must
+  -- discharge Section IV first, on the fields' own clauses.
+
+non-derive nd-kind-predicts-survival
+  -- The pattern in Section IV -- close held, axiom unrun, theorem broke -- is
+  -- THREE DATA POINTS, one per field, from one author, in one week. It is not
+  -- a law, it does not predict a fourth field, and it has an obvious
+  -- confound: the theorem was also the oldest and the only one that crossed a
+  -- repository boundary, so age and portage are uncontrolled against kind.
+  -- Stated as a pattern worth testing, and nothing more.
+
+non-derive nd-hyperphysics-cannot-have-p0
+  -- hyperphysics' refusal is a PRECONDITION failure, not an impossibility
+  -- result. Its ground is unwritten; an unwritten ground is not an absent one.
+  -- P0_PRECONDITION.md lists four unblocking steps in order, and completing
+  -- them is expected to make the question askable there.
+
+non-derive nd-arithmetic-barriers-are-impossible
+  -- Section III refutes ONE arithmetic barrier, in ONE field, on that field's
+  -- current clauses. It does not show that no arithmetic barrier can work. A
+  -- genuine exclusion in hypermath would need a negation about orbits, and
+  -- hypermath currently has none -- ax-box guarantees return at two and
+  -- forbids nothing at one. That is a gap in the field, not a proof of
+  -- impossibility.
+
+non-derive nd-p0-is-committed
+  -- No artifact cited by this file is committed anywhere. Four untracked
+  -- files in four working trees: hypermath and hyperlogic are PUBLIC
+  -- repositories, hyperethics and hyperphysics are private. Any reader
+  -- treating this census as repository state is reading a plan as a fact.
+
+-- ---------------------------------------------------------------------------
+-- SECTION VII: GRADUATION CRITERIA
+-- ---------------------------------------------------------------------------
+
+-- GC-P0X-1  THE CENSUS IS UNCHECKED HERE. definitional_shadow.hm has
+--           tests/test_definitional_shadow.py re-measuring its counts whenever
+--           the sibling checkouts are present. This file has no such test. The
+--           five failures of Section III and the collapsed_model fact of
+--           Section II are re-measurable and are not re-measured. Until they
+--           are, every number above is a claim about bytes nobody re-read.
+
+-- GC-P0X-2  HYPERETHICS' BARRIER HAS NEVER BEEN RUN. The displacement
+--           argument has no model, no countermodel, and no test. It is the
+--           only one of the three whose status is neither HOLDS nor BROKEN but
+--           UNRUN, and it is the barrier of the field where the paradox
+--           actually lives. This is the single highest-value open item in the
+--           P0 program.
+
+-- GC-P0X-3  GC-P0-6 IS OPEN IN BOTH P0 LAYERS. ax-p0-no-return cannot fail in
+--           either file. Two repairs are named in each: demote the axiom to a
+--           reading instruction, or make the shadow kind a predicate on the
+--           parent carrier so that re-entry becomes statable and therefore
+--           refusable. Neither is applied. See Section V.
+
+-- GC-P0X-4  PERIOD 1 IS UNADDRESSED IN HYPERETHICS. d-return-is-silent-at-one
+--           records that one-step return appears in no axiom, derive,
+--           non-derive, countermodel or test in any of that field's three
+--           encodings. hypermath ADMITS period 1 and hyperlogic INHABITS it by
+--           axiom -- ax-closure-self closes at one turn while ax-triangle
+--           closes at three. Two fields have answered and one has not even
+--           been asked. Nobody should repeat "period 1 is barred in the
+--           L-layers"; it is false in two fields and undefined in the third.
+
+-- GC-P0X-5  THE PRECURSOR IS A SINGLE POINT OF FAILURE. The only copy of the
+--           original P0 draft is in an uncommitted working tree of a
+--           repository with NO REMOTE, 43 commits behind the field it forked
+--           from. A byte-for-byte backup was taken on 2026-09-21 and verified
+--           at 678 files on both sides. That is a mitigation, not a fix: the
+--           material is still unpublished and still unreviewed.
+
+-- END p0_barrier.hm

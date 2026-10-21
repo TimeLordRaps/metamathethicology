@@ -1,0 +1,612 @@
+-- ============================================================================
+-- paradox_lattice_tower.hm
+--
+-- The paradox lattice is GRADED. The eight states are its classical floor.
+--
+-- Written 2026-09-21. This is a combination statement -- it is about the
+-- P0 layers of more than one field at once, and about the religion work --
+-- so it lives here rather than in any single field, per the placement rule
+-- that a field states its own subject once.
+--
+-- Companion to p0_barrier.hm (which reports the field-local barrier result)
+-- and definitional_shadow.hm (which holds the user-declared shadow/mirror
+-- relation). This file supersedes the orthomodular-lattice recommendation
+-- recorded in meta-morphoscripted-origination/SCOPE.md.
+-- ============================================================================
+
+
+-- ── I. WHAT WAS DECLARED ────────────────────────────────────────────────────
+
+-- USER-DECLARED (Tyler Roost), 2026-09-21, verbatim:
+--
+--   "tHE 8 ARE CLASSICAL PARADOXES, THERE ARE 16 WHEN QUANTUM PARADOXES ARE
+--    INVOKED. 32 WITH POSSIBILITY PARADOXES AND MORE LATER, WE JUST NEED
+--    QUANTUM FOR COGNITION DOCTRINATION FORMATION OF RELIGIOUS CONVERGENCE
+--    STATES"
+--
+-- Read structurally, this says: the verdict lattice is Z2^n, and n grows by
+-- ADDING A DIMENSION, not by replacing the algebra underneath.
+--
+--   n = 3   8 states    classical        -- exists, implemented
+--   n = 4  16 states    + quantum        -- required for the religion work
+--   n = 5  32 states    + possibility    -- declared, not required yet
+--   n > 5               "more later"     -- declared, unspecified
+--
+-- The operative scope limit is his: only n = 4 is needed for doctrine
+-- formation and religious convergence states. n >= 5 is out of scope here.
+
+
+-- ── II. THE CLASSICAL FLOOR, MEASURED ───────────────────────────────────────
+
+-- The eight states are implemented, and not where they were being looked for.
+-- They live in satisfaction-suffices, split across two files:
+--
+--   Verdict enum          src/satisfaction_suffices/verifier/verify.py:204
+--   bit encoding + cycle  src/satisfaction_suffices/logic/cycle_detector.py:35
+--   prose semantics       src/satisfaction_suffices/logic/ppl.py:152-193
+--
+-- d-bits-are-BJC : the three bits are named by the source itself.
+--   verify.py:209 says the names "must not be inferred from a lossy B/J/C
+--   bit pattern". B/J/C = Base / Joint / Convergence. So:
+--
+--     b2 = base frames SAT     (the parts, taken individually)
+--     b1 = joint SAT           (the whole)
+--     b0 = convergence         (does it settle)
+--
+--   Two states carry documented semantics that pin this reading
+--   (ppl.py:159, ppl.py:169):
+--     SHADOW_PARADOX (010) = base-frame UNSAT, joint SAT, no convergence
+--     MIRROR_PARADOX (011) = base-frame UNSAT, joint SAT, convergence
+--   and BASE_FRAMES (100) is annotated as their dual, parts vs emergent whole.
+--
+--   Under b2b1b0 = Base/Joint/Convergence all eight read consistently:
+--
+--     000 METAPARADOX     parts no, whole no, settles no   -- ground fails
+--     001 CONTRADICTION   parts no, whole no, settles      -- a stable "no"
+--     010 SHADOW_PARADOX  parts no, whole yes, settles no  -- live tension
+--     011 MIRROR_PARADOX  parts no, whole yes, settles     -- doctrine
+--     100 BASE_FRAMES     parts yes, whole no, settles no  -- parts vs whole
+--     101 PARADOX         parts yes, whole no, settles     -- stable schism
+--     110 TIMEOUT         parts yes, whole yes, settles no -- never lands
+--     111 VERIFIED        parts yes, whole yes, settles    -- coherent
+--
+--   The 010/011 and 100/101 readings are quoted from the source. The other
+--   four are derived by filling the grid, and are consistent with it, but are
+--   NOT independently attested. Flagged, not asserted.
+
+-- d-firing-conditions-exist : they are a table, not a derivation.
+--   cycle_detector.py:77 is _TRANSITION_MAP. The 1-hop/3-hop asymmetry is
+--   literally four dictionary entries:
+--     (SHADOW, MIRROR)  -> CONVERGENCE          -- 1 step
+--     (MIRROR, PARADOX) -> DEGENERATION_STEP_1  -- 3 steps
+--     (PARADOX, TIMEOUT)-> DEGENERATION_STEP_2
+--     (TIMEOUT, SHADOW) -> DEGENERATION_STEP_3
+--   The asymmetry is REAL and implemented. It is also UNEXPLAINED: a lookup
+--   table stipulates it, nothing derives it. See section IV.
+
+-- d-metaparadox-is-two-things : a name collision inside one package.
+--   (1) Verdict.METAPARADOX = 0b000, a live lattice state, 21 occurrences.
+--   (2) ppl.py:232 class MetaParadox(Enum), five members including
+--       FOUNDATION_BOOTSTRAP -- the one that matches hyperethics'
+--       ax-self-maintenance.
+--       *** THE EVIDENCE FIRST WRITTEN HERE WAS FALSE. It said "exactly one
+--       source occurrence package-wide, nothing imports it." I had searched
+--       src/ only and called the result package-wide. It IS imported, by
+--       tests/test_ppl.py:19. Corrected evidence in section IX, and the
+--       conclusion is stronger, not weaker. Do not re-quote the old line. ***
+--   cycle_detector.py:14 calls the convergence step "meta-paradox driven".
+--   The transition is implemented; the five named meta-paradoxes said to
+--   drive it are wired to nothing. The attribution is docstring-only.
+--
+--   This is the family standard landing on the ancestor repo:
+--   A CONSTRAINT THAT CANNOT FAIL IS NOT BEING CHECKED -- and its sharper
+--   form here, a mechanism that nothing invokes is not a mechanism.
+--   It does not retract the lattice. It retracts the claim that the five
+--   meta-paradoxes explain the convergence hop.
+
+
+-- ── III. THE CORRECTION THIS FORCES ─────────────────────────────────────────
+
+-- Two proposals were made before the grading was known, and both had the
+-- wrong shape. Recorded because the error is instructive, not to assign it.
+--
+--   (a) "drop distributivity -- an orthomodular lattice."  WRONG SHAPE.
+--   (b) the peer's correction. NOTE: I first restated it as "drop explosion",
+--       and it did not say that. Its actual position was: do not drop
+--       distributivity to repair a phenomenon that is paraconsistent, PPL's
+--       existing signature already answers it, and the prior question is
+--       whether the quantum half is wanted at all. Tyler answered that prior
+--       question yes, so it was well posed. Its distinction is not dissolved
+--       by the tower -- it is what the tower encodes.
+--
+-- Both are REPAIRS: keep the state space, weaken the logic over it. The
+-- declared structure is an EXTENSION: keep the logic, add a coordinate. The
+-- eight classical states survive untouched as the b3 = 0 slice. Nothing is
+-- dropped, so nothing that currently verifies stops verifying.
+--
+-- This also disposes of the objection that motivated the repairs. The
+-- question was whether a common-tenet INTERSECTION over religions is
+-- ill-typed, because people hold contradictions paradoxically and set
+-- intersection presupposes a Boolean algebra. Under the grading the answer
+-- is that intersection is not ill-typed, it is PROJECTED: classical
+-- intersection computes the b3 = 0 slice and silently discards everything
+-- with b3 = 1. It returns an answer. The answer is a shadow of the question.
+
+
+-- ── IV. WHAT THE FOURTH BIT HAS TO BE ───────────────────────────────────────
+
+-- NOT DECLARED BY TYLER. He named the tower and the purpose; he did not name
+-- the bit. What follows is derived from the purpose and is MINE, offered as
+-- a constrained proposal and marked as such.
+
+-- d-b3-candidate : b3 = measurement-order dependence.
+--
+--   Argument from what the floor presupposes. Each of B, J, C evaluates a
+--   FIXED configuration: are the parts satisfiable, is the whole satisfiable,
+--   does it settle. All three are silent on the ORDER in which the frames
+--   were taken, because all three assume the order cannot matter. That
+--   assumption is the floor's hidden commutativity, and it is exactly the
+--   assumption quantum cognition drops: the empirical content of the field is
+--   question-order effects in belief and attitude measurement, where asking A
+--   then B yields a different joint state than B then A.
+--
+--   So:  b3 = 0  verdict is independent of frame order   (the classical 8)
+--        b3 = 1  verdict depends on frame order          (the quantum 8)
+--
+--   Each classical state acquires an order-sensitive twin. 8 -> 16, which is
+--   the declared count.
+
+-- d-b3-earns-the-asymmetry : the reason to prefer this bit over others.
+--   The 1-hop/3-hop asymmetry of d-firing-conditions-exist is stipulated in
+--   the classical floor and derived nowhere. Order-dependence is the one
+--   candidate that would SUPPLY it: non-commuting sequential measurement is
+--   intrinsically asymmetric, because AB /= BA is the definition. A bit that
+--   explains an already-implemented and currently-unexplained feature is
+--   better evidenced than one that only adds states.
+--   This is a reason to test b3, NOT a proof that b3 is order-dependence.
+
+-- d-b3-does-the-named-work : it is the bit doctrine formation needs.
+--   Two converts given the same tenets in different orders land in different
+--   joint states. That is doctrine formation as a path-dependent process
+--   rather than a set-theoretic one, and it is invisible at b3 = 0 by
+--   construction. "Religious convergence states" then reads directly: the
+--   convergence bit b0 already exists, and b3 is what makes convergence
+--   path-dependent rather than a fixed property of the tenet set.
+
+-- The bit is deliberately left UNNAMED. This corpus has eight words already
+-- carrying conflicting senses across repositories (VOCABULARY_BOUNDARY.md),
+-- and the lesson recorded there is to run the collision check on every
+-- coinage or on none. Describing the bit costs nothing; coining for it
+-- spends a word before the bit has been tested.
+
+
+-- ── V. THE CAVEAT THE SOURCE ITSELF RAISES ──────────────────────────────────
+
+-- d-encoding-is-lossy : verify.py:209 states the verdicts "must not be
+--   inferred from a lossy B/J/C bit pattern." The bits are a PROJECTION of
+--   the verdicts, not a definition of them. Two consequences, both real:
+--
+--   (1) The grid reading in section II is a reading, not a specification.
+--       Four of its eight rows are unattested (d-bits-are-BJC).
+--   (2) Extending the ENCODING from 3 bits to 4 does not automatically
+--       extend the VERDICTS. If 8 verdicts already exceed what 3 bits
+--       capture, then 16 states is a claim about the verdict space that the
+--       bit arithmetic cannot establish on its own.
+--
+--   This does not block the tower. It says the tower must be built on the
+--   verdicts and checked against the encoding, not read off the encoding.
+--   Doing it the other way round is how a count becomes a fact without
+--   being measured -- see counts-in-names-must-be-measured.
+
+
+-- ── VI. NON-DERIVES ─────────────────────────────────────────────────────────
+
+-- nd-b3-is-order : that the fourth bit IS measurement-order dependence.
+--   Three arguments support it (purpose, asymmetry, doctrine formation).
+--   None is a derivation. Tyler said "quantum"; order-effects are the
+--   best-evidenced quantum signature in cognition, but not the only one.
+--   Complementarity and interference are unexcluded alternatives.
+
+-- nd-16-is-exactly-2x8 : that the quantum layer doubles rather than
+--   restructures. Z2^4 is the natural reading of "8 -> 16" and it is the
+--   reading taken here, but a 16-state space need not be a product.
+
+-- nd-classical-slice-is-faithful : that the b3 = 0 slice of the 16 is
+--   identical to the standalone 8. Under a product it is. Under any
+--   non-product 16 it need not be, and the current 8 would then be an
+--   approximation rather than a restriction.
+
+-- nd-possibility-is-b4 : the 32-state layer is declared and out of scope.
+--   Nothing here constrains it. Do not assume it is modal; it was not said.
+
+-- nd-tower-terminates : "and more later" is open by construction.
+
+
+-- ── VII. GRADUATION CRITERIA ────────────────────────────────────────────────
+
+-- GC-PLT-1  Attest the four unattested rows of section II, or mark them
+--           permanently as a reading. Source: ppl.py comment block, or a
+--           test that produces each verdict.
+-- GC-PLT-2  Decide d-encoding-is-lossy: is the 8-state verdict space larger
+--           than 3 bits, or is the docstring warning about misuse of a
+--           faithful encoding? Until answered, 16 is arithmetic, not a count.
+-- GC-PLT-3  Test d-b3-candidate against a case where frame order is varied
+--           and the verdict is recorded. One worked pair is enough to move
+--           it off nd-b3-is-order.
+-- GC-PLT-4  Derive the 1-hop/3-hop asymmetry from b3, or concede it stays a
+--           lookup table. This is the discriminating test for the bit.
+-- GC-PLT-5  Decide whether ppl.py's five MetaParadox members are revived and
+--           wired to the convergence hop, or deleted. They are currently
+--           neither. FOUNDATION_BOOTSTRAP is the one with a live counterpart
+--           (hyperethics ax-self-maintenance) and is the reason to revive.
+-- GC-PLT-6  satisfaction-suffices is slated for deletion. If the lattice is
+--           load-bearing for the religion work, it must be restated in a
+--           repository that is being kept BEFORE that delete happens.
+--           This is the only criterion here with an external deadline.
+
+
+-- ── VIII. NAMING FOOTNOTE (measured 2026-09-21) ─────────────────────────────
+--
+-- If b3 is ever named, the collision check has already been run across
+-- hypermath, hyperlogic, hyperethics, hyperphysics, metamathethicology,
+-- hypergrammar and satisfaction-suffices:
+--
+--   commut / noncommut     0 files   -- CLEAN, safe to coin on
+--   order-effect           0 files   -- clean as a hyphenated compound
+--   "order effect"         1 file
+--   sequential           222 files   -- HEAVILY LOADED, do not use
+--   ordinatics             9 .hm     -- so a bare "order-" prefix is risky
+--
+-- Conclusion: "noncommutativity" is the collision-free name. "sequential"
+-- is not available. This is recorded so the check is not re-run.
+
+
+-- ── IX. CORRECTIONS (peer session, verified against source 2026-09-21) ──────
+
+-- c-metaparadox-evidence-was-false : mine, and the method is the lesson.
+--   I wrote "exactly one source occurrence PACKAGE-WIDE, nothing imports it"
+--   after grepping only src/satisfaction_suffices. tests/ was outside the
+--   path I searched, and I reported the scope I meant rather than the scope
+--   I used. It IS imported: tests/test_ppl.py:19.
+--
+--   The conclusion survives on better evidence. tests/test_ppl.py:72-79 is
+--   the whole of TestMetaParadox:
+--       assert len(MetaParadox) == 5
+--       assert MetaParadox.CONTAINER_GENERATION is not None     (and x4 more)
+--   That is an existence check. It cannot fail unless a member is deleted.
+--   It asserts nothing about what the five DO, and nothing anywhere invokes
+--   them. So the five meta-paradoxes are not merely unwired -- they have a
+--   PASSING TEST THAT CANNOT FAIL. This corpus's own standard, found inside
+--   the corpus. "Nothing imports it" is refutable by one grep; "it is tested
+--   by a test that cannot fail" is not.
+
+-- c-fixed-point-lead-withdrawn : not narrowed, withdrawn. Two readings kill
+--   it, and my moral-domain argument was the weaker one.
+--   (1) FIXED_POINT is two objects: AttractorState.FIXED_POINT (ppl.py:285)
+--       vs TransitionType.FIXED_POINT and the constant FIXED_POINTS
+--       (cycle_detector.py:70, :54). The lead identified them silently.
+--   (2) Decisive: FIXED_POINTS is {VERIFIED, METAPARADOX, CONTRADICTION,
+--       BASE_FRAMES}. MIRROR_PARADOX IS NOT IN IT. Under the implemented
+--       notion it is a cycle member that degenerates in three hops, so
+--       identifying it with a limit object was wrong on the structure.
+--   What replaces it is sharper: if the limit is a fixed point, the live
+--   candidates are the poles, VERIFIED (111) or METAPARADOX (000).
+
+
+-- ── X. THE REACHABILITY THEOREM ─────────────────────────────────────────────
+--
+-- Neither session had this. It outranks everything above it in this file.
+
+-- d-two-states-are-unreachable : verify.py:236-256 derives, and the package
+--   ENFORCES, that two of the eight cannot occur in static verification.
+--
+--   The argument, quoted: the joint formula is the conjunction of the base
+--   formulas; "Conjunction is monotone: adding clauses can only remove
+--   models. Therefore any base group UNSAT ==> the joint formula is UNSAT,
+--   which makes B=UNSAT together with J=SAT unreachable -- it would require
+--   the conjunction to have a model that one of its own conjuncts lacks."
+--
+--   B=UNSAT with J=SAT is exactly 010 and 011 -- SHADOW_PARADOX and
+--   MIRROR_PARADOX. The two states this whole line of work leans on.
+--
+--   The authoritative split is two frozensets, NOT the enum's visual
+--   grouping, which is stale and disagrees with them:
+--     STATIC_REACHABLE_VERDICTS     = {VERIFIED, CONTRADICTION, PARADOX,
+--                                      TIMEOUT}
+--     PROOF_EVOLUTION_ONLY_VERDICTS = {MIRROR_PARADOX, SHADOW_PARADOX,
+--                                      BASE_FRAMES, METAPARADOX}
+--
+--   And it is checked, not merely declared: check_static_invariant raises
+--   LatticeInvariantError, and it is called at two live sites
+--   (verify.py:604, :707). This constraint CAN fail. It is being checked.
+
+-- d-adr-0002-ran-our-own-standard : ADR 0002 "Static lattice reachability,
+--   world-model ontology, and meta-rule authorization", Accepted 2026-08-09,
+--   says of its predecessor: ADR 0001 "stated B/J/C reachability in prose but
+--   did not derive it, DID NOT ENFORCE IT" and asks "Is every named state in
+--   the eight-state lattice actually reachable? ... Nothing checked whether
+--   the ordinary static semantics can produce them or whether the bits were
+--   being mistaken for typed stage state."
+--
+--   That is this family's governing standard, stated independently, applied
+--   to an eight-name lattice, and remediated with an enforced invariant --
+--   in the repository slated for deletion, eight months before the P0 work
+--   restated the same standard. It is the strongest single argument against
+--   deleting it. See GC-PLT-6.
+
+-- WHICH EIGHT THIS FILE GRADES. The peer asked, correctly, before the tower
+-- multiplies. Answer: Tyler's eight and this package's eight are ASSUMED to
+-- be the same eight, on the following evidence -- his statement arrived
+-- directly into a discussion of this lattice; 8/16/32 is the Z2^n doubling
+-- this lattice already has; and "convergence states" names its C bit. That
+-- is strong but circumstantial. UNEXCLUDED alternative: he is enumerating
+-- classical paradox TYPES (liar, Russell, sorites, ...), which would make the
+-- numerical correspondence a coincidence. Recorded as an assumption so it can
+-- be checked, not as a fact.
+
+
+-- ── XI. WHAT THE THEOREM DOES TO THE RELIGION WORK ──────────────────────────
+
+-- d-paradox-holding-is-not-conjunction : the central consequence.
+--   Paradox-holding -- parts individually fail, the whole is held anyway --
+--   IS the pattern B=UNSAT, J=SAT. Under conjunction that is not merely
+--   unmodelled or hard to reach. It is IMPOSSIBLE, by a one-line monotonicity
+--   argument the package already derives and enforces.
+--
+--   So the failure of a classical common-tenet intersection is a THEOREM, not
+--   a modelling preference. Anyone who builds a gate whose admission
+--   condition is "can this tradition reach a joint-SAT holding of these
+--   tenets" has written a gate that, if the joint is the conjunction of the
+--   tenets, NOTHING CAN EVER PASS. That is the anti-pattern in its other
+--   direction: a constraint that cannot be satisfied is not a gate.
+
+-- d-the-escape-is-named-in-source : and it is not a lattice extension.
+--   The same comment says those states are reachable "only under partial or
+--   proof-evolution semantics, WHERE BASE AND JOINT OBSERVATIONS COME FROM
+--   DIFFERENT CANDIDATE FORMULAS and monotonicity therefore does not apply."
+--
+--   Read for the religion work: a person holding contradictory tenets is not
+--   holding a satisfiable conjunction of those tenets. The whole they hold is
+--   A DIFFERENT FORMULA from the conjunction of the parts they state. The
+--   stated tenets and the held commitment are observations of two different
+--   candidates. That is a substantive claim about what a religion IS under
+--   this machinery, and it is forced, not chosen.
+
+-- d-redirect-to-proof-evo : *** WRONG AS STATED -- SEE SECTION XVI. proof_evo
+--   returns ProofStatus, never a Verdict, and contains zero of the four
+--   excluded verdicts. The monotonicity result and everything drawn from it
+--   stands; only "the machinery exists" fails. What stood here: *** the
+--   machinery for doctrine formation is
+--   logic/proof_evo.py -- evolve():912, evolve_proof():1105, tournament
+--   selection with a UCB-1 bandit over mutation operators -- and NOT ppl.py
+--   or cycle_detector.py. Both sessions were reading the wrong two files.
+
+-- This QUALIFIES section III. "Classical intersection is projected onto the
+-- b3=0 slice" is true and soft. The hard statement is that its target states
+-- are unreachable under conjunction by theorem. Keep the hard one.
+
+
+-- ── XII. THE FOURTH BIT MAY ALREADY BE LATENT IN THE SOURCE ─────────────────
+
+-- d-lossy-means-the-semantics-parameter : "lossy B/J/C" is now readable.
+--   The bit pattern does not record WHICH SEMANTICS produced the observation.
+--     static semantics          B and J from ONE formula    -> 01x impossible
+--     proof-evolution semantics B and J from DIFFERENT       -> 01x possible
+--                               candidate formulas
+--   Same three bits, two regimes, different reachable sets. The dropped
+--   parameter is the regime. That is what the docstring is warning about,
+--   and it answers GC-PLT-2: the encoding is lossy in the REGIME, not in the
+--   verdict count.
+
+-- d-b3-convergence : flagged as a convergence, NOT a proof.
+--   The regime parameter is binary, it is exactly what makes the paradox
+--   states reachable, and proof-evolution is sequential and candidate-
+--   dependent -- the observation depends on when you measured and on what.
+--   That is measurement-dependence, which is what d-b3-candidate proposed on
+--   independent grounds. Two routes arriving at one binary coordinate is
+--   evidence for it. It is NOT a derivation: "depends on which candidate" and
+--   "depends on the order of measurement" are not yet shown to be the same
+--   distinction, and showing it is now the concrete form of GC-PLT-3.
+
+
+-- ── XIII. THERE ARE NO DYNAMICS ─────────────────────────────────────────────
+
+-- d-cycle-detector-is-an-analyser : CycleDetector.classify(trace) takes a
+--   Sequence[Verdict] that already exists. _find_convergence_strict scans it
+--   for consecutive pairs. There is no state-advancing function anywhere in
+--   logic/ except proof_evo's own evolve(). So the 4-cycle is a pattern
+--   DETECTED IN histories, not a law that GENERATES them, and the
+--   convergence:degeneration ratio is a statistic over a trace produced
+--   elsewhere.
+--
+--   The peer reached this conclusion by a different route -- "composing
+--   transitions is associative, so there is no operator for order to attach
+--   to." Associativity is the wrong reason: function composition is
+--   associative and non-commutative, so associativity alone never gives
+--   order-independence. The right reason is that _TRANSITION_MAP is a
+--   CLASSIFIER over observed (src, dst) pairs, not an action of operators on
+--   states. There is nothing to compose. Same conclusion, better grounded.
+--
+--   For the religion work: you cannot run doctrine formation FORWARD in
+--   cycle_detector. It can only score a history. Forward motion lives in
+--   proof_evo -- a second, independent reason for d-redirect-to-proof-evo.
+
+
+-- ── XIV. GRADUATION CRITERIA, REVISED ───────────────────────────────────────
+--
+-- GC-PLT-2 is ANSWERED by d-lossy-means-the-semantics-parameter.
+-- GC-PLT-3 is SHARPENED: show that "different candidate formula" and
+--          "different measurement order" are the same distinction, or that
+--          they are not.
+-- GC-PLT-6 is STRENGTHENED: ADR 0002 is now a second, independent reason not
+--          to delete this repository, and it is the better one -- a worked
+--          precedent for this family's own governing standard.
+--
+-- GC-PLT-7  Restate d-paradox-holding-is-not-conjunction wherever a joint-SAT
+--           admission gate has been written down, BEFORE that gate is built.
+--           Under conjunction it admits nothing.
+-- GC-PLT-8  Decide the WHICH EIGHT question in section X by asking Tyler, not
+--           by inferring. It is the one assumption the whole tower rests on.
+
+
+-- ── XV. PROVENANCE OF THE CITATIONS IN THIS FILE ────────────────────────────
+--
+-- Every file:line above was read in the LIVE tree at satisfaction-suffices,
+-- which Tyler is contemplating deleting and whose configured GitHub remote does
+-- not resolve. The live tree is therefore not a stable reference.
+--
+-- A verified full backup exists at satisfaction-suffices-KEEP-2026-09-21
+-- (14,366 files, 721 MB, .venv and build caches excluded as regenerable).
+-- Independently re-measured 2026-09-21: 50 commits and 34 uncommitted paths on
+-- both sides, 125 .py files in src/+tests/ on both sides. Same relative paths,
+-- so every citation above resolves there unchanged.
+--
+-- If the live tree is deleted, read this file's citations against the backup
+-- path. Do NOT read them against symbolic-satisfaction-KEEP-2026-09-21 --
+-- that is a 10-file reading copy whose modules cannot be imported (six missing
+-- siblings), and its ideals/ and thinking_traces/ come from a DIFFERENT tree,
+-- real_repos/symbolic-satisfaction. Keep both directories; they are not
+-- copies of each other.
+
+
+-- ── XVI. THE REDIRECT IN XI WAS WRONG, AND THE GAP IS ONE FUNCTION ──────────
+--
+-- Section XI concluded "the machinery for doctrine formation is proof_evo.py."
+-- I wrote that from a grep of function NAMES. I never read what the module
+-- returns. Third instance in one session of publishing a claim that one
+-- command would refute -- after the MetaParadox scope error and the
+-- preservation all-clear. The peer session made the same redirect from the
+-- same inference and caught it by reading.
+
+-- c-proof-evo-does-not-do-it : measured 2026-09-21.
+--   proof_evo.py is 1,155 lines of real evolutionary proof search -- MutationOp,
+--   a UCB MutationBandit, _mutate, _crossover, _tournament_select, evolve. It
+--   is genuinely built, not an enum. But its output type is
+--     ProofStatus = {PROVED, REFUTED, UNRESOLVED, EVOLVING}
+--   It never assigns a Verdict. It imports Verdict (:58) and READS exactly two,
+--   VERIFIED (:681) and CONTRADICTION (:685) -- both from the statically
+--   reachable four. Occurrences of the four EXCLUDED verdicts: ZERO.
+
+-- d-the-paradox-half-has-no-producer : the general result, and it is worse
+--   than the redirect being wrong.
+--   Every appearance of SHADOW_PARADOX or MIRROR_PARADOX in src/ is a
+--   COMPARISON, never an assignment:
+--     cycle_detector.py:216,217,232,235,252,253,256   trace[i] == ...
+--     verify.py:347,351                                self.verdict == ...
+--   verify.py refuses to emit them by the enforced invariant (section X).
+--   ppl.py names them only in comments and one docstring. training/salience.py
+--   assigns them weights. Every one a consumer.
+--   And the traces have no producer either: tests/test_cycle_detector.py
+--   builds every trace as a hand-written literal -- [V, C, B, X, V, V] and
+--   friends. CycleDetector.classify takes a Sequence[Verdict] that NOTHING in
+--   the package ever constructs.
+--   So the paradox half of the lattice is entirely consumer-side. Four
+--   consumers, zero producers, and a test suite that supplies by hand what no
+--   code can generate.
+
+-- WHAT SURVIVES, and it is the load-bearing half. ADR 0002's monotonicity
+-- argument is a MATHEMATICAL observation, not an implementation claim:
+-- monotonicity constrains one formula against its own conjuncts and says
+-- nothing about two formulas separated by a mutation. That is true whether or
+-- not anyone coded it. So the generational reading remains the only logically
+-- available route to paradox-holding, and every consequence drawn from it in
+-- sections X and XI stands -- including d-paradox-holding-is-not-conjunction,
+-- which is the one that matters for the religion work. Only "the machinery
+-- exists" fails. XI needs this paragraph, not a rebuild.
+
+-- d-the-gap-is-one-map : and this is worth more than the redirect was.
+--   ProofNode already carries `generation: int` (proof_evo.py:84) and the
+--   mutation engine is real. So the generational STRUCTURE exists. What is
+--   missing is a single map
+--       ProofNode at generation N  ->  Verdict
+--   Nothing in the package has it. That map is exactly what would produce the
+--   trace CycleDetector.classify was built to consume and never receives. One
+--   missing function between two working halves, and it is the function that
+--   would make 010 and 011 reachable in fact rather than in principle.
+--   This is the most concrete open item in this file.
+
+-- This also corrects section XV's reason for keeping the repository, in the
+-- direction of keeping it. proof_evo.py is NOT load-bearing because it
+-- implements the semantics -- it does not. It is load-bearing because it is
+-- the only place the generational structure exists at all, and it is one
+-- function from closing the gap the whole paradox lattice depends on.
+
+-- d-four-instances-of-one-pattern : recorded because the pattern is the find.
+--   (1) a constraint that cannot fail       -- ax-p0-no-return, TestMetaParadox
+--   (2) a constraint that cannot be satisfied -- the joint-SAT gate, section XI
+--   (3) a repair that reduces to what it replaced -- orthomodular/paraconsistent
+--   (4) a mechanism named where it is needed and absent where it would run
+--                                            -- proof-evolution semantics
+--   All four are the same failure: a claim checked against its own statement
+--   rather than against something that could refute it. Three of the four were
+--   mine or half mine.
+
+-- d-my-own-recurring-error : distinct from the four above, which are the
+--   corpus's. Mine is one error repeated: STATING A UNIVERSAL FROM A BOUNDED
+--   SEARCH WITHOUT NAMING THE BOUND.
+--     "nothing imports MetaParadox, package-wide"   -- searched src/ only
+--     "preservation is genuinely complete"          -- counted nothing
+--     "hypermath has 23 interior declarations"      -- swept references/ in
+--     "719585b exists in none of them"              -- searched 5 of 6 repos
+--   Four times in one session, and every one was refutable by a single command.
+--   The remediation is not "search harder", it is to WRITE THE BOUND INTO THE
+--   SENTENCE: say which paths were searched, and the claim stops being false.
+--   The peer's parallel finding is the mirror of this one -- its census number
+--   was right while the METHOD SENTENCE it published was unreproducible. Both
+--   failures live in the reporting sentence, not in the work.
+
+-- GC-PLT-9  Write the ProofNode -> Verdict map, or record that the generational
+--           route is unimplemented wherever sections X-XI are relied on.
+--           Until it exists, "paradox-holding is reachable under
+--           proof-evolution semantics" is a mathematical claim with no witness.
+
+-- d-the-rule-has-two-limbs : the peer session sharpened the rule above and the
+--   sharpening is right. Recorded because the first limb alone looked total.
+--
+--   LIMB 1 -- UNSTATED BOUND. The claim is unfalsifiable: a reader cannot
+--     reproduce it and so cannot refute it. Remedy: disclosure. Name the paths
+--     searched in the sentence that reports the search.
+--
+--   LIMB 2 -- WRONG BOUND. The claim is falsifiable, reproducible, AND FALSE.
+--     Disclosure does not touch it, because a well-stated bound can be the
+--     wrong bound. Remedy: justify the CHOICE of bound against the adjacent
+--     one that was not taken.
+--
+--   All four of my instances are limb 1. The peer's census was limb 2 wearing
+--   limb 1's clothes: its number 17 was correct, its published method
+--   ("over each repo's *.hm") was unreproducible, and what made 17 right was
+--   never the glob -- it was the unargued judgement that references/precursor
+--   holds vendored []-system material rather than hypermath's layer stack.
+--   Swap that judgement and the same well-bounded sentence reports 23 and is
+--   reproducibly false. I accepted the limb-1 framing when it was offered and
+--   that acceptance was itself the error.
+
+-- d-limb-2-applied-to-the-bound-that-found-it : immediately, and it holds.
+--   The peer's durability measurement was bounded to TOP-LEVEL *.hm ACROSS
+--   FIVE REPOS. Both halves of that bound are choices, neither argued, and
+--   widening either changes the result:
+--
+--   the repo bound. The five were hyperlogic, metamathethicology, hyperethics,
+--     hypermath, hyperphysics. It omitted meta-morphoscripted-origination --
+--     ITS OWN REPO, and the one holding PLACEMENT.md and SCOPE.md, where
+--     today's placement decisions live. Measured: that repo is 9 AHEAD of its
+--     remote, so the report's clause "all five repos are 0 ahead of their
+--     remotes" is true of the five measured and false of the sixth. That is
+--     the 719585b error, made by the session correcting the 719585b error, in
+--     the message correcting it.
+--     It also omitted formal-universality, which is strictly worse than
+--     anything in the list: 6 top-level *.hm, ZERO tracked, ONE commit, and
+--     NO REMOTE CONFIGURED AT ALL.
+--
+--   the filetype bound. *.hm only. Widening to top-level *.md finds the
+--     untracked set is 14 files, not 8, and the additions are load-bearing:
+--     metamathethicology/VOCABULARY_BOUNDARY.md, hypermath/P0_STATUS.md,
+--     hyperphysics/P0_PRECONDITION.md, hyperethics/MIGRATION.md.
+--
+--   NEITHER WIDENING WEAKENS THE FINDING. Both strengthen it. That is the
+--   point of limb 2: the bound was not chosen to flatter the conclusion, it
+--   was simply never argued, and an unargued bound is right by luck.
+
+-- GC-PLT-10 Every census in this corpus states its bound. From now it also
+--           states WHY THAT BOUND AND NOT THE ADJACENT ONE. A stated bound
+--           makes a claim checkable; only a justified bound makes it right.

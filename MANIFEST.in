@@ -1,0 +1,3 @@
+include DESIGN.md VALIDATION.md
+include .gitattributes
+include validation/source-manifest.json

@@ -1,0 +1,54 @@
+{
+  "schema": "metamathethicology.certified-intellidynamics.verification-receipt.v1",
+  "date": "2026-10-18",
+  "tools": {
+    "python": "3.12.8",
+    "pytest": "8.3.5 (primary environment); 9.1.1 (isolated Hypermath environment)",
+    "ruff": "0.13.0",
+    "lean": "4.14.0 x86_64-w64-windows-gnu commit 410fab728470",
+    "lake": "5.0.0-410fab7",
+    "git": "2.53.0.windows.1"
+  },
+  "signed_candidate_commits": {
+    "ordinatics": "5f412733c1a72747f5fef86f651b56f4615c1fdc",
+    "hypermath": "b298c1b69b3e014adac2ee70a3bf26e54a4a5537",
+    "grounded-hyperset-theory": "b65b6d0fa8cfb9c4d3ac5e70aaf114dbbe6a4667",
+    "grounded-hypercalculi": "1860bcba6e84f574c1efeda5875c8225eaf89863",
+    "hyperethics": "ce734e1672608540d3c4fa28108da264e6c49346",
+    "metamathethicology_implementation": "1cbeec4b9083600c9fd87b67b7713e06ba7b6363"
+  },
+  "artifact_sha256": {
+    "src/metamathethicology/certified_intellidynamics.py": "5e6a7ff812f67fa040a700d5b9671979d4f6f59b70089028a6b2fed8e12d7dee",
+    "hypermath:lean4/Hypermath/CertifiedIntellidynamics.lean": "7b9e34557d454c2d41bf30a40e624bc585578b701be6d0257df0307f1098be55",
+    "validation/certified-intellidynamics/dependency-graph.json": "80ac343acae66a3564fc602257c90eacc31b8236fd86edaf9f98a520d30ce6ad",
+    "validation/certified-intellidynamics/obligations.json": "0d57f9661acd817ea64ba5be2c9dcf47be00202faeae11da937ff48c84c60818"
+  },
+  "checks": [
+    {"repository": "ordinatics", "command": "python -m pytest -q", "result": "PASS", "summary": "516 passed in 43.13s"},
+    {"repository": "grounded-hyperset-theory", "command": "python -m pytest -q", "result": "PASS", "summary": "563 passed in 43.14s"},
+    {"repository": "grounded-hypercalculi", "command": "python -m pytest -q", "result": "PASS", "summary": "257 passed in 2.44s"},
+    {"repository": "hyperethics", "command": "python -m pytest -q", "result": "PASS", "summary": "399 passed in 22.33s"},
+    {"repository": "hypermath", "command": "isolated-python -m pytest -q", "result": "PASS_WITH_SKIPS", "summary": "423 passed, 6 skipped in 151.80s; verifier-standard 1.4.0"},
+    {"repository": "hypermath", "command": "lake build Hypermath", "result": "PASS_WITH_DISCLOSED_WARNINGS", "summary": "target module built; whole library retains 11 explicit L0-L3 sorry declarations outside target closure"},
+    {"repository": "hypermath", "command": "lake env lean CertifiedIntellidynamicsChecks.lean", "result": "PASS", "summary": "12 theorem signatures and transitive axiom reports checked"},
+    {"repository": "hypermath", "command": "lake build certified_intellidynamics_checker", "result": "PASS", "summary": "compiled executable"},
+    {"repository": "hypermath", "command": "checker good/unsafe/exhausted/malformed", "result": "PASS", "summary": "ACCEPTED, REJECTED, UNKNOWN, REJECTED"},
+    {"repository": "metamathethicology", "command": "python -m pytest -q with candidate source closure", "result": "PASS_WITH_SKIP", "summary": "148 passed, 1 optional Hyperphysics citation skip in 4.99s"},
+    {"repository": "metamathethicology", "command": "python -m ruff check src tests", "result": "PASS", "summary": "all checks passed"},
+    {"repository": "metamathethicology", "command": "python -m build", "result": "PASS", "summary": "sdist and wheel built"},
+    {"repository": "metamathethicology", "command": "python -m metamathethicology.certified_intellidynamics", "result": "PASS", "summary": "accepted v2, rejected v-bad, one assist effect, recovery a->b->g, invariant true"}
+  ],
+  "negative_baselines_reproduced": [
+    "Ordinatics swallowed limit callback failure and reported convergence at state 50",
+    "Ordinatics guessed omega from a finite prefix whose actual fixed point is 1000",
+    "Nested Veblen terms compared equal while hashing differently",
+    "Grounded Hypercalculi accepted a wff typing premise as a proved assertion",
+    "Grounded Hyperset Theory accepted overlapping blocks and collapsed a node/block identifier collision"
+  ],
+  "environment_notes": [
+    "The first Hypermath full run in the global environment had 422 pass, 6 skip, 1 fail because verifier 2.0.0 was imported while the suite requires 1.4.0.",
+    "The final Hypermath run used a fresh isolated environment with the declared verifier-standard 1.4.0 and passed.",
+    "HM_LEAN and HM_MMVERIFY were unset for six existing translator target tests. Lean target checks were executed directly; the external Metamath target was not run.",
+    "No remote push, release, deployment, or publication was performed."
+  ]
+}
